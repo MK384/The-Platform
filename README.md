@@ -113,7 +113,7 @@ To run The Platform locally, follow these steps:
 
 ## Contributing
 
-** Contributions are welcome! If you'd like to contribute to The Platform, please follow these steps: **
+**Contributions are welcome! If you'd like to contribute to The Platform, please follow these steps:**
 
 1. Fork the repository.
 2. Create a new branch (```git checkout -b feature/YourFeatureName```).
@@ -146,5 +146,5 @@ For questions or feedback, feel free to reach out:
 
 ---
 
-Happy Learning! 🚀
+**Happy Learning! 🚀**
 
