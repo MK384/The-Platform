@@ -1,18 +1,22 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
+/The-Platform-frontend/dist
+/The-Platform-frontend/tmp
+/The-Platform-frontend/out-tsc
+/The-Platform-frontend/bazel-out
 
 # Node
 /node_modules
 /The-Platform-backend/node_modules
 /The-Platform-frontend/node_modules
-npm-debug.log
-yarn-error.log
+/The-Platform-backend/npm-debug.log
+/The-Platform-frontend/npm-debug.log
+/The-Platform-backend/yarn-error.log
+/The-Platform-frontend/yarn-error.log
 
+
+ 
 # IDEs and editors
 .idea/
 .project
@@ -23,14 +27,19 @@ yarn-error.log
 *.sublime-workspace
 
 # Visual Studio Code
+/The-Platform-backend/.vscode
+/The-Platform-frontend/.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+/The-Platform-backend/.history
+/The-Platform-frontend/.history
 .history/*
 
 # Miscellaneous
+/The-Platform-frontend/.angular
 /.angular/cache
 .sass-cache/
 /connect.lock
@@ -40,5 +49,9 @@ testem.log
 /typings
 
 # System files
-.DS_Store
-Thumbs.db
+/The-Platform-backend/.DS_Store
+/The-Platform-frontend/.DS_Store
+/The-Platform-backend/Thumbs.db
+/The-Platform-frontend/Thumbs.db
+
+
