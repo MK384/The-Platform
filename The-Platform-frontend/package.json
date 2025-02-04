@@ -1,6 +1,6 @@
 {
   "name": "the-platform-frontend",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -40,5 +40,12 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.4.2"
-  }
+  },
+  "description": "The Platform is an innovative e-learning web application designed to empower content creators and learners. It allows creators to host and monetize their courses while enabling students to enroll, learn, and grow. This project was developed as a capstone project for the MEAN Stack course at the NTI Institute.",
+  "main": "index.js",
+  "keywords": [
+    "E-learning"
+  ],
+  "author": "Mohammed Khaled, Aya Ashreey, Mohammed Ramadan, Amr Khaled, Omar Mahmoud",
+  "license": "MIT"
 }
