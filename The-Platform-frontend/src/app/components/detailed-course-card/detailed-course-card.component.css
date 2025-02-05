@@ -1,0 +1,250 @@
+:host {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.course-card {
+    display: flex;
+    width: 648px;
+    height: 188px;
+    background: #FFFFFF;
+    box-shadow: 0px 12px 32px rgba(29, 32, 38, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.course-image {
+    width: 220px;
+    height: 188px;
+    background: #E9EAF0;
+}
+
+.course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.course-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    width: 428px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-badge {
+    background: rgba(255, 198, 60, 0.77);
+    padding: 4px 6px;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #1D2026;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.current-price {
+    font-size: 18px;
+    font-weight: 450;
+    color: #1D2026;
+}
+
+.old-price {
+    font-size: 15px;
+    text-decoration: line-through;
+    color: #A1A5B3;
+}
+
+.rate-value {
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #1D2026;
+
+}
+
+.raters-count {
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #8C94A3;
+
+}
+
+.course-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #35AACD;
+    margin: 8px 0;
+}
+
+.instructor {
+    display: flex;
+    justify-content: space-between;
+    /* Ensures spacing */
+    align-items: center;
+    gap: 12px;
+}
+
+.instructor-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.instructor img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.instructor-name {
+    /* Kevin Gilbert */
+
+    /* width: 84px;
+    height: 22px; */
+
+    /* Body Medium/400 */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    letter-spacing: -0.01em;
+
+    /* Gray/700 */
+    color: #4E5566;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.rating img {
+    width: 20px;
+    height: 20px;
+}
+
+hr {
+    border: 1px solid #E9EAF0;
+    margin: 10px 0;
+}
+
+.course-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-info div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    /* font-size: 14px;
+    color: #4E5566; */
+}
+
+.course-info img {
+    width: 20px;
+    height: 20px;
+}
+
+.course-info span {
+
+/* Beginner */
+
+/* width: 58px;
+height: 22px; */
+
+/* Body Medium/400 */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 22px;
+/* identical to box height, or 157% */
+letter-spacing: -0.01em;
+
+/* Gray/700 */
+color: #4E5566;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+
+
+#students-count{
+
+    /* 265.7K */
+
+/* width: 47px;
+height: 20px; */
+
+/* Body Medium/500 */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+letter-spacing: -0.01em;
+
+/* Gray/700 */
+color: #4E5566;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+#student-text{
+
+    /* students */
+
+width: 61px;
+height: 22px;
+
+/* Body Medium/400 */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 22px;
+/* identical to box height, or 157% */
+letter-spacing: -0.01em;
+
+/* Gray/500 */
+color: #8C94A3;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}

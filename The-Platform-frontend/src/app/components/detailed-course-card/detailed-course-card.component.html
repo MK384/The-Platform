@@ -1,0 +1,44 @@
+<div class="component">
+    <div class="course-card">
+        <div class="course-image">
+            <img [src]="card.imageUrl" alt="Course Thumbnail">
+        </div>
+        <div class="course-content">
+            <div class="header">
+                <div class="category-badge">{{card.category}}</div>
+                <div class="price">
+                    <span class="current-price">${{card.price}}</span>
+                    <span class="old-price">${{card.oldPrice}}</span>
+                </div>
+            </div>
+            <h2 class="course-title">{{card.title}}</h2>
+            <div class="instructor">
+                <div class="instructor-info">
+                    <img [src]="card.instructorImageUrl" alt="Instructor">
+                    <span class="instructor-name">{{card.instructor}}</span>
+                </div>
+                <div class="rating">
+                    <img src="../../../assets/star.png" alt="Star">
+                    <span class="rate-value">{{card.rating}}</span>
+                    <span class="raters-count">({{card.reviewCount}})</span>
+                </div>
+            </div>
+            <hr>
+            <div class="course-info">
+                <div class="students">
+                    <img src="../../../assets/user-icon.png" alt="Students">
+                    <span id="students-count">{{card.enrolledStudents}}</span>
+                    <span id="student-text">students</span>
+                </div>
+                <div class="difficulty">
+                    <img src="../../../assets/bar-chart.png" alt="Difficulty">
+                    <span>{{card.difficultyLevel}}</span>
+                </div>
+                <div class="duration">
+                    <img src="../../../assets/clock.png" alt="Duration">
+                    <span>{{card.duration}} hour</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
