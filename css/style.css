@@ -1,0 +1,109 @@
+body{
+  margin: 0px;
+  padding: 0;
+  cursor: pointer;
+}
+
+/*navbar 2 */
+
+.navbar2 {
+  display:flex;
+  align-items: center;
+  padding: 15px 20px;
+  /* background-color: #f8f9fa; */
+}
+
+/* logo */
+
+.logo img{
+  display: inline-block;
+  width: 198px;
+  height: 58px;
+  object-fit: contain;
+  margin-left: -25px;
+ 
+   
+}
+
+
+select {
+  width: 200px;
+  padding: 8px;
+  font-size: 16px;
+  /* border: 2px solid #007bff; */
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  
+  
+}
+
+
+select:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 91, 187, 0.5);
+}
+
+
+option {
+  padding: 10px;
+  font-size: 14px;
+}
+
+
+optgroup {
+  font-weight: bold;
+  font-style: italic;
+  color: #007bff;
+}
+
+.navbar3{
+  display: flex;
+  justify-content: left;
+  margin-left: 135px;
+  
+}
+ 
+
+/* account */
+.account{
+  justify-content: right;
+}
+/* Create Account  */
+.create_account{
+width: 168px;
+  height: 48px;
+  border-radius: 20px;
+  color: #007bff;
+  background-color: rgb(247, 242, 236);
+  border: none;
+  cursor: pointer;
+ }
+ .create_account:focus{
+  outline: none;
+ }
+
+.signin{
+  
+  width: 100px;
+  height: 48px;
+  border-radius: 20px;
+  color: white;
+  background-color: #007bff;
+  font-size: medium;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.signin:focus{
+  outline: none;
+}
+
+
+.container-icons li a{
+  background-color: white;
+  color: black !important;
+}
