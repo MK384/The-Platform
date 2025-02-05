@@ -1,4 +1,4 @@
-export interface DetailedCourseCard {
+export interface DetailedCourseCardProps {
     title: string;
     category:string;
     instructor: string;

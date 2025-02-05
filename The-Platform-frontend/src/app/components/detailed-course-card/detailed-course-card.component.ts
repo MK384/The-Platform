@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { DetailedCourseCard } from '../../../core/interfaces/detailed-course-card.interface';
+import { Component, Input } from '@angular/core';
+import { DetailedCourseCardProps } from '../../../core/interfaces/DetailedCourseCardProps.interface';
 
 @Component({
   selector: 'app-detailed-course-card',
@@ -10,7 +10,27 @@ import { DetailedCourseCard } from '../../../core/interfaces/detailed-course-car
 })
 export class DetailedCourseCardComponent {
 
-  card:DetailedCourseCard = {
+  iconsUrls!:{
+    star:string;
+    clock:string;
+    user:string;
+    level:string;
+  };
+
+  constructor(){
+
+    this.iconsUrls = {
+
+      star:'../../../assets/course_icons/star.png',
+      clock:'../../../assets/course_icons/clock.png',
+      user:'../../../assets/course_icons/user-icon.png',
+      level:'../../../assets/course_icons/bar-chart.png'
+
+    }
+
+  }
+
+  @Input() card:DetailedCourseCardProps = {
 
     title: "Adobe XD for Web Design: Essential Principles",
     category: "PRODUCTIVITY",
@@ -26,6 +46,5 @@ export class DetailedCourseCardComponent {
     imageUrl: "../../../assets/course-image.png"
 
   }
-
 
 }
