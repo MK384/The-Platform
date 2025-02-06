@@ -1,0 +1,128 @@
+/* General Styles */
+:host {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Top Navbar */
+.top-nav {
+    background: #1D2026;
+    padding: 10px 32px;
+    width: 100%;
+    height: 52px;
+}
+
+.logo-img {
+    width: 198px;
+    height: 58px;
+}
+
+.logo-text {
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    margin-left: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 8px;
+}
+
+.nav-links li {
+    padding: 16px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #8C94A3;
+    padding: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+    color: #FFFFFF;
+    box-shadow: inset 0px 2px 0px #FF6636;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* Currency & Language Dropdown */
+.currency-lang .btn {
+    font-size: 14px;
+    color: #A1A5B3;
+    background: none;
+    border: none;
+}
+
+/* Main Navbar */
+.main-nav {
+    background: #FFFFFF;
+    padding: 24px 32px;
+    box-shadow: inset 0px -1px 0px #E9EAF0;
+    width: 100%;
+    height: 96px;
+}
+
+/* Search & Category */
+.search-category {
+    display: flex;
+    gap: 16px;
+}
+
+.category {
+    border: 1px solid #E9EAF0;
+    padding: 10px;
+    width: 200px;
+    color: #4E5566;
+}
+
+.search-bar {
+    border: 1px solid #E9EAF0;
+    padding: 10px;
+    width: 400px;
+}
+
+/* User Actions */
+.user-actions img {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+}
+
+
+
+.buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.create-account {
+    background: #F7FBDE;
+    color: #35AACD;
+    padding: 12px 24px;
+    border-radius: 15px;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login {
+    background: #35AACD;
+    color: #FFFFFF;
+    padding: 12px 24px;
+    border-radius: 15px;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
