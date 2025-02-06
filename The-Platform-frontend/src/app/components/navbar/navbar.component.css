@@ -1,0 +1,248 @@
+/* General Styles */
+:host {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Top Navbar */
+.top-nav {
+    background: #1D2026;
+    width: 100%;
+    height: 52px;
+}
+
+.logo-img {
+    width: 198px;
+    height: 58px;
+    padding-left: 15px;
+}
+
+
+.nav-links {
+    list-style: circle;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* gap: 8px; */
+    height: 52px;
+}
+
+.nav-links li {
+    padding: 16px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #8C94A3;
+    padding: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+    color: #FFFFFF;
+    box-shadow: inset 0px 2px 0px #FF6636;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* Currency & Language Dropdown */
+.currency-lang .btn {
+    font-size: 14px;
+    color: #A1A5B3;
+    background: none;
+    border: none;
+}
+
+/* Main Navbar */
+.main-nav {
+    background: #FFFFFF;
+    box-shadow: inset 0px -1px 0px #E9EAF0;
+    width: 100%;
+    height: 76px;
+    padding-right: 24px;
+}
+
+/* Search & Category */
+.search-category {
+    margin-top: 10px;
+    display: flex;
+    gap: 16px;
+}
+
+/* Container for dropdown and options */
+.dropdown-container {
+    position: relative;
+    width: 200px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Dropdown Menu Styles */
+  .dropdown-menu-category {
+    box-sizing: border-box;
+    width: 100%;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #E9EAF0;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    gap: 12px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 15px;
+  }
+  
+  /* Dropdown Text */
+  .dropdown-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4E5566;
+    position: absolute;
+    left: 18px;
+  }
+  
+  /* Dropdown Icon */
+  .dropdown-icon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 18px;
+  }
+  
+  /* Dropdown Options */
+  .dropdown-options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 48px; /* Matches the height of the dropdown menu */
+    left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #E9EAF0;
+    z-index: 10;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Dropdown Option Items */
+  .dropdown-option {
+    padding: 12px 18px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4E5566;
+    cursor: pointer;
+  }
+  
+  .dropdown-option:hover {
+    background: #ffffff;
+  }
+  
+  /* Show dropdown options on hover */
+  .dropdown-container:hover .dropdown-options {
+    display: block;
+    border-radius: 15px;
+    background-color: #f1f1f1;
+  }
+  
+.logo-drop-search {
+    display: flex; 
+    gap: 30px;
+}
+
+/* Search Bar Styles */
+.search-bar {
+    box-sizing: border-box;
+    width: 424px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #E9EAF0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 12px;
+    position: relative;
+    border-radius: 15px;
+}
+
+/* Search Icon */
+.search-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 18px;
+    top: calc(50% - 24px / 2);
+}
+
+/* Search Input */
+.search-input {
+    width: 100%;
+    height: 24px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8C94A3;
+    border: none;
+    outline: none;
+    padding-left: 48px;
+    /* Ensures text doesn't overlap the icon */
+    background: transparent;
+}
+
+
+/* User Actions */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-actions img {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    vertical-align: middle;
+    gap: 24px;
+    cursor: pointer;
+    
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    width: 280px;
+    height: 48px;
+}
+
+.create-account {
+    background: #F7FBDE;
+    color: #35AACD;
+    padding: 12px 24px;
+    border-radius: 15px;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.login {
+    background: #35AACD;
+    color: #FFFFFF;
+    padding: 12px 24px;
+    border-radius: 15px;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
