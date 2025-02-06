@@ -18,7 +18,7 @@
                     <span class="instructor-name">{{card.instructor}}</span>
                 </div>
                 <div class="rating">
-                    <img src="../../../assets/star.png" alt="Star">
+                    <img [src]="iconsUrls.star" alt="Star">
                     <span class="rate-value">{{card.rating}}</span>
                     <span class="raters-count">({{card.reviewCount}})</span>
                 </div>
@@ -26,16 +26,16 @@
             <hr>
             <div class="course-info">
                 <div class="students">
-                    <img src="../../../assets/user-icon.png" alt="Students">
+                    <img [src]="iconsUrls.user" alt="Students">
                     <span id="students-count">{{card.enrolledStudents}}</span>
                     <span id="student-text">students</span>
                 </div>
                 <div class="difficulty">
-                    <img src="../../../assets/bar-chart.png" alt="Difficulty">
+                    <img [src]="iconsUrls.level" alt="Difficulty">
                     <span>{{card.difficultyLevel}}</span>
                 </div>
                 <div class="duration">
-                    <img src="../../../assets/clock.png" alt="Duration">
+                    <img [src]="iconsUrls.clock" alt="Duration">
                     <span>{{card.duration}} hour</span>
                 </div>
             </div>

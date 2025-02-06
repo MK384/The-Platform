@@ -11,11 +11,6 @@ import { CommonModule } from '@angular/common';
 })
 export class CategoryCardComponent {
 
-  @Input() card:CategoryCardProps = {
-    iconUrl: '../../../assets/category_icons/lifestyle-icon.png',
-    title: 'Lifestyle',
-    colorCode: '#FFF2E5',
-    courseCount: '12,068'
-  }
+  @Input() card!:CategoryCardProps;
 
 }
