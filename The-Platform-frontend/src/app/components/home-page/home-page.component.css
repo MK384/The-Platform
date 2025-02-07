@@ -1,8 +1,10 @@
-/* Intro Section */
+/* --------------------------------------------------------------- */
+/* Intro section */
+/* ---------------------------------------------------------------- */
 .intro-section {
     position: relative;
-    width: 100%;
-    height: 548px;
+    /* width: 1904px;
+    height: 100%; */
     background: linear-gradient(180deg, rgba(240, 242, 245, 0) 0.02%, #F0F2F5 220.8%);
     display: flex;
     align-items: center;
@@ -85,23 +87,20 @@
   
 
 /* --------------------------------------------------------------- */
-/* second section */
-/* ------------------------------------------------------------------ */
+/* Category section */
+/* ---------------------------------------------------------------- */
 
 .category-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* padding: 80px 300px; */
-    padding-top: 40px;
-    gap: 40px;
-    position: absolute;
-    /* width: 1920px;
-    height: 680px; */
-    left: 206px;
-    /* top: 690px; */
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 80px 300px; */
+  padding-top: 40px;
+  gap: 40px;
+  position: relative;
+  width: 100%;
+}
 
   .category-title {
     width: 395px;
@@ -187,3 +186,111 @@
     font-size: 18px;
     color: #35AACD;
   }
+
+
+/* --------------------------------------------------------------- */
+/* CTR Section */
+/* ---------------------------------------------------------------- */
+:host {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #1D2026;
+}
+
+.cta-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 300px;
+  gap: 136px;
+  width: 100%;
+  height: 100%;
+  background: #1D2026;
+  box-shadow: inset 0px -1px 0px rgba(54, 59, 71, 0.5);
+  /* padding-top: 200px; Adjust if needed */
+}
+
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 536px;
+}
+
+.cta-content h2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-primary, .btn-secondary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 24px;
+  gap: 12px;
+  height: 48px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 48px;
+  letter-spacing: -0.008em;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  width: 168px;
+  background: #35AACD;
+}
+
+.btn-secondary {
+  width: 197px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.fun-facts {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.fun-fact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 200px;
+}
+
+.fun-fact h3 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+
+.fun-fact p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B7BAC7;
+}
