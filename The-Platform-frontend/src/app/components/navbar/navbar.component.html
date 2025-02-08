@@ -33,17 +33,24 @@
             <img src="../../../assets/The-platform-logo.png" alt="Logo" class="logo-img">
         </div>
         <div class="search-category d-flex">
-            <div class="dropdown-container">
-                <div class="dropdown-menu-category">
+            <div class="dropdown-container" [class.active]="isDropdownOpen">
+                <div class="dropdown-menu-category" (click)="toggleDropdown()">
                     <span class="dropdown-text">Browse</span>
                     <img class="dropdown-icon" src="../../../assets/navbar-icons/caret-icon.png" alt="Dropdown Icon">
                 </div>
-                <ul class="dropdown-options">
-                    <li class="dropdown-option">Option 1</li>
-                    <li class="dropdown-option">Option 2</li>
-                    <li class="dropdown-option">Option 3</li>
-                </ul>
+
+                @if (isDropdownOpen) {
+                    <ul class="dropdown-options">
+                        <li class="dropdown-option">Option 1</li>
+                        <li class="dropdown-option">Option 2</li>
+                        <li class="dropdown-option">Option 3</li>
+                    </ul>
+                }
+
             </div>
+            
+            
+            
             <div class="search-bar">
                 <img class="search-icon" src="../../../assets/navbar-icons/search-icon.png" alt="Search Icon">
                 <input class="search-input" type="text" placeholder="What do you want learn...">

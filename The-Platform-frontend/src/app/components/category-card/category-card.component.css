@@ -7,8 +7,15 @@
     width: 312px;
     height: 104px;
     border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling transition */
   }
   
+  /* Apply scaling effect on hover */
+.category-card:hover {
+  transform: scale(1.1); /* Slight enlargement effect */
+}
+
   .icon-container {
     display: flex;
     align-items: center;

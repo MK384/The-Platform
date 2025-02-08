@@ -1,45 +1,46 @@
 <!-- Intro section  -->
 <header class="intro-section">
-    <div class="intro-content">
-      <h1 class="intro-title">Makes learning easier.</h1>
-      <p class="intro-description">
-        Our mission is to help people to find the best course online and learn with expert anytime, anywhere.
-      </p>
-      <button class="intro-button">Create Account</button>
-    </div>
-    <div class="intro-image">
-      <img src="../../../assets/home-page-featured-image.jpeg" alt="Learning Illustration">
-    </div>
-  </header>
-<!-- Category section  -->
-  <section class="category-section">
-    <h2 class="category-title">Browse top category</h2>
-    <div class="category-container">
-      <div class="category-row">
-        @for (item of topcategories; track $index) {
-            @if ($index < 4) {<app-category-card [card]="item"></app-category-card>}
-        }
-      </div>
-      <div class="category-row">
-        @for (item of topcategories; track $index) {
-            @if ($index >= 4 && $index <= 7) {<app-category-card [card]="item"></app-category-card>}
-        }
-      </div>
-      <div class="category-row">
-        @for (item of topcategories; track $index) {
-            @if ($index < 12 && $index >= 8) {<app-category-card [card]="item"></app-category-card>}
-        }
-      </div>
-    </div>
+  <div class="intro-content">
+    <h1 class="intro-title">{{ displayedTitle }}</h1>
+    <p class="intro-description">{{ displayedDescription }}</p>
+    <button class="intro-button">Create Account</button>
+  </div>
+  <div class="intro-image" [class.fade]="isFading">
+    <img [src]="currentImage" alt="Learning Illustration">
+  </div>
+</header>
 
-    <div class="browse-all">
-        <p class="browse-text">We have more categories & subcategories.</p>
-        <button class="browse-button">
-          <span class="browse-label">Browse All</span>
-          <span class="arrow-right">➜</span>
-        </button>
-      </div>
-  </section>
+
+
+<!-- Category section  -->
+<section class="category-section">
+  <h2 class="category-title">Browse top category</h2>
+  <div class="category-container">
+    <div class="category-row">
+      @for (item of topcategories; track $index) {
+      @if ($index < 4) {<app-category-card [card]="item"></app-category-card>}
+        }
+    </div>
+    <div class="category-row">
+      @for (item of topcategories; track $index) {
+      @if ($index >= 4 && $index <= 7) {<app-category-card [card]="item"></app-category-card>}
+        }
+    </div>
+    <div class="category-row">
+      @for (item of topcategories; track $index) {
+      @if ($index < 12 && $index>= 8) {<app-category-card [card]="item"></app-category-card>}
+        }
+    </div>
+  </div>
+
+  <div class="browse-all">
+    <p class="browse-text">We have more categories & subcategories.</p>
+    <button class="browse-button">
+      <span class="browse-label">Browse All</span>
+      <span class="arrow-right">➜</span>
+    </button>
+  </div>
+</section>
 
 
 <!-- Best selling section  -->
@@ -57,19 +58,20 @@
 <!-- Trusted Companies section  -->
 <section class="trusted-companies">
   <div class="content">
-      <h2>6.3k trusted companies</h2>
-      <p>Leading brands worldwide trust our platform for reliability, innovation, and exceptional service. Join a growing network of industry leaders who rely on us to drive success and innovation.</p>
-    </div>
+    <h2>6.3k trusted companies</h2>
+    <p>Leading brands worldwide trust our platform for reliability, innovation, and exceptional service. Join a growing
+      network of industry leaders who rely on us to drive success and innovation.</p>
+  </div>
 
   <div class="logos-grid">
-      <div class="logo-card"><img src="../../../assets/Trustedby-logos/netflex-logo.png" alt="Netflix"></div>
-      <div class="logo-card"><img src="../../../assets/Trustedby-logos/youtube-logo.png" alt="YouTube"></div>
-      <div class="logo-card"><img src="../../../assets/Trustedby-logos/google-logo.png" alt="Google"></div>
-      <div class="logo-card"><img src="../../../assets/Trustedby-logos/lenovo-logo.png" alt="Lenovo"></div>
-      <div class="logo-card"><img src="../../../assets/Trustedby-logos/slack-logo.png" alt="Slack"></div>
-      <div class="logo-card"><img src="../../../assets/Trustedby-logos/verizon-logo.png" alt="Verizon"></div>
-      <div class="logo-card"><img src="../../../assets/Trustedby-logos/lexmark-logo.png" alt="Lexmark"></div>
-      <div class="logo-card"><img src="../../../assets/Trustedby-logos/microsoft-logo.png" alt="Microsoft"></div>
+    <div class="logo-card"><img src="../../../assets/Trustedby-logos/netflex-logo.png" alt="Netflix"></div>
+    <div class="logo-card"><img src="../../../assets/Trustedby-logos/youtube-logo.png" alt="YouTube"></div>
+    <div class="logo-card"><img src="../../../assets/Trustedby-logos/google-logo.png" alt="Google"></div>
+    <div class="logo-card"><img src="../../../assets/Trustedby-logos/lenovo-logo.png" alt="Lenovo"></div>
+    <div class="logo-card"><img src="../../../assets/Trustedby-logos/slack-logo.png" alt="Slack"></div>
+    <div class="logo-card"><img src="../../../assets/Trustedby-logos/verizon-logo.png" alt="Verizon"></div>
+    <div class="logo-card"><img src="../../../assets/Trustedby-logos/lexmark-logo.png" alt="Lexmark"></div>
+    <div class="logo-card"><img src="../../../assets/Trustedby-logos/microsoft-logo.png" alt="Microsoft"></div>
   </div>
 </section>
 
@@ -77,24 +79,24 @@
 <!-- The last section  -->
 <section class="cta-section">
   <div class="cta-content">
-      <h2>Start learning with 67.1k students around the world.</h2>
-      <div class="cta-buttons">
-          <button class="btn-primary">Join The Family</button>
-          <button class="btn-secondary">Browse All Courses</button>
-      </div>
+    <h2>Start learning with 67.1k students around the world.</h2>
+    <div class="cta-buttons">
+      <button class="btn-primary">Join The Family</button>
+      <button class="btn-secondary">Browse All Courses</button>
+    </div>
   </div>
   <div class="fun-facts">
-      <div class="fun-fact">
-          <h3>6.3k</h3>
-          <p>Online courses</p>
-      </div>
-      <div class="fun-fact">
-          <h3>26k</h3>
-          <p>Certified Instructor</p>
-      </div>
-      <div class="fun-fact">
-          <h3>99.9%</h3>
-          <p>Success Rate</p>
-      </div>
+    <div class="fun-fact">
+      <h3>6.3k</h3>
+      <p>Online courses</p>
+    </div>
+    <div class="fun-fact">
+      <h3>26k</h3>
+      <p>Certified Instructor</p>
+    </div>
+    <div class="fun-fact">
+      <h3>99.9%</h3>
+      <p>Success Rate</p>
+    </div>
   </div>
 </section>
