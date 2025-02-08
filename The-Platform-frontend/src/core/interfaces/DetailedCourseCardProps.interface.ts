@@ -3,11 +3,11 @@ export interface DetailedCourseCardProps {
     category:string;
     instructor: string;
     instructorImageUrl: string;
-    price: string;
-    oldPrice?: string;
-    rating: string;
-    reviewCount: string;
-    enrolledStudents: string;
+    price: number;
+    oldPrice?: number;
+    rating: number;
+    reviewCount: number;
+    enrolledStudents: number;
     difficultyLevel: 'Beginner' | 'Intermediate' | 'Advanced';
     duration: number; // e.g., "10h 30m"
     imageUrl: string;
