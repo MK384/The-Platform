@@ -187,6 +187,81 @@
     color: #35AACD;
   }
 
+/* --------------------------------------------------------------- */
+/* Trusted Companies Section */
+/* ---------------------------------------------------------------- */
+/* Trusted Companies Section */
+.trusted-companies {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 300px;
+  gap: 24px;
+  width: 100%; /* Make it responsive */
+  max-width: 1920px;
+  height: auto; /* Adjust height dynamically */
+  position: relative; /* Changed from absolute to relative */
+  margin: 0 auto; /* Center the section */
+}
+
+/* Left Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  width: 424px;
+  height: 130px;
+}
+
+.content h2 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+  color: #1D2026;
+  margin: 0;
+}
+
+.content p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  color: #6E7485;
+  width: 312px;
+  margin: 0;
+}
+
+/* Logos Grid */
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Logo Card */
+.logo-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px;
+  width: 200px;
+  height: 100px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 32px rgba(9, 26, 68, 0.07);
+}
+
+.logo-card img {
+  width: 100px;
+  height: 100px;
+}
+
 
 /* --------------------------------------------------------------- */
 /* CTR Section */
