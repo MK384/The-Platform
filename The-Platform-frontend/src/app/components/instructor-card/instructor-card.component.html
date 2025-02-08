@@ -1,0 +1,20 @@
+<div class="instructor-card">
+    <div class="instructor-image">
+        <img [src]="cardData.imageUrl" alt="Instructor Photo">
+    </div>
+    <div class="info">
+        <p class="instructor-name">{{cardData.name}}</p>
+        <p class="headline">{{cardData.title}}</p>
+    </div>
+    <div class="divider"></div>
+    <div class="rating-students">
+        <div class="rating">
+            <img class="star-icon" src="../../../assets/instructor-asset/star-icon.png" alt="Star">
+            <span class="rating-value">{{cardData.rating| ratingFormat}}</span>
+        </div>
+        <div class="students">
+            <span class="students-number">{{cardData.students| numberFormat}}</span>
+            <span class="students-text">students</span>
+        </div>
+    </div>
+</div>
