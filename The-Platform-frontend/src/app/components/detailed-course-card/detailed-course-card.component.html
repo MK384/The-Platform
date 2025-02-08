@@ -7,8 +7,8 @@
             <div class="header">
                 <div class="category-badge">{{card.category}}</div>
                 <div class="price">
-                    <span class="current-price">${{card.price}}</span>
-                    <span class="old-price">${{card.oldPrice}}</span>
+                    <span class="current-price">{{card.price | priceFormat}}</span>
+                    <span class="old-price">{{card.oldPrice | priceFormat}}</span>
                 </div>
             </div>
             <h2 class="course-title">{{card.title}}</h2>
@@ -19,15 +19,15 @@
                 </div>
                 <div class="rating">
                     <img [src]="iconsUrls.star" alt="Star">
-                    <span class="rate-value">{{card.rating}}</span>
-                    <span class="raters-count">({{card.reviewCount}})</span>
+                    <span class="rate-value">{{card.rating | ratingFormat}}</span>
+                    <span class="raters-count">({{card.reviewCount | numberFormat}})</span>
                 </div>
             </div>
             <hr>
             <div class="course-info">
                 <div class="students">
                     <img [src]="iconsUrls.user" alt="Students">
-                    <span id="students-count">{{card.enrolledStudents}}</span>
+                    <span id="students-count">{{card.enrolledStudents | kNotationFormat}}</span>
                     <span id="student-text">students</span>
                 </div>
                 <div class="difficulty">
