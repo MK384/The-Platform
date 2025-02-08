@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+/* Remove any default margin or padding from the body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.page-content{
+
+    padding-top: 130px; /* Adjust based on the total height of both navbars */
+}
