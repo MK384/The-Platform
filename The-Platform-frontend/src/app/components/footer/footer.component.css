@@ -72,7 +72,7 @@
     /* width: 200px;
     height: 170; */
     margin: 20px;
-    /* padding: 20px; */
+    /* padding: 40px; */
     gap: 60px;
 }
 
@@ -135,13 +135,22 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.footer-links ul li a:hover span::after {
-    content: " →";
-    color: #FF6636;
-    font-size: 24px; /* Enlarged arrow */
-    /* font-weight: bold; */
-    transition: 0.3s ease-in-out;
+.footer-links ul li a span {
+    display: inline-block;
+    min-width: 20px; /* Reserve space for the arrow */
 }
+
+.footer-links ul li a span::after {
+    content: " →"; /* Always present */
+    color: transparent; /* Invisible by default */
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links ul li a:hover span::after {
+    color: #FF6636; /* Show on hover */
+}
+
 
 .download-app {
     display: flex;
