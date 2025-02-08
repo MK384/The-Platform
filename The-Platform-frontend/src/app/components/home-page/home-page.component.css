@@ -14,55 +14,67 @@
     box-sizing: border-box;
   }
   
-  /* Intro Content */
-  .intro-content {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    max-width: 648px;
-  }
-  
-  /* Title */
-  .intro-title {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 72px;
-    line-height: 74px;
-    letter-spacing: -0.02em;
-    color: #1D2026;
-    margin: 0;
-  }
-  
-  /* Description */
-  .intro-description {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
-    color: #4E5566;
-    margin: 0;
-  }
-  
-  /* Button */
-  .intro-button {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 56px;
-    text-transform: capitalize;
-    letter-spacing: -0.01em;
-    color: #FFFFFF;
-    background: #35AACD;
-    border: none;
-    border-radius: 15px;
-    padding: 0 32px;
-    width: 198px;
-    height: 56px;
-    cursor: pointer;
-  }
+ /* Ensure the intro section stays properly aligned */
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 100%;
+  min-height: 250px; /* Increased height to avoid overlap */
+  justify-content: flex-start; /* Ensures proper vertical alignment */
+  position: relative;
+}
+
+/* Prevent shifting during typing effect */
+.intro-title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 74px;
+  letter-spacing: -0.02em;
+  color: #1D2026;
+  margin: 0;
+  min-height: 90px; /* Fixed space for title */
+  overflow: hidden; /* Prevents movement */
+  white-space: nowrap; /* Ensures text stays in a single line */
+}
+
+/* Prevent shifting of description */
+.intro-description {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #4E5566;
+  margin: 0;
+  min-height: 72px; /* Fixed height for consistency */
+  overflow: hidden;
+  white-space: normal; /* Allows text wrapping */
+}
+
+/* Button stays fixed in place */
+.intro-button {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 56px;
+  text-transform: capitalize;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  background: #35AACD;
+  border: none;
+  border-radius: 15px;
+  padding: 0 32px;
+  width: 198px;
+  height: 56px;
+  cursor: pointer;
+  align-self: flex-start; /* Aligns button to start without overlapping */
+  margin-top: 20px; /* Adds space to prevent overlap */
+}
+
   
   .intro-button:hover {
     background: #2A90B1;
@@ -71,11 +83,11 @@
   /* Intro Image */
   .intro-image {
     position: relative;
-    width: 900px;
+    width: 100%;
     height: 548px;
-
-      clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%); /* Oblique effect */
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%); /* Oblique effect */
     z-index: 1;
+    overflow: hidden; /*Prevents flickering*/
   }
   
   .intro-image img {
@@ -83,9 +95,15 @@
     height: 100%;
     object-fit: cover;
     object-position: right;
+    transition: opacity 0.8s ease-in-out; /* Smooth fade transition */
   }
-  
 
+/* Fading Effect */
+.intro-image.fade img {
+  opacity: 0; /* Temporary dim effect */
+}
+
+  
 /* --------------------------------------------------------------- */
 /* Category section */
 /* ---------------------------------------------------------------- */
