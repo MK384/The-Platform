@@ -4,11 +4,14 @@ import { CategoryCardProps } from '../../../core/interfaces/CategoryCardProps.in
 import { InstructorCardComponent } from "../instructor-card/instructor-card.component";
 import { BecomeInstructorCardComponent } from "../become-instructor-card/become-instructor-card.component";
 import { InstructorCardProps } from '../../../core/interfaces/InstuctorCardProps.interface';
+import { CourseCardComponent } from "../course-card/course-card.component";
+import { DetailedCourseCardProps } from '../../../core/interfaces/DetailedCourseCardProps.interface';
+import { DetailedCourseCardComponent } from "../detailed-course-card/detailed-course-card.component";
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CategoryCardComponent, InstructorCardComponent, BecomeInstructorCardComponent],
+  imports: [CategoryCardComponent, InstructorCardComponent, BecomeInstructorCardComponent, CourseCardComponent, DetailedCourseCardComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
@@ -132,6 +135,66 @@ export class HomePageComponent implements OnInit, OnDestroy {
         students: 2711
     }
 ];
+
+ featuredCourses: DetailedCourseCardProps[] = [
+  {
+    title: "Investing In Stocks The Complete Course! (13 H...)", 
+    category: "HEALTH & FITNESS",
+    instructor: "Kevin Gilbert",
+    instructorImageUrl: "../../../assets/instructor-asset/instructor1.png",
+    price: 14.00,
+    oldPrice: 26.00,
+    rating: 5.0,
+    reviewCount: 357914,
+    enrolledStudents: 265700,
+    difficultyLevel: "Beginner",
+    duration: 6,
+    imageUrl: "../../../assets/course-images/course-image.png"
+  },
+  {
+    title: "Google Analytics Certification - Learn How To...",
+    category: "PERSONAL DEVELOPMENT",
+    instructor: "Kevin Gilbert",
+    instructorImageUrl: "../../../assets/instructor-asset/instructor2.png",
+    price: 14.00,
+    oldPrice: 26.00,
+    rating: 5.0,
+    reviewCount: 357914,
+    enrolledStudents: 265700,
+    difficultyLevel: 'Intermediate',
+    duration: 6,
+    imageUrl: "../../../assets/course-images/course-image.png"
+  },
+  {
+    title: "Adobe XD for Web Design: Essential Principles",
+    category: "PRODUCTIVITY",
+    instructor: "Kevin Gilbert",
+    instructorImageUrl: "../../../assets/instructor-asset/instructor3.png",
+    price: 14.00,
+    oldPrice: 26.00,
+    rating: 5.0,
+    reviewCount: 357914,
+    enrolledStudents: 265700,
+    difficultyLevel: 'Advanced',
+    duration: 6,
+    imageUrl: "../../../assets/course-images/course-image.png"
+  },
+  {
+    title: "The Python Mega Course: Build 10 Real World ...",
+    category: "MUSIC",
+    instructor: "Kevin Gilbert",
+    instructorImageUrl: "../../../assets/instructor-asset/instructor4.png",
+    price: 14.00,
+    oldPrice: 26.00,
+    rating: 5.0,
+    reviewCount: 357914,
+    enrolledStudents: 265700,
+    difficultyLevel:  'Intermediate',
+    duration: 6,
+    imageUrl: "../../../assets/course-images/course-image.png"
+  }
+];
+
 
 
   images: string[] = [
