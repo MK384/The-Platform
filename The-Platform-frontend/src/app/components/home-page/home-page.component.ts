@@ -4,11 +4,12 @@ import { CategoryCardProps } from '../../../core/interfaces/CategoryCardProps.in
 import { InstructorCardComponent } from "../instructor-card/instructor-card.component";
 import { BecomeInstructorCardComponent } from "../become-instructor-card/become-instructor-card.component";
 import { InstructorCardProps } from '../../../core/interfaces/InstuctorCardProps.interface';
+import { CourseCardComponent } from "../course-card/course-card.component";
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CategoryCardComponent, InstructorCardComponent, BecomeInstructorCardComponent],
+  imports: [CategoryCardComponent, InstructorCardComponent, BecomeInstructorCardComponent, CourseCardComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
