@@ -63,6 +63,12 @@ p {
     border-radius: 8px;
     cursor: pointer;
     margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.start-teaching:hover{
+    background: #fac69c;
+    color: #ffffff;
 }
 
 /* Arrow icon */
