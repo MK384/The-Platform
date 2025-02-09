@@ -7,12 +7,13 @@ import { InstructorCardComponent } from "./components/instructor-card/instructor
 import { DetailedCourseCardComponent } from "./components/detailed-course-card/detailed-course-card.component";
 import { BecomeInstructorCardComponent } from "./components/become-instructor-card/become-instructor-card.component";
 import { CourseCardComponent } from "./components/course-card/course-card.component";
+import { RegularCourseCardComponent } from "./components/regular-course-card/regular-course-card.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, HomePageComponent, FooterComponent, InstructorCardComponent, DetailedCourseCardComponent, BecomeInstructorCardComponent, CourseCardComponent],
+  imports: [RouterOutlet, NavbarComponent, HomePageComponent, FooterComponent, InstructorCardComponent, DetailedCourseCardComponent, BecomeInstructorCardComponent, CourseCardComponent, RegularCourseCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

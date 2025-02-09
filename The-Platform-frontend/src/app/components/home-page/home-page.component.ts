@@ -7,11 +7,12 @@ import { InstructorCardProps } from '../../../core/interfaces/InstuctorCardProps
 import { CourseCardComponent } from "../course-card/course-card.component";
 import { DetailedCourseCardProps } from '../../../core/interfaces/DetailedCourseCardProps.interface';
 import { DetailedCourseCardComponent } from "../detailed-course-card/detailed-course-card.component";
+import { RegularCourseCardComponent } from '../regular-course-card/regular-course-card.component';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CategoryCardComponent, InstructorCardComponent, BecomeInstructorCardComponent, CourseCardComponent, DetailedCourseCardComponent],
+  imports: [CategoryCardComponent, InstructorCardComponent, BecomeInstructorCardComponent, CourseCardComponent, DetailedCourseCardComponent ,RegularCourseCardComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
