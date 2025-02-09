@@ -6,5 +6,6 @@ body {
 
 .page-content{
 
+    overflow: hidden;
     padding-top: 130px; /* Adjust based on the total height of both navbars */
 }

@@ -52,7 +52,59 @@
 <!-- recently added section  -->
 
 
-<!-- Instructors section  -->
+<!-- Become Instructor section  -->
+
+<section class="become-instructor-section">
+  <!-- Left Side: Become an Instructor Card -->
+  <div class="become-instructor-card">
+    <app-become-instructor-card></app-become-instructor-card>
+  </div>
+  <!-- Right Side: Teaching & Earning Steps -->
+  <div class="teaching-steps-card">
+    <h2>Your teaching & earning steps</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-number step-blue">1</span>
+        <p>Apply to become instructor</p>
+      </div>
+      <div class="step">
+        <span class="step-number step-red">2</span>
+        <p>Build & edit your profile</p>
+      </div>
+      <div class="step">
+        <span class="step-number step-orange">3</span>
+        <p>Create your new course</p>
+      </div>
+      <div class="step">
+        <span class="step-number step-green">4</span>
+        <p>Start teaching & earning</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Top Instructors section  -->
+
+<section class="top-instructors-section">
+  <h2 class="section-title">Top instructor of the month</h2>
+
+  <div class="row justify-content-center">
+    @for (instructor of topInstructors; track $index) {
+    <div class="col-md-2 col-sm-6">
+      <app-instructor-card [cardData]="instructor"></app-instructor-card>
+    </div>
+    }
+  </div>
+
+  <div class="browse-section">
+    <p class="description-text">
+      Thousands of students waiting for an instructor. Start teaching & earning now!.
+    </p>
+    <a href="#" class="become-instructor">
+      Become Instructor →
+    </a>
+  </div>
+</section>
 
 
 <!-- Trusted Companies section  -->
