@@ -1,11 +1,14 @@
 import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
 import { CategoryCardComponent } from "../category-card/category-card.component";
 import { CategoryCardProps } from '../../../core/interfaces/CategoryCardProps.interface';
+import { InstructorCardComponent } from "../instructor-card/instructor-card.component";
+import { BecomeInstructorCardComponent } from "../become-instructor-card/become-instructor-card.component";
+import { InstructorCardProps } from '../../../core/interfaces/InstuctorCardProps.interface';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CategoryCardComponent],
+  imports: [CategoryCardComponent, InstructorCardComponent, BecomeInstructorCardComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
@@ -91,6 +94,44 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
 
   ]
+
+   topInstructors: InstructorCardProps[] = [
+    {
+        name: 'Devon Lane',
+        title: 'Senior Developer',
+        imageUrl: './../../assets/instructor-asset/instructor1.png',
+        rating: 4.6,
+        students: 854
+    },
+    {
+        name: 'Darnell Steward',
+        title: 'Digital Product Designer',
+        imageUrl: './../../assets/instructor-asset/instructor2.png', // Assuming similar image path
+        rating: 4.9,
+        students: 451444
+    },
+    {
+        name: 'Jane Cooper',
+        title: 'UI/UX Designer',
+        imageUrl: './../../assets/instructor-asset/instructor3.png', // Assuming similar image path
+        rating: 4.8,
+        students: 435671
+    },
+    {
+        name: 'Albert Flores',
+        title: 'Adobe Instructor',
+        imageUrl: './../../assets/instructor-asset/instructor4.png', // Assuming similar image path
+        rating: 4.7,
+        students: 511123
+    },
+    {
+        name: 'Kathryn Murphy',
+        title: 'Lead Developer',
+        imageUrl: './../../assets/instructor-asset/instructor5.png', // Assuming similar image path
+        rating: 4.2,
+        students: 2711
+    }
+];
 
 
   images: string[] = [
