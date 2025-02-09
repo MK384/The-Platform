@@ -1,0 +1,156 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Course Card */
+.course-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 14px;
+    gap: 14px;
+    width: 244px;
+    height: 333px;
+    background: #FFFFFF;
+    border: 1px solid #E9EAF0;
+    border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.course-card:hover {
+
+    background: #edf1f3;
+    border-color: #c0c2cb;
+    box-shadow: 0px 12px 32px rgba(29, 32, 38, 0.1);
+    scale: 1.05;
+}
+
+/* Course Image */
+.course-image img {
+    max-width: 244px;
+    max-height: 183px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+/* Course Info */
+.course-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 76px;
+    padding: 0 18px;
+    margin-top: -10px;
+}
+
+.course-info h3{
+
+    margin-top: -10px;
+}
+
+/* Price & Category */
+.price-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+}
+
+/* Category Badge */
+.category-badge {
+    background: #F7FBDE;
+    color: #F1B72F;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 4px 6px;
+    border-radius: 5px;
+}
+
+/* Price */
+.course-price {
+    color: #35AACD;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Course Title */
+.course-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1D2026;
+    text-align: left;
+    padding-top: 10px;
+}
+
+/* Divider */
+.divider {
+    width: 100%;
+    height: 1px;
+    /* background: #E9EAF0; */
+    border: #E9EAF0 solid 1px;
+}
+
+/* Rating & Students */
+.rating-students {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 18px;
+    
+    /* margin-top: -25px; */
+}
+
+/* Rating */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.rating img {
+    width: 20px;
+    height: 20px;
+}
+
+.rating-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4E5566;
+}
+
+/* Students */
+.students {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: flex-end; /* Ensure the text "students" remains fixed */
+}
+
+.students img {
+    width: 20px;
+    height: 20px;
+}
+
+.students-number {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4E5566;
+    
+}
+
+.students-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #8C94A3;
+}

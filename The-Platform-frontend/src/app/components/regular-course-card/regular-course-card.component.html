@@ -1,0 +1,33 @@
+
+<div class="course-card">
+    <!-- Course Image -->
+    <div class="course-image">
+        <img src="../../../assets/course-images/course-image1.png" alt="Course Thumbnail">
+    </div>
+    
+    <!-- Course Info -->
+    <div class="course-info">
+        <div class="price-category">
+            <span class="category-badge" 
+            [ngStyle]="{ 'background': cardData.categoryBGColor, 'color': cardData.categoryTextColor}">{{cardData.category}}</span>
+            <span class="course-price">${{cardData.price}}</span>
+        </div>
+        <h3 class="course-title">{{cardData.title}}</h3>
+    </div>
+    
+    <!-- Divider -->
+    <div class="divider"></div>
+    
+    <!-- Rating & Students -->
+    <div class="rating-students">
+        <div class="rating">
+            <img src="../../../assets/course_icons/star.png" alt="Star Icon">
+            <span class="rating-value">{{cardData.rate | ratingFormat}}</span>
+        </div>
+        <div class="students">
+            <img src="../../../assets/course_icons/user-icon.png" alt="User Icon">
+            <span class="students-number">{{cardData.enrolledStudents | kNotationFormat}}</span>
+            <span class="students-text">students</span>
+        </div>
+    </div>
+</div>
