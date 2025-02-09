@@ -1,0 +1,40 @@
+.selling-courses-comp {
+    min-height: 100vh;
+    background-color: #DDEDF2;
+}
+
+.card {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    max-width: 244px;
+    max-height: 333px;
+}
+
+.card-p {
+    line-height: 20px;
+    font-weight: 500;
+    height: 3em;
+    overflow: hidden;
+    font-size: 14px !important;
+    font-family: 'Inter', sans-serif;
+
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.divider {
+    width: 100%;
+    border: 1px solid #E9EAF0;
+    opacity: 0.7;
+}
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+ 
