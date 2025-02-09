@@ -250,13 +250,12 @@ margin: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
-  background-color: #FFFFFF;
+  margin-bottom: 80px;
+ 
   min-width: 1320px;
   min-height: 691px;
-
-  gap: 25px;
+margin-bottom: 200px;
+  gap: 40px;
 }
 
 
@@ -396,7 +395,7 @@ margin: auto;
   /* top: 50%; */
   /* Moves it back up by half of its height */
   /* transform: translateY(-30%);  */
-  margin-top: -10%;
+  margin-top: -12%;
   position: relative;
   z-index: 1;
 }
