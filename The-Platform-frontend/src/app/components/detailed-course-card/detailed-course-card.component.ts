@@ -4,11 +4,13 @@ import { PriceFormatPipe } from '../../../core/pipes/price-format.pipe';
 import { RatingFormatPipe } from '../../../core/pipes/rating-format.pipe';
 import { NumberFormatPipe } from '../../../core/pipes/number-format.pipe';
 import { KNotationFormatPipe } from '../../../core/pipes/k-notation-format.pipe';
+import { CategoryColorService } from '../../services/category-color.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-detailed-course-card',
   standalone: true,
-  imports: [PriceFormatPipe, RatingFormatPipe, NumberFormatPipe, KNotationFormatPipe],
+  imports: [PriceFormatPipe, RatingFormatPipe, NumberFormatPipe, KNotationFormatPipe, CommonModule],
   templateUrl: './detailed-course-card.component.html',
   styleUrl: './detailed-course-card.component.css'
 })
@@ -21,7 +23,7 @@ export class DetailedCourseCardComponent {
     level:string;
   };
 
-  constructor(){
+  constructor(private categoryColorService: CategoryColorService){
 
     this.iconsUrls = {
 
@@ -34,7 +36,7 @@ export class DetailedCourseCardComponent {
 
   }
 
-  @Input() card:DetailedCourseCardProps = {
+  @Input() cardData:DetailedCourseCardProps = {
 
     title: "Adobe XD for Web Design: Essential Principles",
     category: "PRODUCTIVITY",
@@ -50,5 +52,15 @@ export class DetailedCourseCardComponent {
     imageUrl: "../../../assets/course-image.png"
 
   }
+
+
+    textColor!: string;
+    bgColor!: string;
+    
+    ngOnInit() {
+      const colors = this.categoryColorService.getCategoryColors(this.cardData.category);
+      this.textColor = colors.text;
+      this.bgColor = colors.background;
+    }
 
 }
