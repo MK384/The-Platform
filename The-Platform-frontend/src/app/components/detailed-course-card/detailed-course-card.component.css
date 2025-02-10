@@ -50,12 +50,12 @@
 }
 
 .category-badge {
-    background: rgba(255, 198, 60, 0.77);
+
     padding: 4px 6px;
     font-size: 10px;
     font-weight: 500;
     text-transform: uppercase;
-    color: #1D2026;
+    
 }
 
 .price {

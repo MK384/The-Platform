@@ -3,24 +3,24 @@
     <div class="card-content">
         <div class="course-info">
             <div class="category-title">
-                <span class="category">DEVELOPMENTS</span>
-                <span class="title">2021 Complete Python Bootcamp From Zero to Hero in Python</span>
+                <span class="category" [ngStyle]="{ 'background': bgColor, 'color': textColor}">{{cardData.category}}</span>
+                <span class="title">{{cardData.title}}</span>
             </div>
 
             <div class="course-by">
                 <div class="instructor">
-                    <img src="../../../assets/instructor-asset/instructor1.png">
+                    <img [src]="cardData.instructorImageUrl">
                     <div class="instructor-name">
                         <span id="course-by">Course by</span>
-                        <span id="name">Kevin Gilbert</span>
+                        <span id="name">{{cardData.instructor}}</span>
                     </div>
                 </div>
 
                 <div class="rating">
 
                     <img src="../../../assets/course_icons/star.png">
-                    <span id="rating-value">5.0</span>
-                    <span id="students-rated">(357,914)</span>
+                    <span id="rating-value">{{cardData.rating | ratingFormat}}</span>
+                    <span id="students-rated">({{cardData.reviewCount | numberFormat}})</span>
                 </div>
             </div>
         </div>
@@ -29,17 +29,17 @@
             <div class="students">
                 <img src="../../../assets/course_icons/user-icon.png" style="height: 20px; width: 20px;">
                 <div>
-                    <span id="students-enrolled">265.7K </span>
+                    <span id="students-enrolled">{{cardData.enrolledStudents | kNotationFormat}}</span>
                     <span id="student-text">students</span>
                 </div>
             </div>
             <div class="course-difficulty">
                 <img src="../../../assets/course_icons/bar-chart.png" style="height: 20px; width: 20px;">
-                <span id="level">Beginner</span>
+                <span id="level">{{cardData.difficultyLevel}}</span>
             </div>
             <div class="course-duration">
                 <img src="../../../assets/course_icons/clock.png" style="height: 20px; width: 20px;">
-                <span id="hours">6 hour</span>
+                <span id="hours">{{cardData.duration}} hour</span>
             </div>
         </div>
 
@@ -48,14 +48,17 @@
 
                 <div class="d-flex gap-1 align-items-center">
 
-                    <span id="price">$14.00</span>
-                    <span id="old-price">$26.00</span>
-
+                    <span id="price">{{cardData.price | priceFormat}}</span>
+                    @if (cardData.discount) {
+                        <span id="old-price">{{cardData.oldPrice | priceFormat}}</span>
+                    }
                 </div>
 
                 <div class="sale d-flex justify-content-center align-items-center">
-                    <span class="off value">56%</span>
-                    <span class="off">OFF</span>
+                    @if (cardData.discount) {
+                        <span class="off value">{{cardData.price | discountPercentage:cardData.oldPrice!}}</span>
+                        <span class="off">OFF</span>
+                    }
                 </div>
 
             </div>
@@ -71,16 +74,15 @@
             <span id="what-you-learn">WHAT YOU'LL LEARN</span>
             <div class="learn-item">
                 <img src="../../../assets/course_icons/check-icon.png" alt="Check">
-                <span id="learn-item-text">Learn to use Python professionally, learning both Python 2 and Python
-                    3!</span>
+                <span id="learn-item-text">{{cardData.learningPoints[0]}}</span>
             </div>
             <div class="learn-item">
                 <img src="../../../assets/course_icons/check-icon.png" alt="Check">
-                <span id="learn-item-text">Create games with Python, like Tic Tac Toe and Blackjack!</span>
+                <span id="learn-item-text">{{cardData.learningPoints[1]}}</span>
             </div>
             <div class="learn-item">
                 <img src="../../../assets/course_icons/check-icon.png" alt="Check">
-                <span id="learn-item-text">Create games with Python, like Tic Tac Toe and Blackjack!</span>
+                <span id="learn-item-text">{{cardData.learningPoints[2]}}</span>
             </div>
         </div>
 
