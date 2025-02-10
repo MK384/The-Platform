@@ -8,11 +8,14 @@ import { CourseCardComponent } from "../course-card/course-card.component";
 import { DetailedCourseCardProps } from '../../../core/interfaces/DetailedCourseCardProps.interface';
 import { DetailedCourseCardComponent } from "../detailed-course-card/detailed-course-card.component";
 import { RegularCourseCardComponent } from '../regular-course-card/regular-course-card.component';
+import { HoveringCardService } from '../../services/hovering-card.service';
+import { HoveringCourseCardComponent } from "../hovering-course-card/hovering-course-card.component";
+import { log } from 'console';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CategoryCardComponent, InstructorCardComponent, BecomeInstructorCardComponent, CourseCardComponent, DetailedCourseCardComponent ,RegularCourseCardComponent],
+  imports: [CategoryCardComponent, InstructorCardComponent, BecomeInstructorCardComponent, CourseCardComponent, DetailedCourseCardComponent, RegularCourseCardComponent, HoveringCourseCardComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
@@ -232,7 +235,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
   private imageIndex: number = 0;
   private intervalId: any;
 
-  constructor(private ngZone: NgZone) { } // Inject NgZone
+  constructor(private ngZone: NgZone, public hoveringService: HoveringCardService) { } // Inject NgZone
 
   ngOnInit(): void {
     this.startImageRotation();
@@ -299,5 +302,50 @@ export class HomePageComponent implements OnInit, OnDestroy {
       }
     }, 40); // Adjust speed of typing effect
   }
+
+
+
+
+  // hovering card controllers
+
+  public outOfCourseCard:boolean = true;
+  public outOfHoveringCard:boolean = true; 
+
+  mouseEnterCourseCard(event: MouseEvent){
+    this.outOfCourseCard = false;
+
+    this.ngZone.run(() => {setTimeout(() => {
+
+      console.log(`x: ${event.screenX} , Y: ${event.screenY}`);
+
+       let x = event.pageX - 10 ; 
+       let y = event.pageY - 300
+       // Offset for better positioning
+      y = (event.screenY < 410)? y + (550 - event.screenY): (event.screenY > 750)? y - ( event.screenY - 650): y;
+      x = (x > 1470)? x - 410: x;
+      this.hoveringService.show(x, y);
+    },100)});
+  }
+  mouseLeaveCourseCard(){
+
+    this.outOfCourseCard = true;
+    this.ngZone.run(() => {setTimeout(() => {
+      if (this.outOfCourseCard && this.outOfHoveringCard) {
+        this.hoveringService.hide();
+      }
+    },200)});  }
+
+  mouseEnterHoveringCard(){
+    this.outOfHoveringCard = false;
+  }
+  mouseLeaveHoveringCard(){
+    this.outOfHoveringCard = true;
+    this.ngZone.run(() => {setTimeout(() => {
+      if (this.outOfCourseCard && this.outOfHoveringCard) {
+        this.hoveringService.hide();
+      }
+    },200)});
+  }
+
 
 }
