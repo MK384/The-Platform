@@ -7,7 +7,7 @@
 /The-Platform-frontend/bazel-out
 
 # Node
-/node_modules
+/node_modules/*
 /The-Platform-backend/node_modules
 /The-Platform-frontend/node_modules
 /The-Platform-backend/npm-debug.log
@@ -39,6 +39,7 @@
 .history/*
 
 # Miscellaneous
+.angular
 /The-Platform-frontend/.angular
 /.angular/cache
 .sass-cache/
