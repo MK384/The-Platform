@@ -1,8 +1,18 @@
-<app-navbar></app-navbar> 
+@if (!isLoginPage) {
+
+<app-navbar></app-navbar>
 
 <div class="page-content">
-        <router-outlet />
-</div>  
+        <router-outlet></router-outlet>
+</div>
 
 <app-footer></app-footer>
 
+}
+@else {
+        <router-outlet></router-outlet>   
+}
+
+
+
+<!-- <app-login-page></app-login-page> -->

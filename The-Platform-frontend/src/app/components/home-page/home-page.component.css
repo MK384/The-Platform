@@ -1,3 +1,7 @@
+
+* {
+  font-family: 'Inter', sans-serif;
+}
 /* --------------------------------------------------------------- */
 /* Intro section */
 /* ---------------------------------------------------------------- */
@@ -29,7 +33,7 @@
 
 /* Prevent shifting during typing effect */
 .intro-title {
-  font-family: 'Inter', sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 72px;
