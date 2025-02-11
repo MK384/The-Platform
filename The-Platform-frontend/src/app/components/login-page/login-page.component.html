@@ -30,9 +30,14 @@
 
                     <div class="input-group position-relative">
                         <label for="password">Password</label>
-                        <input type="password" id="password" placeholder="Password">
-                        <span class="eye-icon">
-                            <img src="../../../assets/login-page-assets/opened-eye-icon.png" style="height: 24px; width: 24px;" alt="Toggle Password">
+                        <input [type]="passType" id="password" placeholder="Password">
+                        <span (click)="eyeClicked()" class="eye-icon">
+                            @if (passHiden) {
+                                <img src="../../../assets/login-page-assets/opened-eye-icon.png" style="height: 24px; width: 24px;" alt="Toggle Password">
+                            }
+                            @else {
+                                <img src="../../../assets/login-page-assets/eye-slash.png" style="height: 24px; width: 24px;" alt="Toggle Password">
+                            }
                         </span>
                     </div>
 
