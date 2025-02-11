@@ -9,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class LoginPageComponent {
 
+  passHiden = true;
+  passType = 'password';
+
+  eyeClicked(){
+
+    this.passHiden = !this.passHiden;
+    this.passType = this.passHiden? 'password':'text';
+
+
+  }
 }
