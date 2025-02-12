@@ -23,10 +23,10 @@
             <div class="category-header d-flex flex-row justify-content-between" (click)="category.dropped=!category.dropped" style="width: 272px;">
 
                 <div class="d-flex" style="gap: 12px;">
-                    <img src="../../../assets/filter-bar/Pasted image.png" style="width: 24px; height: 24px;">
-                    <span class="category-name">{{category.category}}</span>
+                    <img [src]="category.dropped? category.iconActive:category.icon" style="width: 24px; height: 24px;">
+                    <span class="category-name" [ngClass]="{'category-active':category.dropped}">{{category.category}}</span>
                 </div>
-                <img src="../../../assets/filter-bar/chev-down-small.png" style="width: 16px; height: 16px;" alt="">
+                <img [src]="category.dropped?'../../../assets/filter-bar/chevron-active.png':'../../../assets/filter-bar/chev-down-small.png' " style="width: 16px; height: 16px;" alt="">
             </div>
 
 

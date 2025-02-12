@@ -1,3 +1,6 @@
+*{
+    font-family: 'Inter', sans-serif;
+}
 /* Dropdown Container */
 .dropdown {
     display: flex;
@@ -36,18 +39,26 @@
 
 .category-name{
 
-    font-family: 'Inter', sans-serif;
+
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
     letter-spacing: -1%;
     color: #1D2026;
 
+}.category-active{
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -1%;
+
+
 }
 
 /* Header Title */
 .dropdown-title {
-    font-family: 'Inter', sans-serif;
+
     font-weight: 500;
     font-size: 18px;
     line-height: 100%;

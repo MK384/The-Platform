@@ -19,7 +19,8 @@ export class RegularCourseCardComponent {
       title: 'The Python Mega Course: Build 10 Real World Applications',
       price: 57,
       rate: 5.0,
-      enrolledStudents: 265700
+      enrolledStudents: 265700,
+      courseImage: '../../../assets/course-images/course-image.png'
     }
 
 

@@ -1,15 +1,24 @@
-<div class="course-list-page d-flex flex-column align-items-center" style="width: 100%; padding-top: 40px; gap: 40px;">
+<div class="course-list-page d-flex flex-column align-items-center" style=" width: 100%; padding-top: 40px; gap: 40px;">
 
-    <div class="top-action" style="max-width: 1320px;">
+    <div class="top-action" style="background-color: white; max-width: 1320px;">
         <div class="frame-242">
             <div class="cta">
-                <button class="filter-btn">
-                    <img src="../../../assets/filter-bar/filter-icon.png" style="width: 24px; height: 24px;" alt="Filter">
-                    Filter <span class="filter-count">3</span>
+                <button class="filter-btn" [ngClass]="{'filter-active':isFilterActive}" (click)="filterToggle()">
+                    @if (isFilterActive) {
+                    <img src="../../../assets/filter-bar/filter-active.png" style="width: 24px; height: 24px;"
+                        alt="Filter">
+                    }@else {
+                    <img src="../../../assets/filter-bar/filter-icon.png" style="width: 24px; height: 24px;"
+                        alt="Filter">
+
+                    }
+                    Filter <span class="filter-count"
+                        [ngClass]="{'filter-count-active':isFilterActive}">{{filters.selectedBoxes}}</span>
                 </button>
                 <div class="search-container">
-                    <img src="../../../assets/filter-bar/search-icon.png" style="width: 24px; height: 24px;" alt="Search">
-                    <input type="text" placeholder="UI/UX Design (for example)">
+                    <img src="../../../assets/filter-bar/search-icon.png" style="width: 24px; height: 24px;"
+                        alt="Search">
+                    <input type="text" placeholder="Search in courses...">
                 </div>
             </div>
             <div class="sort-by">
@@ -17,17 +26,18 @@
                 <div class="dropdown-container" [class.active]="isDropdownOpen">
                     <div class="dropdown-menu-category" (click)="toggleDropdown()">
                         <span class="dropdown-text">Trending</span>
-                        <img class="dropdown-icon" src="../../../assets/navbar-icons/caret-icon.png" alt="Dropdown Icon">
+                        <img class="dropdown-icon" src="../../../assets/navbar-icons/caret-icon.png"
+                            alt="Dropdown Icon">
                     </div>
-    
+
                     @if (isDropdownOpen) {
-                        <ul class="dropdown-options">
-                            <li class="dropdown-option">Trending</li>
-                            <li class="dropdown-option">Latest</li>
-                            <li class="dropdown-option">popular</li>
-                        </ul>
+                    <ul class="dropdown-options">
+                        <li class="dropdown-option">Trending</li>
+                        <li class="dropdown-option">Latest</li>
+                        <li class="dropdown-option">popular</li>
+                    </ul>
                     }
-    
+
                 </div>
             </div>
         </div>
@@ -48,46 +58,58 @@
         </div>
     </div>
 
-    <div class="page-content d-flex" style="gap: 24px; max-width: 1320px;">
 
-        <app-filter-bar></app-filter-bar>
 
-        <div class="courses-container d-flex flex-wrap" style="gap: 24px; max-width: 1320px; " >
+    <div class="page-content d-flex">
 
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-    
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-    
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-            <app-course-card></app-course-card>
-    
-    
+        @if (isFilterActive) {
+        <div class="filter-bar">
+            <app-filter-bar [(filters)]="filters"></app-filter-bar>
+        </div>
+        }
+
+        <div class="d-flex flex-column justify-content-center align-items-center" style="gap: 40PX;">
+            <div class="courses-container d-flex flex-wrap" style="gap: 24px; max-width: 1320px; ">
+
+
+                @for (course of courses; track $index) {
+
+                    <app-course-card (mouseenter)="mouseEnterCourseCard($event)"
+                    (mouseleave)="mouseLeaveCourseCard()" [cardData]="course"></app-course-card>
+                }
+
+
+            </div>
+
+
+            <div class="pagination-container">
+                <!-- Previous Button -->
+                <div class="pagination-button left" (click)="prevPage()" [ngClass]="{ 'disabled': currentPage === 1 }">
+                    <img src="../../../assets/filter-bar/left-arrow.png" alt="Previous">
+                </div>
+
+                <!-- Page Numbers -->
+                @for (page of pages; track $index) {
+                <div class="pagination-item" (click)="selectPage(page)" [ngClass]="{
+                        'active': page === currentPage, 
+                        'highlighted': page != currentPage 
+                    }">
+                    {{ page | number:'2.0' }}
+                </div>
+                }
+                <!-- Next Button -->
+                <div class="pagination-button right" (click)="nextPage()"
+                    [ngClass]="{ 'disabled': currentPage === pages.length }">
+                    <img src="../../../assets/filter-bar/right-arrow.png" alt="Next">
+                </div>
+            </div>
+
         </div>
     </div>
 
-
-
-
-
-
 </div>
+
+@if (hoveringService.isHovering) {
+<app-hovering-course-card (mouseenter)="mouseEnterHoveringCard()" (mouseleave)="mouseLeaveHoveringCard()"
+    [style.top.px]="hoveringService.position.y" [style.left.px]="hoveringService.position.x"></app-hovering-course-card>
+}

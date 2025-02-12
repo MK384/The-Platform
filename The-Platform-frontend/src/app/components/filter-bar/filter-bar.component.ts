@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FilterProps } from '../../../core/interfaces/FilterProps.interface';
 
 @Component({
   selector: 'app-filter-bar',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
   templateUrl: './filter-bar.component.html',
   styleUrl: './filter-bar.component.css'
 })
-export class FilterBarComponent {
+export class FilterBarComponent implements OnInit {
 
   isCategoryDroppedDown = true;
   isToolsDroppedDown = true;
@@ -17,210 +18,168 @@ export class FilterBarComponent {
   isPriceDroppedDown = true;
   isDurationDroppedDown = true;
 
+  selectedBoxes! : number;
+
+  @Input() filters!: FilterProps;  // Receive value from parent
+  @Output() filtersChange = new EventEmitter<FilterProps>(); // Define Output Event
 
   categories = [
 
-    { category : "Development",
-       dropped: false,
-        sub:[
-      { name: 'Web Development', count: 1345, selected: false },
-      { name: 'Data science', count: 12736, selected: false },
-      { name: 'Mobile Development', count: 1345, selected: false },
-      { name: 'Software Testing', count: 1345, selected: false },
-      { name: 'Software Engineering', count: 1345, selected: false },
-      { name: 'Software Development Tools', count: 1345, selected: false },
-      { name: 'No-Code Development', count: 1345, selected: false },
-  
-    ]},
-    { 
-      category: "Business", 
-      dropped: false, 
-      sub: [
-        { name: 'Entrepreneurship', count: 1345, selected: false },
-        { name: 'Business Strategy', count: 12736, selected: false },
-        { name: 'Operations', count: 1345, selected: false },
-        { name: 'Project Management', count: 1345, selected: false },
-        { name: 'Business Law', count: 1345, selected: false },
-        { name: 'Home Business', count: 1345, selected: false },
-        { name: 'E-commerce', count: 1345, selected: false }
-      ]
+    {
+      category: "Development",
+      dropped: true,
+      icon: '../../../assets/filter-bar/development.png',
+      iconActive: '../../../assets/filter-bar/development-active.png',
+      sub: [ { name: '', count: 0, selected: false }]
     },
-    { 
-      category: "Finance & Accounting", 
-      dropped: false, 
-      sub: [
-        { name: 'Accounting & Bookkeeping', count: 1345, selected: false },
-        { name: 'Cryptocurrency & Blockchain', count: 12736, selected: false },
-        { name: 'Investing & Trading', count: 1345, selected: false },
-        { name: 'Financial Modeling', count: 1345, selected: false },
-        { name: 'Taxes', count: 1345, selected: false },
-        { name: 'Risk Management', count: 1345, selected: false },
-        { name: 'Personal Finance', count: 1345, selected: false }
-      ]
+    {
+      category: "Business",
+      dropped: false,
+      icon: '../../../assets/filter-bar/business.png',
+      iconActive: '../../../assets/filter-bar/business-active.png',
+      sub: []
     },
-    { 
-      category: "IT & Software", 
-      dropped: false, 
-      sub: [
-        { name: 'IT Certification', count: 1345, selected: false },
-        { name: 'Network & Security', count: 12736, selected: false },
-        { name: 'Operating Systems', count: 1345, selected: false },
-        { name: 'Cloud Computing', count: 1345, selected: false },
-        { name: 'Software Engineering', count: 1345, selected: false },
-        { name: 'Cybersecurity', count: 1345, selected: false },
-        { name: 'Databases', count: 1345, selected: false }
-      ]
+    {
+      category: "Finance & Accounting",
+      dropped: false,
+      icon: '../../../assets/filter-bar/finance.png',
+      iconActive: '../../../assets/filter-bar/finance-active.png',
+      sub: []
     },
-    { 
-      category: "Office Productivity", 
-      dropped: false, 
-      sub: [
-        { name: 'Microsoft Office', count: 1345, selected: false },
-        { name: 'Google Workspace', count: 12736, selected: false },
-        { name: 'Productivity Tools', count: 1345, selected: false },
-        { name: 'SAP', count: 1345, selected: false },
-        { name: 'QuickBooks', count: 1345, selected: false },
-        { name: 'Email Productivity', count: 1345, selected: false },
-        { name: 'Business Software', count: 1345, selected: false }
-      ]
+    {
+      category: "IT & Software",
+      dropped: false,
+      icon: '../../../assets/filter-bar/it.png',
+      iconActive: '../../../assets/filter-bar/it-active.png',
+      sub: []
     },
-    { 
-      category: "Personal Development", 
-      dropped: false, 
-      sub: [
-        { name: 'Leadership', count: 1345, selected: false },
-        { name: 'Personal Productivity', count: 12736, selected: false },
-        { name: 'Career Development', count: 1345, selected: false },
-        { name: 'Parenting & Relationships', count: 1345, selected: false },
-        { name: 'Personal Finance', count: 1345, selected: false },
-        { name: 'Memory & Study Skills', count: 1345, selected: false },
-        { name: 'Happiness & Mindfulness', count: 1345, selected: false }
-      ]
+    {
+      category: "Office Productivity",
+      dropped: false,
+      icon: '../../../assets/filter-bar/productivity.png',
+      iconActive: '../../../assets/filter-bar/productivity-active.png',
+      sub: []
     },
-    { 
-      category: "Design", 
-      dropped: false, 
-      sub: [
-        { name: 'Graphic Design', count: 1345, selected: false },
-        { name: 'User Experience Design', count: 12736, selected: false },
-        { name: '3D & Animation', count: 1345, selected: false },
-        { name: 'Web Design', count: 1345, selected: false },
-        { name: 'Fashion Design', count: 1345, selected: false },
-        { name: 'Interior Design', count: 1345, selected: false },
-        { name: 'Design Thinking', count: 1345, selected: false }
-      ]
+    {
+      category: "Personal Development",
+      dropped: false,
+      icon: '../../../assets/filter-bar/personal-development.png',
+      iconActive: '../../../assets/filter-bar/personal-development-active.png',
+      sub: []
     },
-    { 
-      category: "Marketing", 
-      dropped: false, 
-      sub: [
-        { name: 'Digital Marketing', count: 1345, selected: false },
-        { name: 'SEO', count: 12736, selected: false },
-        { name: 'Social Media Marketing', count: 1345, selected: false },
-        { name: 'Email Marketing', count: 1345, selected: false },
-        { name: 'Branding', count: 1345, selected: false },
-        { name: 'Content Marketing', count: 1345, selected: false },
-        { name: 'Advertising', count: 1345, selected: false }
-      ]
+    {
+      category: "Design",
+      dropped: false,
+      icon: '../../../assets/filter-bar/design.png',
+      iconActive: '../../../assets/filter-bar/design-active.png',
+      sub: []
     },
-    { 
-      category: "Lifestyle", 
-      dropped: false, 
-      sub: [
-        { name: 'Health & Wellness', count: 1345, selected: false },
-        { name: 'Travel', count: 12736, selected: false },
-        { name: 'Gaming', count: 1345, selected: false },
-        { name: 'Pet Care & Training', count: 1345, selected: false },
-        { name: 'Beauty & Makeup', count: 1345, selected: false },
-        { name: 'Home Improvement', count: 1345, selected: false },
-        { name: 'Fashion & Style', count: 1345, selected: false }
-      ]
+    {
+      category: "Marketing",
+      dropped: false,
+      icon: '../../../assets/filter-bar/marketing.png',
+      iconActive: '../../../assets/filter-bar/marketing-active.png',
+      sub: []
     },
-    { 
-      category: "Photography & Video", 
-      dropped: false, 
-      sub: [
-        { name: 'Photography', count: 1345, selected: false },
-        { name: 'Video Editing', count: 12736, selected: false },
-        { name: 'Videography', count: 1345, selected: false },
-        { name: 'Motion Graphics', count: 1345, selected: false },
-        { name: 'DSLR Photography', count: 1345, selected: false },
-        { name: 'Cinematography', count: 1345, selected: false },
-        { name: 'Filmmaking', count: 1345, selected: false }
-      ]
+    {
+      category: "Lifestyle",
+      dropped: false,
+      icon: '../../../assets/filter-bar/lifestyle.png',
+      iconActive: '../../../assets/filter-bar/lifestyle-active.png',
+      sub: []
     },
-    { 
-      category: "Music", 
-      dropped: false, 
-      sub: [
-        { name: 'Music Production', count: 1345, selected: false },
-        { name: 'Music Theory', count: 12736, selected: false },
-        { name: 'Instruments', count: 1345, selected: false },
-        { name: 'Vocal Training', count: 1345, selected: false },
-        { name: 'DJing', count: 1345, selected: false },
-        { name: 'Songwriting', count: 1345, selected: false },
-        { name: 'Music Business', count: 1345, selected: false }
-      ]
+    {
+      category: "Photography & Video",
+      dropped: false,
+      icon: '../../../assets/filter-bar/photography.png',
+      iconActive: '../../../assets/filter-bar/photography-active.png',
+      sub: []
     },
-    { 
-      category: "Health & Fitness", 
-      dropped: false, 
-      sub: [
-        { name: 'Nutrition', count: 1345, selected: false },
-        { name: 'Yoga', count: 12736, selected: false },
-        { name: 'Mental Health', count: 1345, selected: false },
-        { name: 'Fitness', count: 1345, selected: false },
-        { name: 'Weight Loss', count: 1345, selected: false },
-        { name: 'Meditation', count: 1345, selected: false },
-        { name: 'Sports', count: 1345, selected: false }
-      ]
+    {
+      category: "Music",
+      dropped: false,
+      icon: '../../../assets/filter-bar/music.png',
+      iconActive: '../../../assets/filter-bar/music-active.png',
+      sub: []
+    },
+    {
+      category: "Health & Fitness",
+      dropped: false,
+      icon: '../../../assets/filter-bar/health.png',
+      iconActive: '../../../assets/filter-bar/health-active.png',
+      sub: []
     }
   ];
-  
-  
-  tools = [
-    { name: 'HTML 5', count: 1345, selected: false },
-    { name: 'CSS 3', count: 12736, selected: false },
-    { name: 'React', count: 1345, selected: false },
-    { name: 'Webflow', count: 1345, selected: false },
-    { name: 'Node.js', count: 1345, selected: false },
-    { name: 'Laravel', count: 1345, selected: false },
-    { name: 'Saas', count: 1345, selected: false },
-    { name: 'Wordpress', count: 1345, selected: false }
-  ];
 
 
-  ratings = [
-    { name: '5 Star', count: 1345, selected: false },
-    { name: '4 Star & up', count: 12736, selected: false },
-    { name: '3 Star & up', count: 545, selected: false },
-    { name: '2 Star & up', count: 43, selected: false },
-    { name: '1 Star & up.js', count: 23, selected: false }
-  ];
+  ngOnInit(){
+    this.importFilters();
+  }
 
-  
-  levels = [
-    { name: 'All Level', count: 243, selected: false },
-    { name: 'Beginner', count: 543, selected: false },
-    { name: 'Intermediate', count: 234, selected: false },
-    { name: 'Expert', count: 689, selected: false }
-  ];
-
-
-  durations = [
-    { name: '6-12 Months', count: 243, selected: false },
-    { name: '3-6 Months', count: 543, selected: false },
-    { name: '1-3 Months', count: 234, selected: false },
-    { name: '1-4 Weeks', count: 689, selected: false },
-    { name: '1-7 Days', count: 689, selected: false },
-  ];
-
-  
-
+  tools:Array<{ name: string; count: number; selected: boolean; }> = [];
+  ratings:Array<{ name: string; count: number; selected: boolean; }> = [];
+  levels:Array<{ name: string; count: number; selected: boolean; }> = [];
+  durations:Array<{ name: string; count: number; selected: boolean; }> = [];
 
 
   toggleSelection(option: any) {
     option.selected = !option.selected;
+    if (option.selected) {
+      this.selectedBoxes++;
+    }
+    else{
+      this.selectedBoxes--;
+    }
+
+    this.exportFilters();
+    this.filtersChange.emit(this.filters);
   }
 
+  exportFilters() {
+
+    this.filters.selectedBoxes = this.selectedBoxes;
+
+    this.filters.Development = this.categories[0].sub;
+    this.filters.Business = this.categories[1].sub;
+    this.filters.Finance = this.categories[2].sub;
+    this.filters.It = this.categories[3].sub;
+    this.filters.Productivity = this.categories[4].sub;
+    this.filters.PersonalDevelopment = this.categories[5].sub;
+    this.filters.Design = this.categories[6].sub;
+    this.filters.Marketing = this.categories[7].sub;
+    this.filters.Lifestyle = this.categories[8].sub;
+    this.filters.Photography = this.categories[9].sub;
+    this.filters.Music = this.categories[10].sub;
+    this.filters.Health = this.categories[11].sub;
+
+    this.filters.tools = this.tools;
+    this.filters.ratings = this.ratings;
+    this.filters.levels = this.levels;
+    this.filters.durations = this.durations;
+
+  }
+
+
+  importFilters() {
+
+    this.selectedBoxes = this.filters.selectedBoxes;
+
+    this.categories[0].sub = this.filters.Development;
+    this.categories[1].sub = this.filters.Business;
+    this.categories[2].sub = this.filters.Finance;
+    this.categories[3].sub = this.filters.It;
+    this.categories[4].sub = this.filters.Productivity;
+    this.categories[5].sub = this.filters.PersonalDevelopment;
+    this.categories[6].sub = this.filters.Design;
+    this.categories[7].sub = this.filters.Marketing;
+    this.categories[8].sub = this.filters.Lifestyle;
+    this.categories[9].sub = this.filters.Photography;
+    this.categories[10].sub = this.filters.Music;
+    this.categories[11].sub = this.filters.Health;
+
+    this.tools = this.filters.tools;
+    this.ratings = this.filters.ratings;
+    this.levels = this.filters.levels;
+    this.durations = this.filters.durations;
+  }
 }
