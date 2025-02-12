@@ -2,13 +2,12 @@
 body {
   margin: 0;
   padding: 0;
-
 }
 
-.page-content {
+.layout {
 
   overflow: hidden;
-  padding-top: 130px;   /* Adjust based on the total height of both navbars */
+  padding-top: 130px;   /* Adjusted based on the total height of both navbars */
 
 }
 

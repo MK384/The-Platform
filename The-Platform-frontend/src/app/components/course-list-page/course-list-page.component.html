@@ -1,0 +1,93 @@
+<div class="course-list-page d-flex flex-column align-items-center" style="width: 100%; padding-top: 40px; gap: 40px;">
+
+    <div class="top-action" style="max-width: 1320px;">
+        <div class="frame-242">
+            <div class="cta">
+                <button class="filter-btn">
+                    <img src="../../../assets/filter-bar/filter-icon.png" style="width: 24px; height: 24px;" alt="Filter">
+                    Filter <span class="filter-count">3</span>
+                </button>
+                <div class="search-container">
+                    <img src="../../../assets/filter-bar/search-icon.png" style="width: 24px; height: 24px;" alt="Search">
+                    <input type="text" placeholder="UI/UX Design (for example)">
+                </div>
+            </div>
+            <div class="sort-by">
+                <span>Sort by:</span>
+                <div class="dropdown-container" [class.active]="isDropdownOpen">
+                    <div class="dropdown-menu-category" (click)="toggleDropdown()">
+                        <span class="dropdown-text">Trending</span>
+                        <img class="dropdown-icon" src="../../../assets/navbar-icons/caret-icon.png" alt="Dropdown Icon">
+                    </div>
+    
+                    @if (isDropdownOpen) {
+                        <ul class="dropdown-options">
+                            <li class="dropdown-option">Trending</li>
+                            <li class="dropdown-option">Latest</li>
+                            <li class="dropdown-option">popular</li>
+                        </ul>
+                    }
+    
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-second-line">
+            <div class="suggestions">
+                <span>Suggestion:</span>
+                <a href="#">user interface</a>
+                <a href="#">user experience</a>
+                <a href="#">web design</a>
+                <a href="#">interface</a>
+                <a href="#">app</a>
+            </div>
+            <div class="result-count">
+                <span>3,145,684 </span>
+                <span class="results-found">results find for “ui/ux design”</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content d-flex" style="gap: 24px; max-width: 1320px;">
+
+        <app-filter-bar></app-filter-bar>
+
+        <div class="courses-container d-flex flex-wrap" style="gap: 24px; max-width: 1320px; " >
+
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+    
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+    
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+    
+    
+        </div>
+    </div>
+
+
+
+
+
+
+</div>

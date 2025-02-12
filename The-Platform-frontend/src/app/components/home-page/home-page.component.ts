@@ -1,4 +1,4 @@
-import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
+import { Component, NgZone, OnDestroy, OnInit,HostListener } from '@angular/core';
 import { CategoryCardComponent } from "../category-card/category-card.component";
 import { CategoryCardProps } from '../../../core/interfaces/CategoryCardProps.interface';
 import { InstructorCardComponent } from "../instructor-card/instructor-card.component";
@@ -304,9 +304,16 @@ export class HomePageComponent implements OnInit, OnDestroy {
   }
 
 
+    // hovering card controllers
 
+  mouseX: number = 0;
+  mouseY: number = 0;
 
-  // hovering card controllers
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
+    this.mouseX = event.pageX; // X position relative to viewport
+    this.mouseY = event.pageY; // Y position relative to viewport
+  }
 
   public outOfCourseCard:boolean = true;
   public outOfHoveringCard:boolean = true; 
@@ -315,16 +322,14 @@ export class HomePageComponent implements OnInit, OnDestroy {
     this.outOfCourseCard = false;
 
     this.ngZone.run(() => {setTimeout(() => {
-
-      console.log(`x: ${event.screenX} , Y: ${event.screenY}`);
-
-       let x = event.pageX - 10 ; 
-       let y = event.pageY - 300
+       
+       let x = this.mouseX - 10 ; 
+       let y = this.mouseY - 300
        // Offset for better positioning
       y = (event.screenY < 410)? y + (550 - event.screenY): (event.screenY > 750)? y - ( event.screenY - 650): y;
       x = (x > 1470)? x - 410: x;
       this.hoveringService.show(x, y);
-    },100)});
+    },300)});
   }
   mouseLeaveCourseCard(){
 
@@ -346,6 +351,4 @@ export class HomePageComponent implements OnInit, OnDestroy {
       }
     },200)});
   }
-
-
 }

@@ -1,0 +1,127 @@
+/* Dropdown Container */
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 312px;
+    background: #FFFFFF;
+    border: 1px solid #E9EAF0;
+}
+
+/* Dropdown Header */
+.dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E9EAF0;
+    cursor: pointer;
+}
+
+.category{
+
+    width: 100%;
+    border-bottom: 1px solid #E9EAF0;
+
+}
+
+.category-header{
+
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.category-name{
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -1%;
+    color: #1D2026;
+
+}
+
+/* Header Title */
+.dropdown-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #1D2026;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 10px;
+    width: 272px;
+    background: #FFFFFF;
+    padding: 16px 0;
+}
+
+/* Dropdown Item */
+.dropdown-item {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #4E5566;
+    cursor: pointer;
+}
+
+/* Checkbox */
+.checkbox {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #CED1D9;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Checked Checkbox */
+.checkbox.checked {
+    background: #35AACD;
+    border: none;
+    position: relative;
+}
+
+/* Checkmark inside the selected checkbox */
+.checkbox.checked::after {
+    content: '✔';  /* Unicode checkmark */
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+/* Selected Item */
+.selected-text {
+    font-weight: 500;
+    color: #35AACD;
+}
+
+/* Item Count */
+.item-count {
+    font-size: 12px;
+    color: #8C94A3;    
+    line-height: 16px;
+    font-weight: 400;
+}.bolden {
+    font-size: 12px;
+    color: #4E5566;    
+    line-height: 16px;
+    font-weight: 500;
+    
+}

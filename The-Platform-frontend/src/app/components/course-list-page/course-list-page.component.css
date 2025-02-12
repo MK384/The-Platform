@@ -1,0 +1,257 @@
+/* Top Action */
+.top-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 1320px;
+    height: 110px;
+}
+
+/* Frame 242 */
+.frame-242 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: 48px;
+}
+
+/* CTA */
+.cta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    width: 648px;
+    height: 48px;
+}
+
+/* Filter Button */
+.filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 167px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #FFDDD1;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1D2026;
+    cursor: pointer;
+    /* border-radius: 15px; */
+    
+}
+
+/* Filter Count */
+.filter-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 24px;
+    background: #F7FBDE;
+    font-weight: 600;
+    font-size: 12px;
+    color: #35AACD;
+}
+
+/* Search Box */
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 457px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #E9EAF0;
+    padding: 0 12px;
+    gap: 12px;
+    /* border-radius: 15px; */
+}
+
+.search-container input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: #1D2026;
+}
+
+/* Sort By */
+.sort-by {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #4E5566;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+/* Container for dropdown and options */
+.dropdown-container {
+    position: relative;
+    width: 200px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu-category {
+    box-sizing: border-box;
+    width: 100%;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #E9EAF0;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    gap: 12px;
+    cursor: pointer;
+    position: relative;
+    /* border-radius: 15px; */
+    transition: border-color 0.3s ease-in-out;
+    /* Smooth transition */
+}
+
+/* Change background color when dropdown is hovered on */
+.dropdown-menu-category:hover {
+    background-color: #e0e8fa;
+}
+
+/* Change border color when dropdown is open */
+.dropdown-container.active .dropdown-menu-category {
+    border-color: #417ab7;
+    /* New border color when pressed */
+    background-color: #e0e8fa;
+}
+
+/* Dropdown Text */
+.dropdown-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4E5566;
+    position: absolute;
+    left: 18px;
+}
+
+/* Dropdown Icon */
+.dropdown-icon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 18px;
+}
+
+/* Ensure the dropdown is initially hidden */
+.dropdown-options {
+    list-style: none; /* Removes default bullets */
+    padding-left: 0;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #E9EAF0;
+    z-index: 10;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* border-radius: 15px; */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* When dropdown is active */
+.dropdown-container.active .dropdown-options {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dropdown Option Items */
+.dropdown-option {
+    padding: 12px 18px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4E5566;
+    cursor: pointer;
+    list-style: none;
+    /* Removes default bullets */
+    padding-left: 0;
+    /* Ensures no extra space */
+}
+
+.dropdown-options li {
+    list-style-type: none;
+    padding: 10px 18px;
+    width: 100%; /* Ensures background covers full width */
+    display: block; /* Makes li behave like a full-width block */
+}
+
+.dropdown-options {
+
+    border-color: #417ab7;
+}
+
+
+/* Fix hover effect */
+.dropdown-options li:hover {
+    background-color: #cbdff5; /* Change to the desired hover color */
+    width: 100%; /* Ensures hover effect covers full width */
+    display: block; /* Ensures proper rendering */
+    /* border-radius: 15px; */
+}
+/* Second Line */
+.filter-second-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0 16px;
+    width: 1320px;
+    height: 62px;
+    background: #FFFFFF;
+    box-shadow: inset 0px -1px 0px #E9EAF0;
+    border-bottom: solid 1px #cfd1d6;
+}
+
+/* Suggestions */
+.suggestions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.suggestions span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #1D2026;
+}
+
+.suggestions a {
+    font-size: 14px;
+    color: #35AACD;
+    text-decoration: none;
+}
+
+/* Results Count */
+.result-count {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #1D2026;
+}
+
+.results-found {
+
+    font-size: 14px;
+    color: #4E5566;
+    line-height: 22px;
+    font-weight: 400;
+}
