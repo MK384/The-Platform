@@ -1,4 +1,4 @@
-<div style="margin-top: 150px; margin-bottom: 200px; ">
+<div style="margin-top: 150px; margin-bottom: 100px; ">
     <div class="container-fluid">
         <div class="row" style="background-color: #FD8E1F;">
             <div class="col-lg-2"></div>
@@ -85,8 +85,8 @@
                         </li>
                     </ul>
                 </div>
-                <!-- =======================sections=================== -->
-                <!-- ===================overview ==============-->
+                <!-- =======================sections section=================== -->
+                <!-- =======================overview section===================-->
                 <div class="overview my-4" id="overview">
                     <h4 class="fw-semibold">Description</h4>
                     <p>
@@ -217,7 +217,7 @@
                         </ol>
                     </div>
                 </div>
-                <!-- ===================Curriculum ==============-->
+                <!-- =====================Curriculum section===================-->
                 <div class="Curriculum my-4" id="curriculum">
 
                     <div class=" mb-3 d-flex justify-content-between align-items-center curriculum-header">
@@ -229,25 +229,26 @@
                             <!-- Sections -->
                             <div class="d-flex align-items-center funfact-item gap-2">
                                 <img src="../../../assets/course-details/svg/FolderNotchOpen.svg" class="icon">
-                                <span>6 Sections</span>
+                                <span class="gray-color">6 Sections</span>
                             </div>
 
                             <!-- Lectures -->
                             <div class="d-flex align-items-center funfact-item gap-2">
                                 <img src="../../../assets/course-details/svg/PlayCircle.svg" class="icon">
-                                <span>202 Lectures</span>
+                                <span class="gray-color">202 Lectures</span>
                             </div>
 
                             <!-- Duration -->
                             <div class="d-flex align-items-center funfact-item gap-2">
                                 <img src="../../../assets/course-details/svg/Clock.svg" class="icon">
-                                <span>19h 37m</span>
+                                <span class="gray-color">19h 37m</span>
                             </div>
                         </div>
                     </div>
                     <!-- accordion -->
 
                     <div class="accordion" id="accordionExample">
+
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -258,12 +259,18 @@
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    @for (topic of accordionTopics; track $index) {
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img [src]="topic.icon" alt="">
+                                            <p class="m-0">{{topic.title}}</p>
+                                        </div>
+                                        <div>
+                                            <p class="gray-color2">{{topic.duration}}</p>
+                                        </div>
+                                    </div>
+                                    }
+
                                 </div>
                             </div>
                         </div>
@@ -277,12 +284,11 @@
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    <div class="d-flex align-items-start gap-2">
+                                        <img src="../../../assets/course-details/svg/ArrowRight.svg" alt="">
+                                        <p>This course is for those who want to launch a Freelance Web Design career.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -367,20 +373,94 @@
 
 
                     </div>
-
                 </div>
 
-
-
-
-
-                <div class="Instructor " id="instructor"></div>
+                <!-- ================ Instructor section =============== -->
+                <div class="Instructor " id="instructor">
+                    <h4 class="fw-semibold">Course instructor (02)</h4>
+                </div>
                 <div class="Review" id="review"></div>
+
+                <!-- ===================Course instructor================== -->
+                <app-course-instractot-card></app-course-instractot-card>
+                <app-course-instractot-card></app-course-instractot-card>
+                <!-- ==================Course Reting================= -->
+                <app-course-reting></app-course-reting>
+                <!-- ==================feed back================= -->
+                <div class="d-flex justify-content-between align-items-center my-4">
+                    <h4 class="fw-semibold">Students Feedback</h4>
+
+                    <div class="dropdown">
+                        <button class=" dropdown-toggle btn-stars" type="button" data-bs-toggle="dropdown">
+                            5 Star Rating
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">All Ratings</a></li>
+                            <li><a class="dropdown-item" href="#">5 Star Rating</a></li>
+                            <li><a class="dropdown-item" href="#">4 Star Rating</a></li>
+                            <li><a class="dropdown-item" href="#">3 Star Rating</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <app-send-feedback></app-send-feedback>
+                <app-send-feedback></app-send-feedback>
+                <button class="btn browse-all-courses"><a href="#" class="browse-all-courses-link">Load More
+                    <img src="../../../assets/course-details/svg/Spinner.svg" alt=""></a></button>
+                <!-- ===================================== -->
             </div>
+
             <div class="col-lg-5 "></div>
+            <!-- ==================Related Courses================= -->
+            <div class="row border-top " style="margin-top: 100px;">
+                
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div class="d-flex justify-content-between align-items-center my-4 pt-4">
+                        <h4 class="fw-semibold">Related Courses</h4>
+                        <button class="btn browse-all-courses"><a href="#" class="browse-all-courses-link">View All
+                                →</a></button>
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <div class="row">
+               
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div class="container-fluid mx-auto my-4 mt-5 ">
+                        <div class="row d-flex justify-content-center align-items-center ">
+
+                            <div class="col-lg-2 col-md-4 col-sm-6">
+                                <app-regular-course-card></app-regular-course-card>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-6">
+                                <app-regular-course-card></app-regular-course-card>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-6">
+                                <app-regular-course-card></app-regular-course-card>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-6">
+                                <app-regular-course-card></app-regular-course-card>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-6">
+                                <app-regular-course-card></app-regular-course-card>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-1"></div>
+
+            </div>
+
+
+
+
+
+
+
+
         </div>
-
-
-
     </div>
 </div>
