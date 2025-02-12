@@ -1,0 +1,31 @@
+body {
+    background-color: #f8f9fa;
+}
+.container-fluid {
+    display: flex;
+}
+.left-section {
+    width: 50%;
+    background: #eef2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right-section {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-container {
+    width: 80%;
+    max-width: 400px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+.btn-light {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
