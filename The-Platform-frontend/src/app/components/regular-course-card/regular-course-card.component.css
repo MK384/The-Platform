@@ -8,6 +8,7 @@
 
 /* Course Card */
 .course-card {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,6 +22,7 @@
     border-radius: 15px;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
+
 }
 
 .course-card:hover {
@@ -137,10 +139,10 @@
     justify-content: flex-end; /* Ensure the text "students" remains fixed */
 }
 
-.students img {
+/* .students img {
     width: 20px;
     height: 20px;
-}
+} */
 
 .students-number {
     font-size: 14px;
