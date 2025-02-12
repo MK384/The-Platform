@@ -5,5 +5,6 @@ export interface CourseCardProps {
     price : number;
     rate : number;
     enrolledStudents : number;
+    courseImage : string;
 
 }
