@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CourseInstractotCardComponent } from '../course-instractot-card/course-instractot-card.component';
-import { CourseRetingComponent } from '../course-reting/course-reting.component';
+import { CourseRatingComponent } from '../course-rating/course-rating.component';
 import { SendFeedbackComponent } from '../send-feedback/send-feedback.component';
 import { RegularCourseCardComponent } from '../regular-course-card/regular-course-card.component';
 
 @Component({
   selector: 'app-course-details',
   standalone: true,
-  imports: [CommonModule, CourseInstractotCardComponent, CourseInstractotCardComponent, CourseRetingComponent, SendFeedbackComponent,RegularCourseCardComponent],
+  imports: [CommonModule, CourseInstractotCardComponent, CourseInstractotCardComponent, SendFeedbackComponent, RegularCourseCardComponent, CourseRatingComponent],
   templateUrl: './course-details.component.html',
   styleUrl: './course-details.component.css'
 })

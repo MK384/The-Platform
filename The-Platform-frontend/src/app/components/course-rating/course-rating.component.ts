@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-course-reting',
+  selector: 'app-course-rating',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './course-reting.component.html',
-  styleUrl: './course-reting.component.css'
+  templateUrl: './course-rating.component.html',
+  styleUrl: './course-rating.component.css'
 })
-export class CourseRetingComponent {
+export class CourseRatingComponent {
   rating = 4.8;
   fullStars = Array(Math.floor(this.rating)).fill(0);
   hasHalfStar = this.rating % 1 !== 0;

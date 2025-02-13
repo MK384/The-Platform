@@ -16,12 +16,13 @@ import { FilterBarComponent } from "./components/filter-bar/filter-bar.component
 import { CheckOutPageComponent } from "./components/checkout-page/checkout-page.component";
 import { InstructorPageComponent } from "./components/instructor-page/instructor-page.component";
 import { UserProfileComponent } from "./components/user-profile/user-profile.component";
+import { CourseDetailsComponent } from "./components/course-details/course-details.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, HomePageComponent, FooterComponent, InstructorCardComponent, DetailedCourseCardComponent, BecomeInstructorCardComponent, CourseCardComponent, RegularCourseCardComponent, HoveringCourseCardComponent, LoginPageComponent, CommonModule, CourseListPageComponent, FilterBarComponent, CheckOutPageComponent, InstructorPageComponent, UserProfileComponent],
+  imports: [RouterOutlet, NavbarComponent, HomePageComponent, FooterComponent, InstructorCardComponent, DetailedCourseCardComponent, BecomeInstructorCardComponent, CourseCardComponent, RegularCourseCardComponent, HoveringCourseCardComponent, LoginPageComponent, CommonModule, CourseListPageComponent, FilterBarComponent, CheckOutPageComponent, InstructorPageComponent, UserProfileComponent, CourseDetailsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
