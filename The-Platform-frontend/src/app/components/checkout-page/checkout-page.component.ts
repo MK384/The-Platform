@@ -2,22 +2,21 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-buy-course-page',
+  selector: 'app-checkout-page',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './buy-course-page.component.html',
-  styleUrl: './buy-course-page.component.css'
+  templateUrl: './checkout-page.component.html',
+  styleUrl: './checkout-page.component.css'
 })
-export class BuyCoursePageComponent {
+export class CheckOutPageComponent {
 
 
   // Header Section
-  @Input() title: string = 'Checkout Your Courses';
+  @Input() title: string = 'Checkout';
   @Input() breadcrumbs: { name: string, link?: string }[] = [
     { name: 'Home', link: '/' },
-    { name: 'Course', link: '/course' },
-    { name: 'Complete Web Design', link:'/course/:id' },
-    { name: 'Buy Course' }
+    { name: 'Shopping Cart', link: '/cart' },
+    { name: 'Checkout' }
   ];
 
 
