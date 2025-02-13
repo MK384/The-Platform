@@ -1,0 +1,402 @@
+
+*{
+    font-family: 'Inter', sans-serif;
+}
+/* Breadcrumb Container */
+.breadcrumb-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 300px;
+    gap: 16px;
+    width: 1920px;
+    height: 150px;
+    background: rgba(255, 198, 60, 0.77);
+}
+
+/* Breadcrumb Title */
+.breadcrumb-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #1D2026;
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #6E7485;
+}
+
+/* Breadcrumb Links */
+.breadcrumb-link {
+    text-decoration: none;
+    color: #6E7485;
+    transition: color 0.2s;
+}
+
+.breadcrumb-link:hover {
+    color: #1D2026;
+}
+
+/* Active Breadcrumb (Last Item) */
+.breadcrumb-text {
+    color: #1D2026;
+}
+
+/* Breadcrumb Separator */
+.breadcrumb-separator {
+    margin: 0 8px;
+    color: #6E7485;
+}
+
+
+
+
+/* Payment Container */
+.payment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 648px;
+}
+
+/* Title */
+.payment-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #1D2026;
+}
+
+/* Payment Options */
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+/* Payment Option */
+.payment-option {
+    display: flex;
+    align-items: center;
+    padding: 10px 24px;
+    gap: 24px;
+    width: 100%;
+    height: 52px;
+    background: #FFFFFF;
+    border: 1px solid #E9EAF0;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out;
+}
+.payment-option span{
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -1%;
+    color: #4E5566;
+    font-family: 'Inter', sans-serif;
+
+}
+
+/* Selected Payment */
+.payment-option.selected {
+    border: 1px solid #23BD33;
+}
+
+/* Payment Icons */
+.payment-icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* PayPal Description */
+.paypal-desc {
+    font-size: 12px;
+    color: #8C94A3;
+}
+
+/* New Card Option */
+.new-card {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #E9EAF0;
+}
+
+.check-icon {
+    color: #23BD33;
+    width: 24px;
+    height: 24px;
+
+}
+
+/* Payment Form */
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Input Fields */
+.payment-form label {
+    font-size: 14px;
+    color: #1D2026;
+}
+
+.payment-form input {
+    width: 100%;
+    height: 48px;
+    padding: 12px;
+    border: 1px solid #E9EAF0;
+    background: #FFFFFF;
+    font-size: 16px;
+    color: #161c2b;
+}
+
+/* Card Details */
+.card-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-details div {
+    width: 48%;
+}
+
+/* Card Input with Icon */
+.card-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #E9EAF0;
+    background: #FFFFFF;
+    padding: 0 12px;
+}
+
+.card-input input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+}
+
+.input-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Remember Card */
+.remember-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.checkbox {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #35AACD;
+    background: transparent;
+}
+
+.checkbox.checked {
+    background: #35AACD;
+    position: relative;
+}
+
+label{
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -1%;
+    color: #1D2026;
+    font-family: 'Inter', sans-serif;
+
+}
+
+
+/* Payment Card Container */
+.payment-card {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 24px 0;
+    gap: 24px;
+    width: 536px;
+    /* height: 550px; */
+    background: #FFFFFF;
+    border: 1px solid #E9EAF0;
+}
+
+/* Course Section */
+.course-section {
+    width: 488px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.course-section h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #1D2026;
+}
+
+/* Course Details */
+.course-details {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+}
+
+.course-image {
+    width: 100px;
+    height: 75px;
+}
+
+.course-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.course-instructor {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    /* letter-spacing: 0%; */
+    color: #A1A5B3;
+}
+
+.course-instructor span {
+    color: #4E5566;
+}
+
+.course-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    letter-spacing: -1%;
+    color: #1D2026;
+}
+
+.course-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: -1%;
+    color: #35AACD;
+}
+
+/* Divider Line */
+.divider {
+    width: 488px;
+    border: 1px solid #E9EAF0;
+}
+
+/* Order Summary */
+.order-summary {
+    width: 488px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.order-summary h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0%;
+    line-height: 24px;
+    color: #1D2026;
+}
+
+/* Summary Items */
+.summary-item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.description{
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #6E7485;
+    letter-spacing: -1%;
+
+
+}
+.item-value{
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1D2026;
+    letter-spacing: -1%;
+
+}
+
+.total {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #202029;
+}
+
+.total-price {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -1%;
+    color: #202029;
+}
+
+
+/* Complete Payment Button */
+.complete-payment-btn {
+    width: 488px;
+    height: 56px;
+    background: #35AACD;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 56px;
+    /* letter-spacing: -1%; */
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.complete-payment-btn:hover {
+    background: #2A8EA1;
+}

@@ -13,12 +13,13 @@ import { LoginPageComponent } from "./components/login-page/login-page.component
 import { CommonModule } from '@angular/common';
 import { CourseListPageComponent } from "./components/course-list-page/course-list-page.component";
 import { FilterBarComponent } from "./components/filter-bar/filter-bar.component";
+import { BuyCoursePageComponent } from "./components/buy-course-page/buy-course-page.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, HomePageComponent, FooterComponent, InstructorCardComponent, DetailedCourseCardComponent, BecomeInstructorCardComponent, CourseCardComponent, RegularCourseCardComponent, HoveringCourseCardComponent, LoginPageComponent, CommonModule, CourseListPageComponent, FilterBarComponent],
+  imports: [RouterOutlet, NavbarComponent, HomePageComponent, FooterComponent, InstructorCardComponent, DetailedCourseCardComponent, BecomeInstructorCardComponent, CourseCardComponent, RegularCourseCardComponent, HoveringCourseCardComponent, LoginPageComponent, CommonModule, CourseListPageComponent, FilterBarComponent, BuyCoursePageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

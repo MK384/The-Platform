@@ -1,1 +1,149 @@
-<p>buy-course-page works!</p>
+<div class="page-container d-flex flex-column align-items-center">
+
+    <div class="breadcrumb-container">
+        <h1 class="breadcrumb-title">{{ title }}</h1>
+        <div class="breadcrumb-nav">
+            <ng-container *ngFor="let item of breadcrumbs; let last = last">
+                <a *ngIf="item.link; else text" [href]="item.link" class="breadcrumb-link">{{ item.name }}</a>
+                <ng-template #text>
+                    <span class="breadcrumb-text">{{ item.name }}</span>
+                </ng-template>
+                <span *ngIf="!last" class="breadcrumb-separator"> / </span>
+            </ng-container>
+        </div>
+    </div>
+
+
+    <div class="d-flex" style="align-items: flex-start; padding: 80px 0; gap: 136px;">
+
+
+        <div class="payment-container">
+            <h2 class="payment-title">Payment Method</h2>
+        
+            <div class="payment-options">
+                <div *ngFor="let method of paymentMethods" 
+                     class="payment-option" 
+                     [ngClass]="{ 'selected': selectedPayment === method.type }"
+                     (click)="selectPayment(method.type)">
+        
+                    <img [src]="method.icon" alt="{{ method.type }}" class="payment-icon">
+                    <span *ngIf="method.lastDigits">{{ method.lastDigits }} **** **** ****</span>
+                    <span *ngIf="method.expiry">{{ method.expiry }}</span>
+                    <span *ngIf="method.owner">{{ method.owner }}</span>
+                    <span *ngIf="method.description" class="paypal-desc">{{ method.description }}</span>
+                </div>
+        
+                <div class="payment-option new-card" 
+                     [ngClass]="{ 'selected': selectedPayment === 'new' }" 
+                     (click)="selectPayment('new')">
+                    <div class="d-flex align-items-center" style="gap: 25px;">
+                        @if (selectedPayment === 'new') {
+                            <img src="../../../assets/buy-course-icons/new-payment-active.png" alt="New Payment Card" class="payment-icon">
+                        }
+                        @else {
+                            <img src="../../../assets/buy-course-icons/new-payment.png" alt="New Payment Card" class="payment-icon">
+                        }
+                        <span>New Payment Card</span>
+                    </div> 
+
+                    <img src="../../../assets/buy-course-icons/check-mark-green.png" class="check-icon" *ngIf="selectedPayment === 'new'">
+                </div>
+            </div>
+        
+            <!-- New Card Form -->
+            <div *ngIf="selectedPayment === 'new'" class="payment-form">
+                <label>Name on card</label>
+                <input type="text" placeholder="Name on card">
+        
+                <label>Card Number</label>
+                <div class="card-input">
+                    <img src="../../../assets/buy-course-icons/new-payment-active.png" alt="Card" class="input-icon">
+                    <input type="text" placeholder="sixteen digits on the card">
+                </div>
+        
+                <div class="card-details">
+                    <div>
+                        <label>MM / YY</label>
+                        <input type="text" placeholder="MM / YY">
+                    </div>
+                    <div>
+                        <label>CVC</label>
+                        <input type="text" placeholder="Security Code">
+                    </div>
+                </div>
+        
+                <div class="remember-card" (click)="toggleRememberCard()">
+                    @if (rememberCard) {
+                        <div class="checkbox"></div>
+                    }@else {
+                        <img src="../../../assets/buy-course-icons/check-mark-blue.png" style="width: 22px; height: 22px;">
+                    }
+
+                    <span>Remember this card, save it on my card list</span>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div class="payment-card">
+            <!-- Course Section -->
+            <div class="course-section">
+                <h2>Courses</h2>
+             @for (course of courses; track $index) {
+
+                    <div class="course-details">
+                        <img [src]="course.image" alt="Course Image" class="course-image">
+                        <div class="course-info">
+                            <div class="d-flex flex-column">
+                                <span class="course-instructor">Course by: <span>{{ course.instructor }}</span></span>
+                                <h3 class="course-title">{{ course.title }}</h3>
+                            </div>
+                            <p class="course-price">${{ course.price.toFixed(2) }}</p>
+                        </div>
+                    </div> 
+             }
+            </div>
+        
+            <!-- Divider Line -->
+            <div class="divider"></div>
+        
+            <!-- Order Summary Section -->
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+
+
+                <div class="d-flex flex-column" style="gap: 10px;">
+
+                    <div class="summary-item">
+                        <span class="description">Subtotal</span>
+                        <span class="item-value">${{ orderSummary.subtotal.toFixed(2) }} USD</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="description" >Coupon Discount</span>
+                        <span class="item-value">{{ orderSummary.discount }}%</span>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="summary-item">
+                        <span class="total">Total:</span>
+                        <span class="total-price">${{ orderSummary.total.toFixed(2) }} USD</span>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Complete Payment Button -->
+            <button class="complete-payment-btn" (click)="completePayment()">Complete Payment</button>
+        </div>
+        
+
+
+    </div>
+
+
+
+
+
+
+</div>
