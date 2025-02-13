@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +9,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+
+  constructor(private router :  Router){}
   isDropdownOpen = false;
+  
 
   toggleDropdown(): void {
     this.isDropdownOpen = !this.isDropdownOpen;
@@ -24,4 +27,11 @@ export class NavbarComponent {
       this.isDropdownOpen = false;
     }
   }
+
+  login(){
+
+    this.router.navigate(['login'])
+
+  }
+
 }

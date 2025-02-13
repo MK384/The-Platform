@@ -13,7 +13,9 @@ import { RegularCourseCardComponent } from '../regular-course-card/regular-cours
   styleUrl: './course-details.component.css'
 })
 export class CourseDetailsComponent {
-  activeTab: string = 'Overview';
+
+  activeTab: string = 'overview'; 
+
   tabs = [
     { id: 'overview', name: 'Overview' },
     { id: 'curriculum', name: 'Curriculum' },

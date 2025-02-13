@@ -1,0 +1,22 @@
+<div class="review-container">
+    <!-- Profile Image -->
+    <img [src]="review.profileImage" alt="Profile Picture" class="review-avatar">
+
+    <!-- Review Content -->
+    <div class="review-content">
+        <!-- Reviewer Info -->
+        <div class="review-header">
+            <span class="review-name">{{ review.name }}</span>
+            <span class="review-dot">•</span>
+            <span class="review-date">{{ review.reviewDate }}</span>
+        </div>
+
+        <!-- Rating Stars -->
+        <div class="review-rating">
+            <img *ngFor="let star of getStarsArray()" src="../../../assets/instructor-asset/star-icon.png" alt="Star" class="star-icon">
+        </div>
+
+        <!-- Review Text -->
+        <p class="review-text">{{ review.text }}</p>
+    </div>
+</div>

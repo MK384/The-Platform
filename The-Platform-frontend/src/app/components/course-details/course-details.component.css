@@ -1,5 +1,5 @@
 /* General Styles */
-body {
+* {
     font-family: 'Inter', sans-serif;
    
 }
@@ -92,6 +92,11 @@ body {
 /* =============tabs================ */
 .tab-container {
     border-bottom: 1px solid #E9EAF0;
+}
+
+.allTabs , .overview, .Curriculum, .Instructor, .Review {
+
+    max-width: 872px;
 }
 
 /* Individual Tabs */

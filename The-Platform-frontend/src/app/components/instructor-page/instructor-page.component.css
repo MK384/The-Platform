@@ -1,0 +1,175 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.instructor-header {
+
+    display: flex;
+    padding: 40px 40px;
+    width: 1320px;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px #FFDDD1;
+}
+
+.instructor-name h2 {
+
+
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: -1%;
+    color: #1D2026;
+
+}
+
+.top-rated span {
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -1%;
+    color: #35AACD;
+
+}
+
+.instructor-title {
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #6E7485;
+}
+
+.val {
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0%;
+    color: #1D2026;
+}
+
+.desc {
+
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -1%;
+    color: #6E7485;
+
+}
+
+
+.social-link {
+
+    display: flex;
+    padding: 14px 14px;
+    gap: 10px;
+    background-color: #FFC63C;
+    /* opacity: 0.77; */
+    cursor: pointer;
+    stroke-opacity: 0.77;
+
+}
+
+.about-me {
+
+    max-width: 424px;
+    padding: 24px 24px;
+    gap: 16;
+    border: solid 1px #E9EAF0;
+    justify-content: flex-start;
+
+}
+
+.about-me h3 {
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #1D2026;
+
+}
+
+.about-me p {
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -1%;
+    color: #6E7485;
+
+}
+
+/* .nav-link{
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}.nav-link:hover{
+
+    background-color: #e4704d3c;
+}
+
+.nav-link.active{
+    border-bottom: solid 3px  #FF6636;
+}
+.nav a{
+
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0%;
+    color: #4E5566;
+
+}
+.nav-link.active a{
+
+color: #1D2026;
+
+} */
+
+.tab-container {
+    border-bottom: 1px solid #E9EAF0;
+}
+
+.allTabs , .overview, .Curriculum, .Instructor, .Review {
+
+    max-width: 872px;
+}
+
+/* Individual Tabs */
+.nav-tabs .nav-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4E5566;
+    text-align: center;
+    width: 200px;
+    padding-bottom: 20px;
+    border: none;
+    background: none;
+}
+
+/* Active Tab */
+.nav-tabs .nav-link.active {
+    color: #1D2026;
+    box-shadow: inset 0px -2px 0px #FF6636;
+}
+
+/* Hover Effect */
+.nav-tabs .nav-link:hover {
+    color: #1D2026;
+}
+.nav-tabs .nav-link:active{
+    box-shadow: inset 0px -2px 0px #FF6636;
+}
+
+.divider{
+
+    width: 100%;
+    border: solid 1px #E9EAF0;
+}
