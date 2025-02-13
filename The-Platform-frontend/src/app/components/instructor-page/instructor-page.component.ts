@@ -10,7 +10,7 @@ import { StudentReview } from '../../../core/interfaces/StudentReview.interface'
 @Component({
   selector: 'app-instructor-page',
   standalone: true,
-  imports: [CommonModule, CourseCardComponent, RegularCourseCardComponent, StudentReviewComponent],
+  imports: [CommonModule, RegularCourseCardComponent, StudentReviewComponent],
   templateUrl: './instructor-page.component.html',
   styleUrl: './instructor-page.component.css'
 })
