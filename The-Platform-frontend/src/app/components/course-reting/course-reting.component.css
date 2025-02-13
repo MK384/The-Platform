@@ -1,0 +1,19 @@
+/* .course-rating-container {
+    max-width: 600px;
+    margin: auto;
+  }
+   */
+  .stars {
+    color: #ff9800;
+    font-size: 20px;
+  }
+  
+  .progress {
+    height: 8px;
+    background-color: #f1f1f1;
+  }
+  
+  .progress-bar {
+    background-color: #ff9800;
+  }
+  

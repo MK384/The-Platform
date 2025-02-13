@@ -163,6 +163,8 @@ ol li {
     padding: 1.25rem;
     font-weight: 500;
     transition: all 0.3s ease;
+    color: #35AACD;
+    background-color: white;
 }
 
 .accordion-button:not(.collapsed) {
@@ -182,4 +184,55 @@ ol li {
 .accordion-button::after {
     transition: transform 0.3s ease;
 }
+.gray-color{
+    color: #4E5566;
+}
+.gray-color2{
+    color: #8C94A3;
+}
+.accordion-button::after {
+    display: none; /* Hide default Bootstrap icon */
+  }
+  .btn-stars{
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: 1px solid #dfdfdf;
+    border-radius: 4px;
+    color:#4E5566;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.browse-all-courses {
+    background: #F7FBDE;
+    color: #35AACD;
+    padding: 12px 24px;
+    /* border-radius: 15px; */
+    border: none;
+    letter-spacing: -0.8%;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 48px;
+    cursor: pointer;
+    width: 224px;
+    height: 48px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+.browse-all-courses-link {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 48px;
+    letter-spacing: -0.8%;
+    color: #35AACD;
+    text-decoration: none;
+    display: flex;
+    transition: color 0.3s ease;
+  }
+  .browse-all-courses:hover {
+    background-color: #d3ee3f;
+  }
+  
+ 
 
