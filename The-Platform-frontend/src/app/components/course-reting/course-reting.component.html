@@ -1,0 +1,49 @@
+
+<h4 class="fw-semibold mb-4">Course Rating</h4>
+<div class="course-rating-container p-4  bg-white ">
+
+    <div class="row">
+        <div class="col-lg-3 border shadow-sm d-flex align-items-center justify-content-center">
+            <div >
+                <div class="rating-score">
+                  <h1 class="display-4 fw-bold">4.8</h1>
+                  <div class="stars">
+                    <span *ngFor="let star of fullStars">&#9733;</span>
+                    <span *ngIf="hasHalfStar">&#9733;</span>
+                  </div>
+                  <p class="mt-1 text-muted">Course Rating</p>
+                </div>
+          
+              </div>
+        </div>
+        <div class="col-lg-9">
+            <div *ngFor="let rating of ratings" class="d-flex align-items-center mb-3">
+                <div class="stars me-2">
+                  <span *ngFor="let star of [].constructor(rating.stars)">&#9733;</span>
+                  <span *ngFor="let empty of [].constructor(5 - rating.stars)">&#9734;</span>
+                </div>
+                <div class="progress flex-grow-1 me-2">
+                  <div
+                    class="progress-bar"
+                    [style.width.%]="rating.percent"
+                    role="progressbar"
+                    [attr.aria-valuenow]="rating.percent"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+                <span class="text-muted">{{ rating.percent }}%</span>
+              </div>
+    
+        </div>
+    </div>
+    
+        
+
+         
+
+
+    
+   
+  </div>
+  

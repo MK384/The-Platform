@@ -1,0 +1,30 @@
+<div class="component my-3 border">
+    <div class="course-card p-4">
+        <div class="row">
+            <div class="col-lg-3">
+                <img [src]="instrCardData.instrImg" alt="">
+            </div>
+            <div class="col-lg-9 ">
+                <h4 class="instName fw-semibold ">{{instrCardData.instName}}</h4>
+                <p class="instJob">{{instrCardData.instJob1}} & {{instrCardData.instJob2}} </p>
+                <div class="d-flex gap-4 mb-3">
+                    <div class="d-flex justify-content-center align-items-center gap-2">
+                        <img [src]="icons.star" alt="">
+                        <p class="numStyle fw-semibold mb-0 "> {{instrCardData.rateNum  | ratingFormat}} <span class="instJob">{{instrCardData.rateName}}</span> </p>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center gap-2">
+                        <img [src]="icons.user" alt="">
+                        <p class="numStyle fw-semibold m-0"> {{instrCardData.studentsNum | numberFormat}} <span class="instJob">{{instrCardData.students}} </span> </p>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center gap-2">
+                        <img [src]="icons.play" alt="">
+                        <p class="numStyle fw-semibold m-0"> {{instrCardData.coursesNum | number:'2.0-0'}} <span class="instJob">{{instrCardData.courses}}</span> </p>
+                    </div>
+                </div>
+                <p class="instJob">{{instrCardData.about}} <span class="text-uppercase" style="color: #6E7485;">read more</span></p>
+            </div>
+        </div>
+
+
+    </div>
+</div>
