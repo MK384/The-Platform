@@ -150,6 +150,26 @@ ol li {
 }
 /* acordion */
 
+.custom-accordion {
+    max-width: 800px;
+    /* margin: 2rem auto; */
+    --bs-accordion-btn-bg: #ffffff;
+    --bs-accordion-active-bg: #f8f9fa;
+    --bs-accordion-active-color: #0d6efd;
+    --bs-accordion-btn-focus-border-color: #e9ecef;
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.1);
+}
+
+.accordion-button {
+    padding: 1.25rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: #35AACD;
+    background-color: white;
+    width: 70%;
+}
+
+
 .gray-color{
     color: #4E5566;
 }
@@ -198,4 +218,29 @@ ol li {
   }
   
  
+
+  .curriculum-text{
+
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+
+  }
+
+
+/* -------------------------- */
+
+
+.collapse{
+    display: none;
+}.show{
+    display: block;
+}
+
+.divider{
+
+    width: 100%;
+    border: solid 1px #E9EAF0;
+    margin-bottom: 20px;
+}
 

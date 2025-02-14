@@ -1,0 +1,99 @@
+.watch-course-card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    width: 312px;
+    height: 367px;
+    background: #FFFFFF;
+    border: 1px solid #E9EAF0;
+  }
+  
+  .course-image {
+    width: 312px;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0px -1px 0px #E9EAF0;
+  }
+  
+  .course-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 6px;
+    width: 280px;
+  }
+  
+  .course-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6E7485;
+    margin: 0;
+  }
+  
+  .lecture-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #1D2026;
+    margin: 0;
+  }
+  
+  .divider {
+    width: 312px;
+    border: 1px solid #E9EAF0;
+  }
+  
+  .cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+  }
+  
+  .watch-btn {
+    width: 130px;
+    height: 40px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -0.004em;
+    text-transform: capitalize;
+    color: #35AACD;
+    background: #F7FBDE;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .completion {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #23BD33;
+    margin: 0;
+  }
+  
+  .progress-bar {
+    width: 312px;
+    height: 2px;
+    background: #E9EAF0;
+    position: relative;
+  }
+  
+  .progress {
+    height: 2px;
+    background: #35AACD;
+  }
+  

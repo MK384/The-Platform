@@ -1,0 +1,140 @@
+.instructor-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 20px;
+  gap: 16px;
+  width: 312px;
+  height: 508px;
+  background: #FFFFFF;
+  border: 1px solid #E9EAF0;
+}
+
+/* Profile Image */
+.instructor-image {
+  width: 312px;
+  height: 312px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0px -1px 0px #E9EAF0;
+}
+
+/* Instructor Info */
+.instructor-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 272px;
+  height: 50px;
+}
+
+.instructor-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #1D2026;
+  margin: 0;
+}
+
+.instructor-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #8C94A3;
+  margin: 0;
+}
+
+/* Divider */
+.divider {
+  width: 312px;
+  height: 0px;
+  border: 1px solid #E9EAF0;
+}
+
+/* Rating & Students */
+.rating-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  gap: 51px;
+  width: 312px;
+  height: 22px;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  width: 47px;
+  height: 20px;
+}
+
+.rating img {
+  width: 20px;
+  height: 20px;
+}
+
+.rating p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: #4E5566;
+  margin: 0;
+}
+
+.students {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 113px;
+  height: 22px;
+}
+
+.students p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: #4E5566;
+  margin: 0;
+}
+
+.students span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  color: #8C94A3;
+  margin-left: 5px;
+}
+
+/* Send Message Button */
+.send-message {
+  width: 272px;
+  height: 40px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: -0.004em;
+  text-transform: capitalize;
+  color: #35AACD;
+  background: #F7FBDE;
+  border: none;
+  cursor: pointer;
+}

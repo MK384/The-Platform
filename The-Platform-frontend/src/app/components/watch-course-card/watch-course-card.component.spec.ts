@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CourseRetingComponent } from './course-reting.component';
+import { WatchCourseCardComponent } from './watch-course-card.component';
 
-describe('CourseRetingComponent', () => {
-  let component: CourseRetingComponent;
-  let fixture: ComponentFixture<CourseRetingComponent>;
+describe('WatchCourseCardComponent', () => {
+  let component: WatchCourseCardComponent;
+  let fixture: ComponentFixture<WatchCourseCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CourseRetingComponent]
+      imports: [WatchCourseCardComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(CourseRetingComponent);
+    fixture = TestBed.createComponent(WatchCourseCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

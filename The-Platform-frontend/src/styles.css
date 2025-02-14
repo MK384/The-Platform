@@ -6,12 +6,13 @@ body {
     font-family: 'Inter', sans-serif;
 
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .layout {
 
   overflow: hidden;
   padding-top: 130px;   /* Adjusted based on the total height of both navbars */
-
 }
 
 /* You can add global styles to this file, and also import other style files */
