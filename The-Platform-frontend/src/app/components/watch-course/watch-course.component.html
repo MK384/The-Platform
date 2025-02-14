@@ -1,0 +1,160 @@
+<!-- =============header======== -->
+<div class="p-4 bg-opacity-75 py-3 header-container my-3">
+    <div class="row align-items-center justify-content-between">
+        <!-- Back Button -->
+        <div class="col-auto">
+            <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center"
+                style="width: 58px; height: 58px;">
+                <img src="../../../assets/watch-course/svg/ArrowLeft.svg" alt="">
+            </button>
+        </div>
+        <!-- Course Info -->
+        <div class="col ">
+            <h3 class="h5 text-dark fw-medium">
+                Complete Website Responsive Design: from Figma to Webflow to Website Design
+            </h3>
+            <div class="d-flex  gap-3 small-text mt-2">
+                <div>
+                    <img src="../../../assets/watch-course/svg/FolderNotchOpen.svg" alt="">
+                    <span> 6 Sections</span>
+                </div>
+                <div>
+                    <img src="../../../assets/watch-course/svg/PlayCircle.svg" alt="">
+                    <span> 202 Lectures</span>
+                </div>
+                <div>
+                    <img src="../../../assets/watch-course/svg/Clock.svg" alt="">
+                    <span> 19h 37m</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="col-auto d-flex gap-3">
+            <button class="btn text-primary btn-light px-4 py-3">Write A Review</button>
+            <button class="btn btn-primary px-4 py-3">Next Lecture</button>
+        </div>
+    </div>
+</div>
+<!-- =============header======== -->
+<div class="container-fluid ">
+    <div class="row ">
+        <div class="col-lg-8">
+            <img class="w-100" src="../../../assets/watch-course/Video Player.png" alt="">
+            <!-- ======= -->
+            <app-video-details></app-video-details>
+            <!-- =============all taps========== -->
+            <div class="allTabs mt-4">
+                <ul class="nav nav-tabs tab-container d-flex align-items-center">
+                    <li class="nav-item" *ngFor="let tab of tabs">
+                        <button class="nav-link" [ngClass]="{'active': activeTab === tab.id}"
+                            (click)="setActiveTab(tab.id)">
+                            {{ tab.name }}
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <!-- =================Description============== -->
+            <div class="description my-4" id="description">
+                <h4 class="fw-semibold mb-4">Lectures Description</h4>
+                <p>
+                    We cover everything you need to build your first website. From creating your first page through to
+                    uploading your website to the internet. We’ll use the world’s most popular (and free) web design
+                    tool called Visual Studio Code. There are exercise files you can download and then work along with
+                    me. At the end of each video I have a downloadable version of where we are in the process so that
+                    you can compare your project with mine. This will enable you to see easily where you might have a
+                    problem. We will delve into all the good stuff such as how to create your very own mobile burger
+                    menu from scratch learning some basic JavaScript and jQuery.<br><br>
+                    If that all sounds a little too fancy - don’t worry, this course is aimed at people new to web
+                    design and who have never coded before. We’ll start right at the beginning and work our way through
+                    step by step.
+                </p>
+
+            </div>
+            <!-- ================lectures-notes==================== -->
+            <div class="lectures-notes my-4" id="lectures-notes">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h4 class="fw-semibold mb-4">Lecture Notes</h4>
+                    <button class="btn browse-all-courses"><a href="#" class="browse-all-courses-link"> <img
+                                src="../../../assets/watch-course/svg/DownloadSimple.svg" alt=""> Download Notes
+                        </a></button>
+                </div>
+                <p>
+                    In ut aliquet ante. Curabitur mollis tincidunt turpis, sed aliquam mauris finibus vel. Praesent eget
+                    mi in mi maximus egestas. Mauris eget ipsum in justo bibendum pellentesque. Sed id arcu in arcu
+                    ullamcorper eleifend condimentum quis diam. Phasellus tempus, urna ut auctor mattis, nisi nunc
+                    tincidunt lorem, eu egestas augue lectus sit amet sapien. Maecenas tristique aliquet massa, a
+                    venenatis augue tempor in. Aliquam turpis urna, imperdiet in lacus a, posuere suscipit augue.
+                </p>
+                <p>Nullam non quam a lectus finibus varius nec a orci. Aliquam efficitur sem cursus elit efficitur
+                    lacinia</p>
+                <ol style="list-style: disc;">
+                    <li>Morbi sit amet pretium tellus. Donec blandit fermentum tincidunt.</li>
+                    <li>Proin iaculis sem et imperdiet tristique. Nam varius ac nisl id sodales. Donec iaculis interdum
+                        mattis.</li>
+                    <li>Curabitur posuere ultricies diam in egestas.</li>
+                    <li>Donec id diam et lacus pharetra vestibulum a id est. Mauris vestibulum massa quis elit feugiat,
+                        dictum maximus ipsum pellentesque.</li>
+                    <li>Sed elementum, libero id lacinia aliquet, purus nibh consectetur mauris, eget interdum mi lacus
+                        vitae sem.</li>
+                </ol>
+                <p>Donec congue aliquam lorem nec congue. Suspendisse eu risus mattis, interdum ante sed, fringilla
+                    urna. Praesent mattis dictum sapien a lacinia. Ut scelerisque magna aliquet, blandit arcu quis,
+                    consequat purus. Suspendisse eget scelerisque felis. Integer vulputate urna laoreet purus vehicula
+                    condimentum. Donec quis luctus quam. Curabitur quis molestie ante. Nam pharetra sagittis varius. Sed
+                    ullamcorper facilisis bibendum.</p>
+            </div>
+            <!-- =================attach-file============== -->
+            <div class="attach-file my-4" id="attach-file">
+                <h4 class="fw-semibold mb-4">Attach File</h4>
+                <div class="file-container d-flex justify-content-between align-items-center p-3">
+
+                    <div class="d-flex align-items-center gap-3">
+
+                        <img src="../../../assets/watch-course/svg/FileText.svg" alt="File Icon" class="file-icon">
+                        <div>
+                            <p class="file-name mb-0">Create account on webflow.pdf</p>
+                            <p class="file-size mb-0">12.6 MB</p>
+                        </div>
+                    </div>
+                    <a href="assets/Create-account-on-webflow.pdf" download class="btn btn-primary bg-primary border-0">
+                        Download File
+                    </a>
+                </div>
+            </div>
+            <!-- =================comments============== -->
+            <div class="comments my-4" id="comments">
+                <h4 class="fw-semibold mb-4"> Comments</h4>
+                <div *ngFor="let x of comments">
+                    <app-comment-reply [comment]="x"></app-comment-reply>
+                  </div>
+                <!-- <app-comment-reply ></app-comment-reply> -->
+                <button class="btn browse-all-courses"><a href="#" class="browse-all-courses-link">Load More
+                    <img src="../../../assets/course-details/svg/Spinner.svg" alt=""></a></button>
+            </div>
+
+
+
+
+            <!-- =============================== -->
+        </div>
+        <!-- ====accordion====== -->
+        <div class="col-lg-4">
+            <div class="prog-part mb-3 col-lg-12 col-md-6 mb-4">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h4 class="fw-semibold">Course Contents</h4>
+                    <small class="text-green fw-semibold">15% Complete</small>
+                </div>
+
+                <div class="progress" style="height: 10px;">
+                    <div class="progress-bar bg-prog-green" role="progressbar" style="width: 15%;" aria-valuenow="15"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+            <app-accordion></app-accordion>
+        </div>
+
+    </div>
+</div>

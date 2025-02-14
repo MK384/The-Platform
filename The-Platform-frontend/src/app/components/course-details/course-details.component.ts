@@ -4,11 +4,12 @@ import { CourseInstractotCardComponent } from '../course-instractot-card/course-
 import { CourseRetingComponent } from '../course-reting/course-reting.component';
 import { SendFeedbackComponent } from '../send-feedback/send-feedback.component';
 import { RegularCourseCardComponent } from '../regular-course-card/regular-course-card.component';
+import { AccordionComponent } from '../accordion/accordion.component';
 
 @Component({
   selector: 'app-course-details',
   standalone: true,
-  imports: [CommonModule, CourseInstractotCardComponent, CourseInstractotCardComponent, CourseRetingComponent, SendFeedbackComponent,RegularCourseCardComponent],
+  imports: [CommonModule, CourseInstractotCardComponent, CourseInstractotCardComponent, CourseRetingComponent, SendFeedbackComponent,RegularCourseCardComponent,AccordionComponent],
   templateUrl: './course-details.component.html',
   styleUrl: './course-details.component.css'
 })
@@ -20,14 +21,7 @@ export class CourseDetailsComponent {
     { id: 'instructor', name: 'Instructor' },
     { id: 'review', name: 'Review' }
   ];
-  accordionTopics = [
-    { title: "What’s is Webflow?", duration: "07:31", icon: "../../../assets/course-details/svg/Play.svg" },
-    { title: "Sign up in Webflow", duration: "07:31", icon: "../../../assets/course-details/svg/Play.svg" },
-    { title: "Webflow Terms & Conditions", duration: "5.3 MB", icon: "../../../assets/course-details/svg/File.svg" },
-    { title: "Teaser of Webflow", duration: "07:31", icon: "../../../assets/course-details/svg/Play.svg" },
-    { title: "Practice Project", duration: "5.3 MB", icon: "../../../assets/course-details/svg/File.svg" }
-  ];
-
+ 
   setActiveTab(tabId: string) {
     this.activeTab = tabId;
     // Scroll to the section

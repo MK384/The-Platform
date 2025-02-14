@@ -1,0 +1,39 @@
+<div class="lecture-container">
+    <!-- Lecture Title -->
+    <h2 class="lecture-title">2. Sign up in Webflow</h2>
+  
+    <!-- Students Watching Section -->
+    <div class="students-info d-flex align-items-center justify-content-between">
+     <div class="d-flex align-items-center gap-2">
+        <div class="avatars">
+            <img *ngFor="let avatar of studentAvatars; let i = index"
+                 [src]="avatar"
+                 class="avatar"
+                 [ngStyle]="{'left': i * 20 + 'px'}"
+                 alt="Student Avatar">
+          </div>
+          <div class="students-count ">
+            <span class="count">{{ studentsWatching }}</span><br>
+            <span class="label">Students watching</span>
+          </div>
+         
+     </div>
+    
+
+
+      <div class="extra-info d-flex justify-content-between gap-3">
+        <div class="updated-date">
+          <span class="label">Last updated:</span>
+          <span class="value">{{ lastUpdated }}</span>
+        </div>
+        <div class="comments">
+          <span class="label">Comments:</span>
+          <span class="value">{{ commentsCount }}</span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Extra Info Section -->
+   
+  </div>
+  
