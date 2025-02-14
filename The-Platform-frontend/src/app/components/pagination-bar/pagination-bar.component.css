@@ -1,0 +1,69 @@
+
+/* Pagination Container */
+.pagination-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+
+}
+
+/* Pagination Button (Left & Right) */
+.pagination-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 100px;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.pagination-button img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Active Button (Right Arrow) */
+.pagination-button.right {
+  background: #F7FBDE;
+  opacity: 1;
+}
+
+/* Disabled State */
+.pagination-button.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Pagination Item (Numbers) */
+.pagination-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1D2026;
+  letter-spacing: -1%;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Active Page */
+.pagination-item.active {
+  background: #35AACD;
+  color: #FFFFFF;
+}
+
+/* Highlighted Page */
+.pagination-item.highlighted {
+  background: #F7FBDE;
+  color: #35AACD;
+}

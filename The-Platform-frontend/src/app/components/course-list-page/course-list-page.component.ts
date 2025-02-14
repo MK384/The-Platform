@@ -6,11 +6,12 @@ import { HoveringCardService } from '../../services/hovering-card.service';
 import { HoveringCourseCardComponent } from "../hovering-course-card/hovering-course-card.component";
 import { FilterProps } from '../../../core/interfaces/FilterProps.interface';
 import { CourseCardProps } from '../../../core/interfaces/CourseCardProps.interface';
+import {PaginationBarComponent} from "../pagination-bar/pagination-bar.component";
 
 @Component({
   selector: 'app-course-list-page',
   standalone: true,
-  imports: [CourseCardComponent, FilterBarComponent, CommonModule, HoveringCourseCardComponent],
+  imports: [CourseCardComponent, FilterBarComponent, CommonModule, HoveringCourseCardComponent, PaginationBarComponent],
   templateUrl: './course-list-page.component.html',
   styleUrl: './course-list-page.component.css'
 })
@@ -338,13 +339,11 @@ export class CourseListPageComponent {
       courseImage: '../../../assets/course-images/c23.png'
     }
   ];
-  
+
 
   isDropdownOpen = false;
   isFilterActive = false;
-  pages = [1, 2, 3, 4, 5];
-  currentPage = this.pages[0]; // Active page (default: 1)
-  
+
 
   filterToggle(){
 
@@ -358,47 +357,26 @@ export class CourseListPageComponent {
 
 
 
-
-
-
-
-  selectPage(page: number) {
-    this.currentPage = page;
-  }
-
-  prevPage() {
-    if (this.currentPage > 1) {
-      this.currentPage--;
-    }
-  }
-
-  nextPage() {
-    if (this.currentPage < this.pages.length) {
-      this.currentPage++;
-    }
-  }
-
-
       // hovering card controllers
-  
+
     mouseX: number = 0;
     mouseY: number = 0;
-  
+
     @HostListener('document:mousemove', ['$event'])
     onMouseMove(event: MouseEvent) {
       this.mouseX = event.pageX; // X position relative to viewport
       this.mouseY = event.pageY; // Y position relative to viewport
     }
-  
+
     public outOfCourseCard:boolean = true;
-    public outOfHoveringCard:boolean = true; 
-  
+    public outOfHoveringCard:boolean = true;
+
     mouseEnterCourseCard(event: MouseEvent){
       this.outOfCourseCard = false;
-  
+
       this.ngZone.run(() => {setTimeout(() => {
-         
-         let x = this.mouseX - 10 ; 
+
+         let x = this.mouseX - 10 ;
          let y = this.mouseY - 300
          // Offset for better positioning
         y = (event.screenY < 410)? y + (550 - event.screenY): (event.screenY > 750)? y - ( event.screenY - 650): y;
@@ -407,14 +385,14 @@ export class CourseListPageComponent {
       },300)});
     }
     mouseLeaveCourseCard(){
-  
+
       this.outOfCourseCard = true;
       this.ngZone.run(() => {setTimeout(() => {
         if (this.outOfCourseCard && this.outOfHoveringCard) {
           this.hoveringService.hide();
         }
       },200)});  }
-  
+
     mouseEnterHoveringCard(){
       this.outOfHoveringCard = false;
     }

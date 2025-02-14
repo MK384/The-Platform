@@ -1,0 +1,21 @@
+<div class="pagination-container">
+  <!-- Previous Button -->
+  <div class="pagination-button left" (click)="prevPage()" [ngClass]="{ 'disabled': currentPage === 1 }">
+    <img src="../../../assets/filter-bar/left-arrow.png" alt="Previous">
+  </div>
+
+  <!-- Page Numbers -->
+  @for (page of pages; track $index) {
+    <div class="pagination-item" (click)="selectPage(page)" [ngClass]="{
+                        'active': page === currentPage,
+                        'highlighted': page != currentPage
+                    }">
+      {{ page | number:'2.0' }}
+    </div>
+  }
+  <!-- Next Button -->
+  <div class="pagination-button right" (click)="nextPage()"
+       [ngClass]="{ 'disabled': currentPage === pages.length }">
+    <img src="../../../assets/filter-bar/right-arrow.png" alt="Next">
+  </div>
+</div>

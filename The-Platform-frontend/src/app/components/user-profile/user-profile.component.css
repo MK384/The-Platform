@@ -93,7 +93,7 @@
 
 
 .tab-container {
-    border-bottom: 1px solid #E9EAF0;
+    border-bottom: 1px solid #FFDDD1;
 }
 
 .allTabs , .overview, .Curriculum, .Instructor, .Review {
@@ -126,4 +126,196 @@
 }
 .nav-tabs .nav-link:active{
     box-shadow: inset 0px -2px 0px #FF6636;
+}
+
+
+.desc-text{
+
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #4E5566;
+
+}
+.info-text{
+
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #1D2026;
+
+
+}
+.start-learning{
+
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    color: #1D2026;
+
+}
+
+.hide{
+    display: none;
+}.show{
+    display: block;
+}
+
+
+
+
+.filter-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    width: 1320px;
+    height: 128px;
+  }
+
+
+  .filters {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .filter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 240px;
+  }
+
+  .filter-item label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #6E7485;
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #E9EAF0;
+    background: #FFFFFF;
+    width: 528px;
+    height: 48px;
+    padding: 0 12px;
+  }
+
+  .search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #1D2026;
+  }
+
+  .search-box img {
+    width: 24px;
+    height: 24px;
+  }
+
+  select {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #E9EAF0;
+    background: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #4E5566;
+    padding: 0 12px;
+    cursor: pointer;
+  }
+
+  .field-desc{
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #6E7485;
+
+
+  }
+
+
+/* Search Box */
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  background: #FFFFFF;
+  border: 1px solid #E9EAF0;
+  padding: 0 12px;
+  gap: 12px;
+  transition: all 0.3s ease-in-out;
+  /* border-radius: 15px; */
+}
+
+.search-container input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  color: #1D2026;
+}
+.search-container:focus-within {
+  /* Expanded width */
+  border: 1px solid #35AACD;
+
+}
+
+
+.dropdown-menu-category {
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  background: #FFFFFF;
+  border: 1px solid #E9EAF0;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+  /* border-radius: 15px; */
+  transition: border-color 0.3s ease-in-out;
+  /* Smooth transition */
+}
+
+/* Change background color when dropdown is hovered on */
+.dropdown-menu-category:hover {
+  background-color: #e0e8fa;
+}
+
+/* Change border color when dropdown is open */
+.dropdown-container.active .dropdown-menu-category {
+  border-color: #35AACD;
+  /* New border color when pressed */
+  background-color: #e0e8fa;
+}
+
+/* Dropdown Text */
+.dropdown-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4E5566;
+  position: absolute;
+  left: 18px;
+}
+
+/* Dropdown Icon */
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 18px;
 }
