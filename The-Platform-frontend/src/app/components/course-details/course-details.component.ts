@@ -14,7 +14,9 @@ import { AccordionComponent } from '../accordion/accordion.component';
   styleUrl: './course-details.component.css'
 })
 export class CourseDetailsComponent {
-  activeTab: string = 'Overview';
+
+  activeTab: string = 'overview'; 
+
   tabs = [
     { id: 'overview', name: 'Overview' },
     { id: 'curriculum', name: 'Curriculum' },

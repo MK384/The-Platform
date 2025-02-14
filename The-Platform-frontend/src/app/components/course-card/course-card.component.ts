@@ -15,13 +15,12 @@ import { CategoryColorService } from '../../services/category-color.service';
 export class CourseCardComponent {
 
   @Input() cardData : CourseCardProps = {
-
     category: 'DESIGN',
     title: 'The Python Mega Course: Build 10 Real World Applications',
     price: 57,
     rate: 5.0,
-    enrolledStudents: 265700,
-courseImage: '../../../assets/course-images/course-image.png'
+    enrolledStudents: 265700
+
   }
 
   textColor!: string;

@@ -1,0 +1,182 @@
+<div class="filter-bar d-flex flex-column" style="gap: 24px;">
+
+
+    <div class="dropdown">
+
+        <div class="dropdown-header" (click)="isCategoryDroppedDown = !isCategoryDroppedDown">
+            <span class="dropdown-title">CATEGORY</span>
+            @if (isCategoryDroppedDown) {
+            <img src="../../../assets/filter-bar/chevron-up.png" style="width: 24px; height: 24px;" alt="Expand">
+            }
+            @else {
+            <img src="../../../assets/filter-bar/chevron-down.png" style="width: 24px; height: 24px;" alt="Expand">
+            }
+        </div>
+
+        @if (isCategoryDroppedDown) {
+        @for (category of categories; track $index) {
+
+        <div class="category d-flex flex-column justify-content-center align-items-center">
+
+
+            
+            <div class="category-header d-flex flex-row justify-content-between" (click)="category.dropped=!category.dropped" style="width: 272px;">
+
+                <div class="d-flex" style="gap: 12px;">
+                    <img [src]="category.dropped? category.iconActive:category.icon" style="width: 24px; height: 24px;">
+                    <span class="category-name" [ngClass]="{'category-active':category.dropped}">{{category.category}}</span>
+                </div>
+                <img [src]="category.dropped?'../../../assets/filter-bar/chevron-active.png':'../../../assets/filter-bar/chev-down-small.png' " style="width: 16px; height: 16px;" alt="">
+            </div>
+
+
+
+            @if (category.dropped) {
+                <div class="dropdown-content">
+                    <div *ngFor="let _ of category.sub" class="dropdown-item" (click)="toggleSelection(_)">
+                        <div class="d-flex" style="gap: 12px;">
+                            <div class="checkbox" [ngClass]="{ 'checked': _.selected }"></div>
+                            <span id="" [ngClass]="{ 'selected-text': _.selected }">{{ _.name }}</span>
+                        </div>
+                        <span class="item-count" [ngClass]="{ 'bolden': _.selected }">{{ _.count | number }}</span>
+                    </div>
+                </div>
+            }
+        </div>
+
+
+        }
+        }
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Tools dropdown -->
+    <div class="dropdown">
+        <div class="dropdown-header" (click)="isToolsDroppedDown = !isToolsDroppedDown">
+            <span class="dropdown-title">Tools</span>
+            @if (isToolsDroppedDown) {
+            <img src="../../../assets/filter-bar/chevron-up.png" style="width: 24px; height: 24px;" alt="Expand">
+            }
+            @else {
+            <img src="../../../assets/filter-bar/chevron-down.png" style="width: 24px; height: 24px;" alt="Expand">
+            }
+        </div>
+
+        @if (isToolsDroppedDown) {
+
+
+        <div class="dropdown-content">
+            <div *ngFor="let tool of tools" class="dropdown-item" (click)="toggleSelection(tool)">
+                <div class="d-flex" style="gap: 12px;">
+                    <div class="checkbox" [ngClass]="{ 'checked': tool.selected }"></div>
+                    <span [ngClass]="{ 'selected-text': tool.selected }">{{ tool.name }}</span>
+                </div>
+                <span class="item-count" [ngClass]="{ 'bolden': tool.selected }">{{ tool.count | number }}</span>
+            </div>
+        </div>
+        }
+
+    </div>
+
+
+    <div class="dropdown">
+        <div class="dropdown-header" (click)="isRatingDroppedDown = !isRatingDroppedDown">
+            <span class="dropdown-title">RATING</span>
+            @if (isRatingDroppedDown) {
+            <img src="../../../assets/filter-bar/chevron-up.png" style="width: 24px; height: 24px;" alt="Expand">
+            }
+            @else {
+            <img src="../../../assets/filter-bar/chevron-down.png" style="width: 24px; height: 24px;" alt="Expand">
+            }
+        </div>
+        @if (isRatingDroppedDown) {
+        <div class="drop-section d-flex align-items-center justify-content-center">
+            <div class="dropdown-content">
+                <div *ngFor="let _ of ratings" class="dropdown-item" (click)="toggleSelection(_)">
+                    <div class="d-flex" style="gap: 12px;">
+                        <div class="checkbox" [ngClass]="{ 'checked': _.selected }"></div>
+                        <img src="../../../assets/filter-bar/star.png" style="width: 16px; height: 16px;" alt="Star">
+                        <span id="" [ngClass]="{ 'selected-text': _.selected }">{{ _.name }}</span>
+                    </div>
+                    <span class="item-count" [ngClass]="{ 'bolden': _.selected }">{{ _.count | number }}</span>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+
+
+    <div class="dropdown">
+        <div class="dropdown-header" (click)="isLevelDroppedDown = !isLevelDroppedDown">
+            <span class="dropdown-title">LEVEL</span>
+            @if (isLevelDroppedDown) {
+            <img src="../../../assets/filter-bar/chevron-up.png" style="width: 24px; height: 24px;" alt="Expand">
+            }
+            @else {
+            <img src="../../../assets/filter-bar/chevron-down.png" style="width: 24px; height: 24px;" alt="Expand">
+            }
+        </div>
+        @if (isLevelDroppedDown) {
+        <div class="drop-section d-flex align-items-center justify-content-center">
+            <div class="dropdown-content">
+                <div *ngFor="let _ of levels" class="dropdown-item" (click)="toggleSelection(_)">
+                    <div class="d-flex" style="gap: 12px;">
+                        <div class="checkbox" [ngClass]="{ 'checked': _.selected }"></div>
+                        <span id="" [ngClass]="{ 'selected-text': _.selected }">{{ _.name }}</span>
+                    </div>
+                    <span class="item-count" [ngClass]="{ 'bolden': _.selected }">{{ _.count | number }}</span>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+
+
+    <div class="dropdown">
+        <div class="dropdown-header" (click)="isDurationDroppedDown = !isDurationDroppedDown">
+            <span class="dropdown-title">Duration</span>
+            @if (isDurationDroppedDown) {
+            <img src="../../../assets/filter-bar/chevron-up.png" style="width: 24px; height: 24px;" alt="Expand">
+            }
+            @else {
+            <img src="../../../assets/filter-bar/chevron-down.png" style="width: 24px; height: 24px;" alt="Expand">
+            }
+        </div>
+        @if (isDurationDroppedDown) {
+        <div class="drop-section d-flex align-items-center justify-content-center">
+            <div class="dropdown-content">
+                <div *ngFor="let _ of durations" class="dropdown-item" (click)="toggleSelection(_)">
+                    <div class="d-flex" style="gap: 12px;">
+                        <div class="checkbox" [ngClass]="{ 'checked': _.selected }"></div>
+                        <span id="" [ngClass]="{ 'selected-text': _.selected }">{{ _.name }}</span>
+                    </div>
+                    <span class="item-count" [ngClass]="{ 'bolden': _.selected }">{{ _.count | number }}</span>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+
+
+</div>

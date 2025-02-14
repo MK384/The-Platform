@@ -1,0 +1,175 @@
+<div class="page-content d-flex flex-column" style="gap: 80px;">
+
+
+    <div style="width: 100%; height: 280px; background-color: #F7FBDE;"></div>
+
+
+    <div class="d-flex flex-column justify-content-center align-items-center" style="gap: 40px; position: relative; bottom: 280px;">
+
+        <div class="instructor-header" style="background-color: white;">
+
+
+            <div class="instructor-info d-flex align-items-center justify-content-between" style="width: 724px;">
+
+                <img src="../../../assets/instructor-asset/instructor1.png"
+                    style="width: 200px; height: 200px; border-radius: 100%;">
+
+                <div class="d-flex flex-column"
+                    style="gap: 24px; padding: 24px 0; min-width: 500px; align-items: flex-start;">
+
+                    <div class="instructor-profile d-flex flex-column align-items-center" style="gap: 10px;">
+
+                        <div class="instructor-name d-flex" style="gap: 12px;">
+                            <h2>Vako Shvili</h2>
+                            @if (instructor.isTopRated) {
+                            <div class="top-rated d-flex justify-content-center align-items-center"
+                                style="gap: 6px; width: 118px; height: 36px; background-color: #F7FBDE;">
+                                <img src="../../../assets/instructor-asset/top-rated.png" alt="Top Rated"
+                                    style="width: 20px; height: 20px;">
+                                <span>Top Rated</span>
+                            </div>
+                            }
+                        </div>
+                        <span class="instructor-title">Web Designer & Best-Selling Instructor</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center" style="gap: 20px;">
+
+                        <div class="rating d-flex" style="gap: 6px;">
+                            <img src="../../../assets/instructor-asset/star-icon.png" alt="star"
+                                style="width: 24px; height: 24px;">
+                            <span class="val">4.8</span>
+                            <span class="desc"> (134,633 review)</span>
+                        </div>
+
+                        <div class="students d-flex" style="gap: 6px;">
+                            <img src="../../../assets/instructor-asset/students-icon.png" alt="students icon"
+                                style="width: 24px; height: 24px;">
+                            <span class="val">430,117</span>
+                            <span class="desc"> student</span>
+
+                        </div>
+
+                        <div class="videos d-flex" style="gap: 6px;">
+
+                            <img src="../../../assets/instructor-asset/vdeos-icon.png" alt="videos"
+                                style="width: 24px; height: 24px;">
+                            <span class="val">7</span>
+                            <span class="desc"> courses</span>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+
+            <div class="contacts d-flex flex-column align-items-end" style="gap: 16px;">
+
+                <div class="personal-site d-flex" style="gap: 6px;">
+                    <img src="../../../assets/instructor-asset/website.png" alt="Top Rated"
+                        style="width: 24px; height: 24px;">
+                    <a href="https://www.vakoshvili.com"
+                        style="font-size: 16px; font-weight: 500; line-height: 20px; color: #564FFD;">https://www.vakoshvili.com</a>
+                </div>
+
+                <div class="social-media d-flex justify-content-start align-self-start" style="gap: 8px;">
+
+                    <div class="social-link">
+                        <img src="../../../assets/instructor-asset/facebook-icon.png" alt="social link"
+                            style="width: 20px; height: 20px;">
+                    </div>
+
+                    <div class="social-link">
+                        <img src="../../../assets/instructor-asset/twitter-icon.png" alt="social link"
+                            style="width: 20px; height: 20px;">
+                    </div>
+
+                    <div class="social-link">
+                        <img src="../../../assets/instructor-asset/instagram-icon.png" alt="social link"
+                            style="width: 20px; height: 20px;">
+                    </div>
+
+                    <div class="social-link">
+                        <img src="../../../assets/instructor-asset/youtube-icon.png" alt="social link"
+                            style="width: 20px; height: 20px;">
+                    </div>
+
+                    <div class="social-link">
+                        <img src="../../../assets/instructor-asset/whatsapp-icon.png" alt="social link"
+                            style="width: 20px; height: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="d-flex align-items-start" style="gap: 24px;">
+
+            <div class="about-me d-flex flex-column">
+                <h3>ABOUT ME</h3>
+
+                <p>
+                    One day Vako had enough with the 9-to-5 grind, or more like 9-to-9 in his case, and quit his job, or
+                    more like got himself fired from his own startup.
+    
+                    He decided to work on his dream: be his own boss, travel the world, only do the work he enjoyed, and
+                    make a lot more money in the process. No more begging for vacation days and living from paycheck to
+                    paycheck. After trying everything from e-commerce stores to professional poker his lucky break came when
+                    he started freelance design. Vako fell in love with the field that gives him the lifestyle of his
+                    dreams.
+    
+                    Vako realizes that people who take courses on Udemy want to transform their lives. Today with his
+                    courses and mentoring Vako is helping thousands of people transform their lives, just like he did once.
+                </p>
+            </div>
+
+            <div class="d-flex flex-column" style="width: 872px; gap: 40px;">
+
+                <div class="allTabs">
+                    <ul class="nav nav-tabs tab-container d-flex justify-content-start align-items-center">
+                        <li class="nav-item" *ngFor="let tab of tabs">
+                            <button class="nav-link" [ngClass]="{'active': activeTab === tab.id}"
+                                (click)="setActiveTab(tab.id)">
+                                {{ tab.name }}
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="d-flex flex-column align-self-start" style="gap: 24px;">
+
+                    <h3 id="courses">{{instructor.firstName}}'s Courses</h3>
+                    <div class="courses-container d-flex flex-wrap" style="width: 100%; gap: 24px;">
+                        @for (course of courses; track $index) {
+                            <app-regular-course-card [cardData]="course"></app-regular-course-card>
+                        }
+                    </div>
+                </div>
+
+
+                <div class="d-flex flex-column" style="width: 100%; gap: 24px;">
+
+                    <div class="d-flex justify-content-between" style="width: 100%; margin-top: 20px;">
+                        <h3 id="review">Students Feedback</h3>
+                    </div>
+
+                    @for (review of reviews; track $index) {
+                        <app-student-review [review]="review"></app-student-review>
+                        <div class="divider"></div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

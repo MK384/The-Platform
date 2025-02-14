@@ -1,0 +1,77 @@
+<div class="login-page d-flex flex-column">
+
+    <header class="header d-flex justify-content-between align-items-center">
+        <a href="#"><img class="logo" src="../../../assets/footer-assets/footer-logo.png" style="width: 200px; height: 58px;">
+        </a>
+        <div class="create-acount d-flex justify-content-center align-items-center" style="gap: 16px;">
+            <span id="dont-have-account">Don't have account?</span>
+            <button class="btn create-account">Create Account</button>
+        </div>
+    </header>
+
+    <section class="d-flex align-items-center" style="gap: 136px; padding-right: 300px;">
+
+        <div class="left-side-img d-flex flex-column justify-content-end " style="background-color: #EBEBFF; height: 875px ;  width: 836px;">
+
+            <img src="../../../assets/login-page-assets/Pasted image.png" style="width: 836px;">
+
+        </div>
+
+
+        <div class="d-flex justify-content-center align-items-center ">
+            <div class="login-form">
+                <h2 class="form-title">Sign in to your account</h2>
+
+                <form>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Username or email address...">
+                    </div>
+
+                    <div class="input-group position-relative">
+                        <label for="password">Password</label>
+                        <input [type]="passType" id="password" placeholder="Password">
+                        <span (click)="eyeClicked()" class="eye-icon">
+                            @if (passHiden) {
+                                <img src="../../../assets/login-page-assets/opened-eye-icon.png" style="height: 24px; width: 24px;" alt="Toggle Password">
+                            }
+                            @else {
+                                <img src="../../../assets/login-page-assets/eye-slash.png" style="height: 24px; width: 24px;" alt="Toggle Password">
+                            }
+                        </span>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn-signin">
+                            Sign In <span class="arrow-icon">→</span>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="social-login">
+                    <div class="divider-container">
+                        <hr class="divider-line">
+                        <span class="divider-text">SIGN IN WITH</span>
+                    </div>
+                    <div class="social-buttons">
+                        <button class="btn-social google">
+                            <img src="../../../assets/login-page-assets/google-icon.png" alt="Google"> Google
+                        </button>
+                        <button class="btn-social facebook">
+                            <img src="../../../assets/login-page-assets/facebook-logo.png" alt="Facebook"> Facebook
+                        </button>
+                        <button class="btn-social apple">
+                            <img src="../../../assets/login-page-assets/apple-logo.png" alt="Apple"> Apple
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+</div>

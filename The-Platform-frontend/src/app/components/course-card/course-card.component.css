@@ -18,7 +18,7 @@
     height: 388px;
     background: #FFFFFF;
     border: 1px solid #E9EAF0;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     transition: all 0.5s ease-in-out;
     cursor: pointer;
 }
@@ -35,8 +35,10 @@
 .course-image img {
     width: 312px;
     height: 234px;
-    border-radius: 15px 15px 0 0;
+    /* border-radius: 15px 15px 0 0; */
     object-fit: cover;
+    position: relative;
+    bottom: 5px;
 }
 
 /* Course Info */

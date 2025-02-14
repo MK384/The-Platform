@@ -1,16 +1,19 @@
 /* Remove any default margin or padding from the body */
 body {
+
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
 
 }
 
-.page-content{
+.layout {
 
-    overflow: hidden;
-    padding-top: 130px; /* Adjust based on the total height of both navbars */
+  overflow: hidden;
+  padding-top: 130px;   /* Adjusted based on the total height of both navbars */
+
 }
+
 /* You can add global styles to this file, and also import other style files */
 
     :root {
@@ -56,5 +59,4 @@ body {
       padding: 4px 6px !important;
       font-size: 10px;
     }
-    
 
