@@ -1,0 +1,129 @@
+/* Profile Header */
+.profile-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+    width: 1320px;
+    height: 190px;
+}
+
+/* Profile Info */
+.profile-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    width: 720px;
+    height: 110px;
+}
+
+/* Profile Image */
+.profile-image {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Profile Content */
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 14px;
+    width: 586px;
+    height: 70px;
+}
+
+/* Profile Name */
+.profile-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    color: #1D2026;
+}
+
+/* Profile Role */
+.profile-role {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6E7485;
+}
+
+/* Become Instructor Button */
+.become-instructor-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 32px;
+    gap: 12px;
+    width: 259px;
+    height: 56px;
+    background: #F7FBDE;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Button Text */
+.become-instructor-btn span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 56px;
+    letter-spacing: -0.01em;
+    color: #35AACD;
+}
+
+/* Arrow Icon */
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+.tab-container {
+    border-bottom: 1px solid #E9EAF0;
+}
+
+.allTabs , .overview, .Curriculum, .Instructor, .Review {
+
+    max-width: 1320px;
+}
+
+/* Individual Tabs */
+.nav-tabs .nav-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4E5566;
+    text-align: center;
+    width: 168px;
+    padding-bottom: 20px;
+    border: none;
+    background: none;
+}
+
+/* Active Tab */
+.nav-tabs .nav-link.active {
+    color: #1D2026;
+    box-shadow: inset 0px -2px 0px #FF6636;
+}
+
+/* Hover Effect */
+.nav-tabs .nav-link:hover {
+    color: #1D2026;
+}
+.nav-tabs .nav-link:active{
+    box-shadow: inset 0px -2px 0px #FF6636;
+}

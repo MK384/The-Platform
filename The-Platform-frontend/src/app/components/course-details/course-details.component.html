@@ -1,8 +1,7 @@
-
 <div>
 
     <div class="container-fluid">
-        <div class="row" style="background-color: #FFC63C; ;">
+        <div class="row" style="background-color: #fcce61c6; ;">
             <div class="col-lg-2"></div>
             <div class="col-lg-9">
                 <!-- ==============upper yellow swction===================== -->
@@ -20,10 +19,8 @@
 
                     <!-- Heading -->
                     <div class="heading ">
-                        <h1 class="fw-semibold ">Complete Website Responsive Design: from Figma to Webflow to
-                            Website Design</h1>
-                        <p>3 in 1 Course: Learn to design websites with Figma, build with Webflow, and make a living
-                            freelancing.
+                        <h1 class="fw-semibold ">{{courseData.courseTitle}}</h1>
+                        <p>{{courseData.courseBrief}}
                         </p>
                     </div>
 
@@ -32,15 +29,18 @@
                         <!-- Created By Section -->
                         <div class=" d-flex justify-content-between align-items-center">
                             <div class="avatar">
-                                <img src="../../../assets/course-details/Image1.png" alt="Avatar 1">
-                                <img src="../../../assets/course-details/Image2.png" alt="Avatar 2">
+                                @for (creator of courseData.creators; track $index) {
+                                <img [src]="creator.instrImg" alt="Avatar">
+                                }
                             </div>
                             <div class="created-by">
                                 <p class="mb-0">Created by:</p>
                                 <div class="author-names d-flex align-items-center">
-                                    <span>Dianne Russell</span>
-                                    <span class="dot">•</span>
-                                    <span>Kristin Watson</span>
+                                    @for (creator of courseData.creators; track $index) {
+                                    <span>{{creator.instName}}</span>
+                                    @if ($index < courseData.creators.length-1) { <span class="dot">•</span>
+                                        }
+                                        }
                                 </div>
                             </div>
                         </div>
@@ -50,8 +50,10 @@
                                 <img src="../../../assets/course-details/Frame 258.png" alt="">
                             </div>
                             <div class="rating-text d-flex align-items-center gap-2">
-                                <span class="fw-semibold" style="color: 1D2026; font-size: 16px;">4.8</span>
-                                <span style="color: #6E7485; font-size: 14px;">(451,444 Ratings)</span>
+                                <span class="fw-semibold"
+                                    style="color: 1D2026; font-size: 16px;">{{courseData.courseRating.overaRating}}</span>
+                                <span style="color: #6E7485; font-size: 14px;">({{courseData.courseRating.reviewersCount
+                                    | numberFormat }} Ratings)</span>
                             </div>
                         </div>
 
@@ -79,382 +81,227 @@
                         </li>
                     </ul>
                 </div>
-                <!-- =======================sections section=================== -->
+                <!-- =======================sections=================== -->
                 <!-- =======================overview section===================-->
                 <div class="overview my-4" id="overview">
                     <h4 class="fw-semibold">Description</h4>
-                    <p>
-                        It gives you a huge self-satisfaction when you look at your work and say, "I made this!". I love
-                        that feeling after I'm done working on something. When I lean back in my chair, look at the
-                        final result with a smile, and have this little "spark joy" moment. It's especially satisfying
-                        when I know I just made $5,000. <br><br>
-                        I do! And that's why I got into this field. Not for the love of Web Design, which I do now. But
-                        for the LIFESTYLE! There are many ways one can achieve this lifestyle. This is my way. This is
-                        how I achieved a lifestyle I've been fantasizing about for five years. And I'm going to teach
-                        you the same. Often people think Web Design is complicated. That it needs some creative talent
-                        or knack for computers. Sure, a lot of people make it very complicated. People make the simplest
-                        things complicated. Like most subjects taught in the universities. But I don't like complicated.
-                        I like easy. I like life hacks. I like to take the shortest and simplest route to my
-                        destination. I haven't gone to an art school or have a computer science degree. I'm an outsider
-                        to this field who hacked himself into it, somehow ending up being a sought-after professional.
-                        That's how I'm going to teach you Web Design. So you're not demotivated on your way with
-                        needless complexity. So you enjoy the process because it's simple and fun. So you can become a
-                        Freelance Web Designer in no time.
-                        <br><br>
-                        For example, this is a Design course but I don't teach you Photoshop. Because Photoshop is
-                        needlessly complicated for Web Design. But people still teach it to web designers. I don't. I
-                        teach Figma – a simple tool that is taking over the design world. You will be designing a
-                        complete website within a week while others are still learning how to create basic layouts in
-                        Photoshop.
-                        <br><br>
-
-                        Second, this is a Development course. But I don't teach you how to code. Because for Web Design
-                        coding is needlessly complicated and takes too long to learn. Instead, I teach Webflow – a tool
-                        that is taking over the web design world. You will be building complex websites within two weeks
-                        while others are still learning the basics of HTML & CSS. Third, this is a Freelancing course.
-                        But I don't just teach you how to write great proposals. I give you a winning proposal template.
-                        When you're done with the course, you will have a stunning portfolio website with portfolio
-                        pieces already in it. Buy this course now and take it whenever the time is right for you.
-                    </p>
+                    <p [innerHTML]="courseData.description"></p>
                     <!-- whar will learn -->
                     <div class="learn p-4">
                         <h4 class="fw-semibold mb-4">What you will learn in this course</h4>
                         <div class="row">
+
                             <div class="col-lg-6">
-                                <div class="d-flex justify-content-center align-items-start gap-2">
+                                @for (item of courseData.learningItems; track $index) {
+
+                                @if ($index < courseData.learningItems.length/2 ) { <div
+                                    class="d-flex justify-content-center align-items-start gap-2">
                                     <img src="../../../assets/course-details/svg/CheckCircle.svg" alt="">
-                                    <p>You will learn how to design beautiful websites using Figma, an interface design
-                                        tool used by designers at Uber, Airbnb and Microsoft.</p>
-                                </div>
-                                <div class="d-flex justify-content-center align-items-start gap-2">
-                                    <img src="../../../assets/course-details/svg/CheckCircle.svg" alt="">
-                                    <p>You will learn secret tips of Freelance Web Designers and how they make great
-                                        money freelancing online.</p>
-                                </div>
-                                <div class="d-flex justify-content-center align-items-start gap-2">
-                                    <img src="../../../assets/course-details/svg/CheckCircle.svg" alt="">
-                                    <p>Understand how to use both the Jupyter Notebook and create .py files</p>
-                                </div>
+                                    <p>{{item}}</p>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex justify-content-center align-items-start gap-2">
-                                    <img src="../../../assets/course-details/svg/CheckCircle.svg" alt="">
-                                    <p>You will learn how to take your designs and build them into powerful websites
-                                        using Webflow, a state of the art site builder used by teams at Dell, NASA and
-                                        more.</p>
-                                </div>
-                                <div class="d-flex justify-content-center align-items-start gap-2">
-                                    <img src="../../../assets/course-details/svg/CheckCircle.svg" alt="">
-                                    <p>Learn to use Python professionally, learning both Python 2 and Python 3!</p>
-                                </div>
-                                <div class="d-flex justify-content-center align-items-start gap-2">
-                                    <img src="../../../assets/course-details/svg/CheckCircle.svg" alt="">
-                                    <p>Get an understanding of how to create GUIs in the Jupyter Notebook system!</p>
-                                </div>
+                            }
+                            }
+                        </div>
+
+                        <div class="col-lg-6">
+                            @for (item of courseData.learningItems; track $index) {
+
+                            @if ($index >= courseData.learningItems.length/2 ) {
+                            <div class="d-flex justify-content-center align-items-start gap-2">
+                                <img src="../../../assets/course-details/svg/CheckCircle.svg" alt="">
+                                <p>{{item}}</p>
                             </div>
-
+                            }
+                            }
                         </div>
-                    </div>
-                    <!-- who course foe -->
-                    <div class="course-for my-4">
-                        <h4 class="fw-semibold mb-4">What you will learn in this course</h4>
-                        <div class="d-flex align-items-start gap-2">
-                            <img src="../../../assets/course-details/svg/ArrowRight.svg" alt="">
-                            <p>This course is for those who want to launch a Freelance Web Design career.</p>
-                        </div>
-                        <div class="d-flex align-items-start gap-2">
-                            <img src="../../../assets/course-details/svg/ArrowRight.svg" alt="">
-                            <p>Praesent eget consequat elit. Duis a pretium purus.</p>
-                        </div>
-                        <div class="d-flex align-items-start gap-2">
-                            <img src="../../../assets/course-details/svg/ArrowRight.svg" alt="">
-                            <p>Sed sagittis suscipit condimentum pellentesque vulputate feugiat libero nec accumsan.</p>
-                        </div>
-                        <div class="d-flex align-items-start gap-2">
-                            <img src="../../../assets/course-details/svg/ArrowRight.svg" alt="">
-                            <p>Sed nec dapibus orci integer nisl turpis, eleifend sit amet aliquam vel, lacinia quis ex.
-                            </p>
-                        </div>
-                        <div class="d-flex align-items-start gap-2">
-                            <img src="../../../assets/course-details/svg/ArrowRight.svg" alt="">
-                            <p>Those who are looking to reboot their work life and try a new profession that is fun,
-                                rewarding and highly in-demand.</p>
-                        </div>
-
-                        <div class="d-flex align-items-start gap-2">
-                            <img src="../../../assets/course-details/svg/ArrowRight.svg" alt="">
-                            <p>Nunc auctor consequat lorem, in posuere enim hendrerit sed.</p>
-                        </div>
-                        <div class="d-flex align-items-start gap-2">
-                            <img src="../../../assets/course-details/svg/ArrowRight.svg" alt="">
-                            <p>Duis ornare enim ullamcorper congue consectetur suspendisse interdum tristique est sed
-                                molestie.</p>
-                        </div>
-
-                    </div>
-                    <!-- course requirment -->
-                    <div class="requre">
-                        <h4 class="fw-semibold mb-4">Course requirements</h4>
-                        <ol>
-                            <li>Nunc auctor consequat lorem, in posuere enim hendrerit sed.</li>
-                            <li>Sed sagittis suscipit condimentum pellentesque vulputate feugiat libero nec accumsan.
-                            </li>
-                            <li>Duis ornare enim ullamcorper congue consectetur suspendisse interdum tristique est sed
-                                molestie.</li>
-                            <li>Those who are looking to reboot their work life and try a new profession that is fun,
-                                rewarding and highly in-demand.</li>
-                            <li> Praesent eget consequat elit. Duis a pretium purus. </li>
-                            <li> Sed nec dapibus orci integer nisl turpis, eleifend sit amet aliquam vel, lacinia quis
-                                ex. </li>
-                            <li> This course is for those who want to launch a Freelance Web Design career. </li>
-
-                        </ol>
                     </div>
                 </div>
-                <!-- =====================Curriculum section===================-->
-                <div class="Curriculum my-4" id="curriculum">
 
-                    <div class=" mb-3 d-flex justify-content-between align-items-center curriculum-header">
+                <!-- who course foe -->
+                <div class="course-for my-4">
+                    <h4 class="fw-semibold mb-4">Who this course is for:</h4>
+                    @for (target of courseData.targetAudience; track $index) {
+                    <div class="d-flex align-items-start gap-2">
+                        <img src="../../../assets/course-details/svg/ArrowRight.svg" alt="">
+                        <p>{{target}}</p>
+                    </div>
+                    }
+                </div>
+                <!-- course requirment -->
+                <div class="requre">
+                    <h4 class="fw-semibold mb-4">Course requirements</h4>
+                    <ol>
+                        @for (item of courseData.courseRequirements; track $index) {
+                        <li>{{item}}</li>
+                        }
+                    </ol>
+                </div>
+            </div>
+            <!-- =====================Curriculum section===================-->
+            <div class="Curriculum my-4" id="curriculum">
 
-                        <h4 class="fw-semibold">Curriculum</h4>
+                <div class=" mb-3 d-flex justify-content-between align-items-center curriculum-header">
 
-                        <!-- Fun Fact Section -->
-                        <div class="d-flex align-items-center funfact gap-4">
-                            <!-- Sections -->
-                            <div class="d-flex align-items-center funfact-item gap-2">
-                                <img src="../../../assets/course-details/svg/FolderNotchOpen.svg" class="icon">
-                                <span class="gray-color">6 Sections</span>
-                            </div>
+                    <h4 class="fw-semibold">Curriculum</h4>
 
-                            <!-- Lectures -->
-                            <div class="d-flex align-items-center funfact-item gap-2">
-                                <img src="../../../assets/course-details/svg/PlayCircle.svg" class="icon">
-                                <span class="gray-color">202 Lectures</span>
-                            </div>
+                    <!-- Fun Fact Section -->
+                    <div class="d-flex align-items-center funfact gap-4">
+                        <!-- Sections -->
+                        <div class="d-flex align-items-center funfact-item gap-2">
+                            <img src="../../../assets/course-details/svg/FolderNotchOpen.svg" style="width: 20px; height: 20px;" class="icon">
+                            <span class="gray-color curriculum-text">{{courseData.curriculum.modulesCount}} Sections</span>
+                        </div>
 
-                            <!-- Duration -->
-                            <div class="d-flex align-items-center funfact-item gap-2">
-                                <img src="../../../assets/course-details/svg/Clock.svg" class="icon">
-                                <span class="gray-color">19h 37m</span>
-                            </div>
+                        <!-- Lectures -->
+                        <div class="d-flex align-items-center funfact-item gap-2">
+                            <img src="../../../assets/course-details/svg/PlayCircle.svg" style="width: 20px; height: 20px;" class="icon">
+                            <span class="gray-color curriculum-text">{{courseData.curriculum.totalLecturesCount}} Lectures</span>
+                        </div>
+
+                        <!-- Duration -->
+                        <div class="d-flex align-items-center funfact-item gap-2">
+                            <img src="../../../assets/course-details/svg/Clock.svg" style="width: 20px; height: 20px;" class="icon">
+                            <span class="gray-color curriculum-text">{{courseData.curriculum.totalCourseTime.hours}}h {{courseData.curriculum.totalCourseTime.minutes}}m</span>
                         </div>
                     </div>
-                    <!-- accordion -->
+                </div>
+                <!-- accordion -->
 
-                    <div class="accordion" id="accordionExample">
+                <div class="accordion" id="accordionExample">
+                    @for (module of courseData.curriculum.modules; track $index) {
 
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Getting Started
+                            <h2 class="accordion-header d-flex justify-content-between align-items-center" id="headingOne">
+                                <button class="accordion-button" type="button"  (click)="toggleModule($index)">
+                                    {{module.moduleTitle}}
                                 </button>
+                                <div class="d-flex justify-content-between align-items-center" style="gap: 16px; margin-right: 20px;">
+                                    <div class="d-flex" style="gap: 6px;">
+                                        <img src="../../../assets/course-details/svg/PlayCircle.svg" style="width: 20px; height: 20px;" class="icon">
+                                        <span class="gray-color curriculum-text">{{module.lecturesCount}} lectures</span>
+                                    </div>
+                                    <div class="d-flex" style="gap: 6px;">
+                                        <img src="../../../assets/course-details/svg/Clock.svg" style="width: 20px; height: 20px;" class="icon">
+                                        <span class="gray-color curriculum-text">{{module.moduleTime.hours}}h {{module.moduleTime.minutes}}m</span>
+
+                                    </div>
+                                </div>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            <div id="collapseOne" class="accordion-collapse collapse" [ngClass]="{ 'show': openModules[$index] }" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    @for (topic of accordionTopics; track $index) {
+                                    @for (lec of module.lectures; track $index) {
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="d-flex align-items-center gap-2">
-                                            <img [src]="topic.icon" alt="">
-                                            <p class="m-0">{{topic.title}}</p>
+
+                                            <img [src]="lec.lectureType == 'watchable'? watchableIcon:readableIcon" alt="">
+                                            <p class="m-0">{{lec.lectureTitle}}</p>
                                         </div>
                                         <div>
-                                            <p class="gray-color2">{{topic.duration}}</p>
+                                            <p class="gray-color2">{{lec.lectureTime.hours}}h {{lec.lectureTime.minutes}}m</p>
                                         </div>
                                     </div>
                                     }
-
+    
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Secret of Good Design
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="d-flex align-items-start gap-2">
-                                        <img src="../../../assets/course-details/svg/ArrowRight.svg" alt="">
-                                        <p>This course is for those who want to launch a Freelance Web Design career.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Practice Design Like an Artist
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Web Development (webflow)
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    Secrets of Making Money Freelancing
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
-                                </div>
-                            </div>
-                        </div>
+                    }
 
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingSix">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    Advanced
-                                </button>
-                            </h2>
-                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                </div>
-
-                <!-- ================ Instructor section =============== -->
-                <div class="Instructor " id="instructor">
-                    <h4 class="fw-semibold">Course instructor (02)</h4>
-                </div>
-                <div class="Review" id="review"></div>
-
-                <!-- ===================Course instructor================== -->
-                <app-course-instractot-card></app-course-instractot-card>
-                <app-course-instractot-card></app-course-instractot-card>
-                <!-- ==================Course Reting================= -->
-                <app-course-reting></app-course-reting>
-                <!-- ==================feed back================= -->
-                <div class="d-flex justify-content-between align-items-center my-4">
-                    <h4 class="fw-semibold">Students Feedback</h4>
-
-                    <div class="dropdown">
-                        <button class=" dropdown-toggle btn-stars" type="button" data-bs-toggle="dropdown">
-                            5 Star Rating
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">All Ratings</a></li>
-                            <li><a class="dropdown-item" href="#">5 Star Rating</a></li>
-                            <li><a class="dropdown-item" href="#">4 Star Rating</a></li>
-                            <li><a class="dropdown-item" href="#">3 Star Rating</a></li>
-                        </ul>
-                    </div>
 
                 </div>
-                <app-send-feedback></app-send-feedback>
-                <app-send-feedback></app-send-feedback>
-                <button class="btn browse-all-courses"><a href="#" class="browse-all-courses-link">Load More
+            </div>
+
+            <!-- ================ Instructor section =============== -->
+            <div class="Instructor " id="instructor">
+                <h4 class="fw-semibold">Course instructor ({{courseData.creators.length}})</h4>
+            </div>
+            <div class="Review" id="review"></div>
+
+            <!-- ===================Course instructor================== -->
+
+            @for (creator of courseData.creators; track $index) {
+                <app-course-instructor-card [instrCardData]="creator"></app-course-instructor-card>
+            }
+            <!-- ==================Course Reting================= -->
+            <app-course-rating [courseRating]="courseData.courseRating"></app-course-rating>
+            <!-- ==================feed back================= -->
+            <div class="d-flex justify-content-between align-items-center my-4">
+                <h4 class="fw-semibold">Students Feedback</h4>
+
+                <div class="dropdown">
+                    <button class=" dropdown-toggle btn-stars" type="button" data-bs-toggle="dropdown">
+                        5 Star Rating
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">All Ratings</a></li>
+                        <li><a class="dropdown-item" href="#">5 Star Rating</a></li>
+                        <li><a class="dropdown-item" href="#">4 Star Rating</a></li>
+                        <li><a class="dropdown-item" href="#">3 Star Rating</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            @for (review of courseData.studentsReviews; track $index) {
+                <app-student-review [review]="review"></app-student-review>
+                <div class="divider"></div>
+            }
+            <button class="btn browse-all-courses"><a href="#" class="browse-all-courses-link">Load More
                     <img src="../../../assets/course-details/svg/Spinner.svg" alt=""></a></button>
-                <!-- ===================================== -->
-            </div>
+            <!-- ===================================== -->
+        </div>
 
-            <div class="col-lg-5 "></div>
-            <!-- ==================Related Courses================= -->
-            <div class="row border-top " style="margin-top: 100px;">
-                
-                <div class="col-lg-2"></div>
-                <div class="col-lg-8">
-                    <div class="d-flex justify-content-between align-items-center my-4 pt-4">
-                        <h4 class="fw-semibold">Related Courses</h4>
-                        <button class="btn browse-all-courses"><a href="#" class="browse-all-courses-link">View All
-                                →</a></button>
-                    </div>
+        <div class="col-lg-5 "></div>
+        <!-- ==================Related Courses================= -->
+        <div class="row border-top " style="margin-top: 100px;">
+
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div class="d-flex justify-content-between align-items-center my-4 pt-4">
+                    <h4 class="fw-semibold">Related Courses</h4>
+                    <button class="btn browse-all-courses"><a href="#" class="browse-all-courses-link">View All
+                            →</a></button>
                 </div>
-                <div class="col-lg-2"></div>
             </div>
-            <div class="row">
-               
-                <div class="col-lg-1"></div>
-                <div class="col-lg-10">
-                    <div class="container-fluid mx-auto my-4 mt-5 ">
-                        <div class="row d-flex justify-content-center align-items-center ">
+            <div class="col-lg-2"></div>
+        </div>
+        <div class="row">
 
-                            <div class="col-lg-2 col-md-4 col-sm-6">
-                                <app-regular-course-card></app-regular-course-card>
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6">
-                                <app-regular-course-card></app-regular-course-card>
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6">
-                                <app-regular-course-card></app-regular-course-card>
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6">
-                                <app-regular-course-card></app-regular-course-card>
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6">
-                                <app-regular-course-card></app-regular-course-card>
-                            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <div class="container-fluid mx-auto my-4 mt-5 ">
+                    <div class="row d-flex justify-content-center align-items-center " style="gap: 25px; margin-bottom: 80px;">
+
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <app-regular-course-card></app-regular-course-card>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <app-regular-course-card></app-regular-course-card>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <app-regular-course-card></app-regular-course-card>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <app-regular-course-card></app-regular-course-card>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <app-regular-course-card></app-regular-course-card>
                         </div>
                     </div>
-
                 </div>
-                <div class="col-lg-1"></div>
 
             </div>
-
-
-
-
-
-
-
+            <div class="col-lg-1"></div>
 
         </div>
+
+
+
+
+
+
+
+
     </div>
+</div>
 </div>
