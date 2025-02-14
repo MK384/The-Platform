@@ -8,7 +8,7 @@
         <div class="review-header">
             <span class="review-name">{{ review.name }}</span>
             <span class="review-dot">•</span>
-            <span class="review-date">{{ review.reviewDate }}</span>
+            <span class="review-date">{{ review.reviewDate.getTime() | timeAgo }}</span>
         </div>
 
         <!-- Rating Stars -->
