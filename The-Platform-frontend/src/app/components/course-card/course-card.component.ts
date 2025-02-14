@@ -19,8 +19,8 @@ export class CourseCardComponent {
     title: 'The Python Mega Course: Build 10 Real World Applications',
     price: 57,
     rate: 5.0,
-    enrolledStudents: 265700
-    courseImage:''
+    enrolledStudents: 265700,
+    courseImage:'../../../assets/course-card/course-card-1.png'
   }
 
   textColor!: string;
