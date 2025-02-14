@@ -20,7 +20,7 @@ export class CourseCardComponent {
     price: 57,
     rate: 5.0,
     enrolledStudents: 265700
-
+    courseImage:''
   }
 
   textColor!: string;
