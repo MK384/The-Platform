@@ -1,3 +1,4 @@
+
 <div>
 
     <div class="container-fluid">
@@ -72,7 +73,15 @@
                 <img class="mt-3" src="../../../assets/course-details/Trailer.png" alt="">
                 <!-- ======tabs===== -->
                 <div class="allTabs mt-4">
-                    <ul class="nav nav-tabs tab-container d-flex justify-content-start align-items-center">
+                    <ul class="nav nav-tabs tab-container d-flex align-items-center">
+                        <!-- <li class="nav-item" *ngFor="let tab of ['Overview', 'Curriculum', 'Instructor', 'Review']">
+                            <button 
+                                class="nav-link" 
+                                [ngClass]="{'active': activeTab === tab}" 
+                                (click)="setActiveTab(tab)">
+                                {{ tab }}
+                            </button>
+                        </li> -->
                         <li class="nav-item" *ngFor="let tab of tabs">
                             <button class="nav-link" [ngClass]="{'active': activeTab === tab.id}"
                                 (click)="setActiveTab(tab.id)">
@@ -164,6 +173,7 @@
                             <span class="gray-color curriculum-text">{{courseData.curriculum.totalCourseTime.hours}}h {{courseData.curriculum.totalCourseTime.minutes}}m</span>
                         </div>
                     </div>
+
                 </div>
                 <!-- accordion -->
 
@@ -207,6 +217,7 @@
                             </div>
                         </div>
                     }
+
 
 
                 </div>

@@ -1,0 +1,127 @@
+body{
+    box-sizing: border-box;
+}
+.header-container {
+    background-color: #FFC63C;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.small-text {
+    color: #4E5566;
+    margin-right: 5px;
+}
+.bg-prog-green{
+    background-color: #23BD33;
+}
+.text-green{
+    color: #23BD33;
+    font-size: 16px;
+}
+/* =============tabs================ */
+.allTabs[data-v-6f8fa183] {
+    margin-right: 0 !important;
+}
+.tab-container {
+    border-bottom: 1px solid #E9EAF0;
+}
+
+/* Individual Tabs */
+.nav-tabs .nav-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4E5566;
+    text-align: center;
+    width: 200px;
+    padding-bottom: 20px;
+    border: none;
+    background: none;
+}
+
+/* Active Tab */
+.nav-tabs .nav-link.active {
+    color: #1D2026;
+    box-shadow: inset 0px -2px 0px #FF6636;
+}
+
+/* Hover Effect */
+.nav-tabs .nav-link:hover {
+    color: #1D2026;
+}
+.nav-tabs .nav-link:active{
+    box-shadow: inset 0px -2px 0px #FF6636;
+}
+/* ==================== */
+.description {
+    max-width: 750px;
+    color: #4E5566;
+    font-size: 14px;
+}
+.browse-all-courses {
+    background: #F7FBDE;
+    color: #35AACD;
+    padding: 12px 24px;
+    /* border-radius: 15px; */
+    border: none;
+    letter-spacing: -0.8%;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 48px;
+    cursor: pointer;
+    width: 224px;
+    height: 48px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+.browse-all-courses-link {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 48px;
+    letter-spacing: -0.8%;
+    color: #35AACD;
+    text-decoration: none;
+    display: flex;
+    transition: color 0.3s ease;
+  }
+  .browse-all-courses:hover {
+    background-color: #d3ee3f;
+  }
+  /* =======file download======= */
+  .file-container {
+    background: rgba(255, 198, 60, 0.77);
+    /* width: 916px;
+    height: 96px; */
+  }
+  
+  .file-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #1D2026;
+  }
+  
+  .file-size {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #6E7485;
+  }
+  
+  .btn-primary {
+    /* background-color: #35AACD; */
+    /* border: none; */
+    padding: 12px 24px;
+    font-weight: 600;
+  }
+  

@@ -1,0 +1,29 @@
+   <div class="">
+    <div class="comment">
+      <!-- User Image -->
+      <img class="avatar" [src]="comment.userImage" alt="User Image" />
+  
+      <div class="comment-content">
+        <div class="comment-header">
+          <span class="user-name">{{ comment.userName }}</span>
+          <span *ngIf="comment.isAdmin" class="admin-badge">ADMIN</span>
+          <span class="dot">•</span>
+          <span class="time">{{ comment.time }}</span>
+        </div>
+        <p class="comment-text">
+          {{ comment.text }}
+        </p>
+        <button class="reply-btn">
+          <img src="../../../assets/watch-course/svg/ChatsCircle.svg" alt=""> Reply
+        </button>
+      </div>
+    </div>
+  
+    <!-- Display Replies -->
+    <div *ngIf="comment.replies && comment.replies.length > 0">
+      <div *ngFor="let reply of comment.replies" class="comment reply">
+        <app-comment-reply [comment]="reply"></app-comment-reply>
+      </div>
+    </div>
+  </div>
+  

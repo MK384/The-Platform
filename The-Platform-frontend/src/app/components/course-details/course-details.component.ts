@@ -3,15 +3,19 @@ import { Component } from '@angular/core';
 import { CourseInstructorCardComponent } from '../course-instructor-card/course-instructor-card.component';
 import { CourseRatingComponent } from '../course-rating-card/course-rating.component';
 import { RegularCourseCardComponent } from '../regular-course-card/regular-course-card.component';
+
 import { CourseRatingProps } from '../../../core/interfaces/CourseRatingProps.interface';
 import { CourseData } from '../../../core/interfaces/CourseData.interface';
 import { NumberFormatPipe } from '../../../core/pipes/number-format.pipe';
 import { StudentReviewComponent } from "../student-review-card/student-review.component";
 
+
 @Component({
   selector: 'app-course-details',
   standalone: true,
+
   imports: [CommonModule, CourseInstructorCardComponent, RegularCourseCardComponent, CourseRatingComponent, NumberFormatPipe, StudentReviewComponent],
+
   templateUrl: './course-details.component.html',
   styleUrl: './course-details.component.css'
 })
@@ -259,6 +263,7 @@ export class CourseDetailsComponent {
     { id: 'instructor', name: 'Instructor' },
     { id: 'review', name: 'Review' }
   ];
+
   setActiveTab(tabId: string) {
     this.activeTab = tabId;
     // Scroll to the section

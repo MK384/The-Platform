@@ -17,54 +17,47 @@ html {
 
 /* You can add global styles to this file, and also import other style files */
 
-:root {
-  --yellow: #F1B72F;
-  --bgyellow: #F7FBDE;
-  --purpul: #342F98;
-  --bgpurpul: #EBEBFF;
-  --green: #15711F;
-  --bgGreen: #E1F7E3;
-  --red: #882929;
-  --bgRed: #FFF0F0;
-  --brown: #65390C;
-  --bgbrown: #FFF2E5;
-
-  --themecolor: #35AACD;
-
-}
-
-.custom-yellow-color {
-  color: var(--yellow);
-  background-color: var(--bgyellow);
-  padding: 4px 6px !important;
-  font-size: 10px;
-}
-
-.custom-purpul-color {
-  color: var(--purpul);
-  background-color: var(--bgpurpul);
-  padding: 4px 6px !important;
-  font-size: 10px;
-}
-
-.custom-green-color {
-  color: var(--green);
-  background-color: var(--bgGreen);
-  padding: 4px 6px !important;
-  font-size: 10px;
-}
-
-.custom-red-color {
-  color: var(--green);
-  background-color: var(--bgRed);
-  padding: 4px 6px !important;
-  font-size: 10px;
-}
-
-.custom-brown-color {
-  color: var(--green);
-  background-color: var(--bgbrown);
-  padding: 4px 6px !important;
-  font-size: 10px;
-}
+    :root {
+      --yellow: #F1B72F;
+      --bgyellow: #F7FBDE;
+      --purpul: #342F98;
+      --bgpurpul:#EBEBFF;
+      --green:#15711F;
+      --bgGreen:#E1F7E3;
+      --red:#882929;
+      --bgRed:#FFF0F0;
+      --brown:#65390C;
+      --bgbrown:#FFF2E5;
+  
+    }
+    .custom-yellow-color{
+      color: var(--yellow);
+      background-color: var(--bgyellow);
+      padding: 4px 6px !important;
+      font-size: 10px;
+    }
+    .custom-purpul-color{
+      color: var(--purpul);
+      background-color: var(--bgpurpul);
+      padding: 4px 6px !important;
+      font-size: 10px;
+    }
+    .custom-green-color{
+      color: var(--green);
+      background-color: var(--bgGreen);
+      padding: 4px 6px !important;
+      font-size: 10px;
+    }
+    .custom-red-color{
+      color: var(--green);
+      background-color: var(--bgRed);
+      padding: 4px 6px !important;
+      font-size: 10px;
+    }
+    .custom-brown-color{
+      color: var(--green);
+      background-color: var(--bgbrown);
+      padding: 4px 6px !important;
+      font-size: 10px;
+    }
 
