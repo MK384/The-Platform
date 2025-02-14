@@ -1,0 +1,25 @@
+<div class="watch-course-card">
+    <!-- Course Image -->
+    <div class="course-image" [style.backgroundImage]="'url(' + course.courseImage + ')'"></div>
+  
+    <!-- Course Info -->
+    <div class="course-info">
+      <p class="course-title">{{ course.courseTitle }}</p>
+      <p class="lecture-title">{{ course.lectureTitle }}</p>
+    </div>
+  
+    <!-- Divider -->
+    <div class="divider"></div>
+  
+    <!-- CTA Section -->
+    <div class="cta">
+      <button class="watch-btn">Watch Lecture</button>
+      <p class="completion">{{ course.completionPercentage }}% Completed</p>
+    </div>
+  
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div class="progress" [style.width.%]="course.completionPercentage"></div>
+    </div>
+  </div>
+  

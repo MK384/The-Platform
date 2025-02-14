@@ -1,40 +1,301 @@
 <div class="page-content d-flex flex-column align-items-center" style="gap: 80px;">
 
 
-    <div style="width: 100%; height: 280px; background-color: #e5ecb3;"></div>
+  <div style="width: 100%; height: 280px; background-color: #e5ecb3;"></div>
 
 
-    <div class="d-flex flex-column justify-content-center align-items-center"
-        style="gap: 40px; position: relative; bottom: 280px; background-color: white; max-width: 1320px;">
+  <div class="d-flex flex-column justify-content-center align-items-center" style="gap: 40px; position: relative;     transform: translateY(-270px);
+    margin-bottom: -160px; background-color: white; max-width: 1320px;">
 
-        <div class="profile-header" style="border: solid 1px #FFDDD1;">
-            <!-- User Info -->
-            <div class="profile-info">
-                <img [src]="user.profileImage" alt="User Profile" class="profile-image">
-                <div class="profile-content">
-                    <h1 class="profile-name">{{ user.name }}</h1>
-                    <p class="profile-role">{{ user.role }}</p>
-                </div>
+    <div class="profile-header" style="border: solid 1px #FFDDD1;">
+      <!-- User Info -->
+      <div class="profile-info">
+        <img [src]="user.profileImage" alt="User Profile" class="profile-image">
+        <div class="profile-content">
+          <h1 class="profile-name">{{ user.name }}</h1>
+          <p class="profile-role">{{ user.role }}</p>
+        </div>
+      </div>
+
+      <!-- Become Instructor Button -->
+      <button class="become-instructor-btn">
+        <span>Become Instructor</span>
+        <img alt="Arrow" class="arrow-icon" src="../../../assets/user-icons/right-arrow.png">
+      </button>
+    </div>
+
+    <div class="allTabs">
+      <ul class="nav nav-tabs tab-container d-flex justify-content-center align-items-center">
+        <li *ngFor="let tab of tabs" class="nav-item">
+          <button (click)="setActiveTab(tab.id)" [ngClass]="{'active': activeTab === tab.id}"
+                  class="nav-link">
+            {{ tab.name }}
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div [ngClass]="{'show':activeTab === 'dashboard'}" class="dashboard-section hide">
+      <div class="d-flex flex-column align-items-start" style="gap: 24px; ">
+        <h3>Dashboard</h3>
+        <div class="d-flex" style="gap: 24px;">
+
+          <div class="d-flex"
+               style="width: 312px; height: 108px; padding: 24px; gap: 24px; background-color: #F7FBDE;">
+
+            <div class="d-flex" style="background-color: white; padding: 14px;">
+              <img alt="" src="../../../assets/user-page-assets/play-icon.png"
+                   style="width: 32px; height: 32px;">
+            </div>
+            <div class="d-flex flex-column align-items-start">
+              <h4 class="info-text">957</h4>
+              <span class="desc-text">Enrolled Courses</span>
             </div>
 
-            <!-- Become Instructor Button -->
-            <button class="become-instructor-btn">
-                <span>Become Instructor</span>
-                <img src="../../../assets/user-icons/right-arrow.png" alt="Arrow" class="arrow-icon">
-            </button>
+          </div>
+          <div class="d-flex"
+               style="width: 312px; height: 108px; padding: 24px; gap: 24px; background-color: #EBEBFF;">
+
+            <div class="d-flex" style="background-color: white; padding: 14px;">
+              <img alt=""
+                   src="../../../assets/user-page-assets/check-icon.png" style="width: 32px; height: 32px;">
+            </div>
+            <div class="d-flex flex-column align-items-start">
+              <h4 class="info-text">6</h4>
+              <span class="desc-text">Active Courses</span>
+            </div>
+          </div>
+          <div class="d-flex"
+               style="width: 312px; height: 108px; padding: 24px; gap: 24px; background-color: #E1F7E3;">
+            <div class="d-flex" style="background-color: white; padding: 14px;">
+              <img alt="" src="../../../assets/user-page-assets/cup-icon.png"
+                   style="width: 32px; height: 32px;">
+            </div>
+            <div class="d-flex flex-column align-items-start">
+              <h4 class="info-text">951</h4>
+              <span class="desc-text">Completed Courses</span>
+            </div>
+          </div>
+          <div class="d-flex"
+               style="width: 312px; height: 108px; padding: 24px; gap: 24px; background-color: #FFF2E5;">
+            <div class="d-flex" style="background-color: white; padding: 14px;">
+              <img alt=""
+                   src="../../../assets/user-page-assets/users-icon.png" style="width: 32px; height: 32px;">
+            </div>
+            <div class="d-flex flex-column align-items-start">
+              <h4 class="info-text">241</h4>
+              <span class="desc-text">Course Instructors</span>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+      <div class="d-flex flex-column" style="gap: 24px; width: 100%; margin-top: 40px;">
+        <div class="d-flex justify-content-between" style="width: 100%;">
+          <h4 class="start-learning">Let's start Learning, Kevin</h4>
+          <div class="d-flex" style="gap: 8px;">
+            <div class="d-flex" style="padding: 8px; background-color: #F7FBDE;">
+              <img alt="Arrow" class="arrow-icon" src="../../../assets/user-page-assets/left-arrow.png">
+            </div>
+            <div class="d-flex" style="padding: 8px; background-color: #F7FBDE;">
+              <img alt="Arrow" class="arrow-icon" src="../../../assets/user-page-assets/right-icon.png">
+            </div>
+          </div>
+
+        </div>
+        <div class="d-flex" style="gap: 24px;">
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+        </div>
+      </div>
+    </div>
+
+    <div [ngClass]="{'show':activeTab === 'courses'}" class="Courses-Section hide" style="width: 100%">
+
+
+      <div class="heading d-flex flex-column align-items-start" style="gap: 24px; width: 100%;margin-bottom: 24px;">
+        <h3>Courses (957)</h3>
+
+        <div class="d-flex" style="gap: 24px">
+
+          <div class="d-flex flex-column gap-2" style="width: 528px">
+            <span class="field-desc">search:</span>
+
+            <div class="search-container">
+              <img src="../../../assets/filter-bar/search-icon.png" style="width: 24px; height: 24px;"
+                   alt="Search">
+              <input type="text" placeholder="Search in courses...">
+            </div>
+
+          </div>
+          <div class="d-flex flex-column gap-2" style="width: 240px">
+
+            <span class="field-desc">Sort by:</span>
+            <div class="dropdown-menu-category">
+              <span class="dropdown-text">Latest</span>
+              <img class="dropdown-icon" src="../../../assets/navbar-icons/caret-icon.png"
+                   alt="Dropdown Icon">
+            </div>
+          </div>
+          <div class="d-flex flex-column gap-2" style="width: 240px">
+
+            <span class="field-desc">Status:</span>
+            <div class="dropdown-menu-category">
+              <span class="dropdown-text">All Courses</span>
+              <img class="dropdown-icon" src="../../../assets/navbar-icons/caret-icon.png"
+                   alt="Dropdown Icon">
+            </div>
+
+          </div>
+          <div class="d-flex flex-column gap-2" style="width: 240px">
+
+            <span class="field-desc">Teacher:</span>
+            <div class="dropdown-menu-category">
+              <span class="dropdown-text">All Teachers</span>
+              <img class="dropdown-icon" src="../../../assets/navbar-icons/caret-icon.png"
+                   alt="Dropdown Icon">
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+      <!--  filter-bar end-->
+
+
+      <!--  filter-bar end-->
+
+      <div class="d-flex flex-column align-items-center" style="gap: 40px">
+        <div class="d-flex flex-wrap" style="gap: 24px; width: 100%;">
+
+
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+          <app-watch-course-card></app-watch-course-card>
+
+
         </div>
 
 
-        <div class="allTabs">
-            <ul class="nav nav-tabs tab-container d-flex justify-content-center align-items-center">
-                <li class="nav-item" *ngFor="let tab of tabs">
-                    <button class="nav-link" [ngClass]="{'active': activeTab === tab.id}"
-                        (click)="setActiveTab(tab.id)">
-                        {{ tab.name }}
-                    </button>
-                </li>
-            </ul>
+        <app-pagination-bar></app-pagination-bar>
+
+      </div>
+
+    </div>
+
+    <div [ngClass]="{'show':activeTab === 'teachers'}" class="Courses-Section hide" style="width: 100%">
+
+      <div class="heading d-flex flex-column align-items-start" style="gap: 24px; width: 100%;margin-bottom: 24px;">
+        <h3>Instructors (241)</h3>
+
+        <div class="d-flex" style="gap: 24px">
+
+          <div class="d-flex flex-column gap-2" style="width: 648px">
+            <span class="field-desc">search:</span>
+
+            <div class="search-container">
+              <img src="../../../assets/filter-bar/search-icon.png" style="width: 24px; height: 24px;"
+                   alt="Search">
+              <input type="text" placeholder="Search in courses...">
+            </div>
+
+          </div>
+          <div class="d-flex flex-column gap-2" style="width: 424px">
+
+            <span class="field-desc">Status:</span>
+            <div class="dropdown-menu-category">
+              <span class="dropdown-text">All Courses</span>
+              <img class="dropdown-icon" src="../../../assets/navbar-icons/caret-icon.png"
+                   alt="Dropdown Icon">
+            </div>
+
+          </div>
+          <div class="d-flex flex-column gap-2" style="width: 200px">
+
+            <span class="field-desc">Teacher:</span>
+            <div class="dropdown-menu-category">
+              <span class="dropdown-text">All Teachers</span>
+              <img class="dropdown-icon" src="../../../assets/navbar-icons/caret-icon.png"
+                   alt="Dropdown Icon">
+            </div>
+
+          </div>
+
+
         </div>
+      </div>
+
+      <div class="d-flex flex-column align-items-center" style="gap: 40px">
+        <div class="d-flex flex-wrap" style="gap: 24px; width: 100%;">
+
+
+          <app-user-instructor-card></app-user-instructor-card>
+          <app-user-instructor-card></app-user-instructor-card>
+          <app-user-instructor-card></app-user-instructor-card>
+          <app-user-instructor-card></app-user-instructor-card>
+          <app-user-instructor-card></app-user-instructor-card>
+          <app-user-instructor-card></app-user-instructor-card>
+          <app-user-instructor-card></app-user-instructor-card>
+          <app-user-instructor-card></app-user-instructor-card>
+          <app-user-instructor-card></app-user-instructor-card>
+          <app-user-instructor-card></app-user-instructor-card>
+          <app-user-instructor-card></app-user-instructor-card>
+          <app-user-instructor-card></app-user-instructor-card>
+          <app-user-instructor-card></app-user-instructor-card>
+
+
+        </div>
+
+
+        <app-pagination-bar></app-pagination-bar>
+
+      </div>
+
+
+    </div>
+
+    <div [ngClass]="{'show':activeTab === 'message'}" class="Courses-Section hide" style="width: 100%">
+
+        <h2>Not Implemented Yet !!</h2>
+    </div>
+
+    <div [ngClass]="{'show':activeTab === 'wishlist'}" class="Courses-Section hide" style="width: 100%">
+      <h2>Not Implemented Yet !!</h2>
+
+    </div>
+
+    <div [ngClass]="{'show':activeTab === 'purchase'}" class="Courses-Section hide" style="width: 100%">
+      <h2>Not Implemented Yet !!</h2>
+
+    </div>
+
+    <div [ngClass]="{'show':activeTab === 'settings'}" class="Courses-Section hide" style="width: 100%">
+
+    
 
 
 
@@ -43,17 +304,7 @@
 
     </div>
 
-    I
-
-
-
-
-
-
-
-
-
-
+  </div>
 
 
 </div>
