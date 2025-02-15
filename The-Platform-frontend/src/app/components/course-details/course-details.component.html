@@ -75,9 +75,9 @@
                 <div class="allTabs mt-4">
                     <ul class="nav nav-tabs tab-container d-flex align-items-center">
                         <!-- <li class="nav-item" *ngFor="let tab of ['Overview', 'Curriculum', 'Instructor', 'Review']">
-                            <button 
-                                class="nav-link" 
-                                [ngClass]="{'active': activeTab === tab}" 
+                            <button
+                                class="nav-link"
+                                [ngClass]="{'active': activeTab === tab}"
                                 (click)="setActiveTab(tab)">
                                 {{ tab }}
                             </button>
@@ -181,7 +181,7 @@
                     @for (module of courseData.curriculum.modules; track $index) {
 
                         <div class="accordion-item">
-                            <h2 class="accordion-header d-flex justify-content-between align-items-center" id="headingOne">
+                            <h2 class="d-flex justify-content-between align-items-center" id="headingOne">
                                 <button class="accordion-button" type="button"  (click)="toggleModule($index)">
                                     {{module.moduleTitle}}
                                 </button>
@@ -197,8 +197,7 @@
                                     </div>
                                 </div>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" [ngClass]="{ 'show': openModules[$index] }" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
+                            <div class="collapse" [ngClass]="{ 'show': openModules[$index] }">
                                 <div class="accordion-body">
                                     @for (lec of module.lectures; track $index) {
                                     <div class="d-flex justify-content-between align-items-center">
@@ -212,7 +211,7 @@
                                         </div>
                                     </div>
                                     }
-    
+
                                 </div>
                             </div>
                         </div>
