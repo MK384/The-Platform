@@ -280,7 +280,7 @@
 
     <div [ngClass]="{'show':activeTab === 'message'}" class="Courses-Section hide" style="width: 100%">
 
-        <h2>Not Implemented Yet !!</h2>
+      <h2>Not Implemented Yet !!</h2>
     </div>
 
     <div [ngClass]="{'show':activeTab === 'wishlist'}" class="Courses-Section hide" style="width: 100%">
@@ -295,12 +295,81 @@
 
     <div [ngClass]="{'show':activeTab === 'settings'}" class="Courses-Section hide" style="width: 100%">
 
-    
+      <div class="d-flex flex-column align-items-start" style="gap: 25px">
+      <h3>Account Settings</h3>
+      <div class="account-settings">
+        <!-- Avatar Section -->
+        <div class="avatar-section">
+          <div class="profile-photo">
+            <img src="assets/user-page-assets/img_1.png" alt="Profile Photo" >
+            <div class="upload-overlay">
+              <img src="../../../assets/user-page-assets/upload-icon.png" style="width: 24px;height: 24px;" alt="Upload Icon">
+              <span>Upload Photo</span>
+            </div>
+          </div>
+          <p class="upload-note">Image size should be under 1MB and image ratio needs to be 1:1</p>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-section">
+          <div class="form-group">
+            <label>Full name</label>
+            <div class="input-row">
+              <input type="text" placeholder="First name">
+              <input type="text" placeholder="Last name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Username</label>
+            <input type="text" placeholder="Enter your username">
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="Email address">
+          </div>
+
+          <div class="form-group">
+            <label>Title</label>
+            <div class="title-input">
+              <input type="text" placeholder="Your title, profession or small biography">
+              <span class="char-count">0/50</span>
+            </div>
+          </div>
+
+          <!-- Save Button -->
+          <button class="save-btn">Save Changes</button>
+        </div>
+      </div>
+
+        <div class="divider" style="width: 100%; border: solid 1px #E9EAF0"></div>
+
+        <h3>Change Password</h3>
+
+        <div class="form-group pass">
+          <label>Current Password</label>
+          <input type="text" placeholder="Password">
+          <img src="assets/login-page-assets/opened-eye-icon.png">
+        </div>
+
+        <div class="form-group pass">
+          <label>New Password</label>
+          <input type="text" placeholder="Password">
+          <img src="assets/login-page-assets/opened-eye-icon.png">
+
+        </div>
+
+        <div class="form-group pass">
+          <label>Confirm Password</label>
+          <input type="text" placeholder="Confirm new password">
+          <img src="assets/login-page-assets/opened-eye-icon.png">
+
+        </div>
 
 
 
-
-
+      </div>
 
     </div>
 

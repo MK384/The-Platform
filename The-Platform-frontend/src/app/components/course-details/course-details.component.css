@@ -1,7 +1,7 @@
 /* General Styles */
 * {
     font-family: 'Inter', sans-serif;
-   
+
 }
 .content {
     width: 872px;
@@ -27,7 +27,7 @@
     line-height: 32px;
 }
 
-/* Created By */ 
+/* Created By */
  .created-by {
     margin-left: 90px;
 }
@@ -142,7 +142,7 @@
 }
 ol{
     list-style:disc;;
-}   
+}
 ol li {
     font-size: 14px;
     color: #6E7485;
@@ -216,8 +216,8 @@ ol li {
   .browse-all-courses:hover {
     background-color: #d3ee3f;
   }
-  
- 
+
+
 
   .curriculum-text{
 
