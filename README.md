@@ -105,9 +105,15 @@ To run The Platform locally, follow these steps:
 
 ## Screenshots
 
-1. Homepage ![The Platform homepage](https://via.placeholder.com/150)
-2. Course Page ![The Platform course page](https://via.placeholder.com/150)
-3. Dashboard ![The Platform Dashboard](https://via.placeholder.com/150)
+
+  ![The Platform homepage](https://github.com/user-attachments/assets/74eeb832-0c7b-47fc-b554-b470fd8b669a)
+
+  ![The Platform course page](https://github.com/user-attachments/assets/e48a90e9-4264-452e-afe5-11e176620347)
+
+  ![image](https://github.com/user-attachments/assets/9b22027d-d27a-4708-bbef-12ffe194f738)
+
+  ![The Platform Dashboard](https://github.com/user-attachments/assets/a89063f9-7ad8-4383-a6fc-b5413efc2894)
+
 
 ---
 
