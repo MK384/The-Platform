@@ -142,7 +142,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
  featuredCourses: DetailedCourseCardProps[] = [
   {
-    title: "Investing In Stocks The Complete Course! (13 H...)", 
+    title: "Investing In Stocks The Complete Course! (13 H...)",
     category: "HEALTH & FITNESS",
     instructor: "Kevin Gilbert",
     instructorImageUrl: "../../../assets/instructor-asset/instructor1.png",
@@ -179,7 +179,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
     rating: 5.0,
     reviewCount: 357914,
     enrolledStudents: 265700,
-    difficultyLevel: 'Advanced',
+    difficultyLevel: 'Expert',
     duration: 6,
     imageUrl: "../../../assets/course-images/course-image.png"
   },
@@ -316,14 +316,14 @@ export class HomePageComponent implements OnInit, OnDestroy {
   }
 
   public outOfCourseCard:boolean = true;
-  public outOfHoveringCard:boolean = true; 
+  public outOfHoveringCard:boolean = true;
 
   mouseEnterCourseCard(event: MouseEvent){
     this.outOfCourseCard = false;
 
     this.ngZone.run(() => {setTimeout(() => {
-       
-       let x = this.mouseX - 10 ; 
+
+       let x = this.mouseX - 10 ;
        let y = this.mouseY - 300
        // Offset for better positioning
       y = (event.screenY < 410)? y + (550 - event.screenY): (event.screenY > 750)? y - ( event.screenY - 650): y;

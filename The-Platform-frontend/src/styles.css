@@ -1,63 +1,129 @@
 /* Remove any default margin or padding from the body */
 body {
 
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 .layout {
 
   overflow: hidden;
-  padding-top: 130px;   /* Adjusted based on the total height of both navbars */
+  padding-top: 130px; /* Adjusted based on the total height of both navbars */
 }
 
 /* You can add global styles to this file, and also import other style files */
 
-    :root {
-      --yellow: #F1B72F;
-      --bgyellow: #F7FBDE;
-      --purpul: #342F98;
-      --bgpurpul:#EBEBFF;
-      --green:#15711F;
-      --bgGreen:#E1F7E3;
-      --red:#882929;
-      --bgRed:#FFF0F0;
-      --brown:#65390C;
-      --bgbrown:#FFF2E5;
-  
-    }
-    .custom-yellow-color{
-      color: var(--yellow);
-      background-color: var(--bgyellow);
-      padding: 4px 6px !important;
-      font-size: 10px;
-    }
-    .custom-purpul-color{
-      color: var(--purpul);
-      background-color: var(--bgpurpul);
-      padding: 4px 6px !important;
-      font-size: 10px;
-    }
-    .custom-green-color{
-      color: var(--green);
-      background-color: var(--bgGreen);
-      padding: 4px 6px !important;
-      font-size: 10px;
-    }
-    .custom-red-color{
-      color: var(--green);
-      background-color: var(--bgRed);
-      padding: 4px 6px !important;
-      font-size: 10px;
-    }
-    .custom-brown-color{
-      color: var(--green);
-      background-color: var(--bgbrown);
-      padding: 4px 6px !important;
-      font-size: 10px;
-    }
+:root {
+  --yellow: #F1B72F;
+  --bgyellow: #F7FBDE;
+  --purpul: #342F98;
+  --bgpurpul: #EBEBFF;
+  --green: #15711F;
+  --bgGreen: #E1F7E3;
+  --red: #882929;
+  --bgRed: #FFF0F0;
+  --brown: #65390C;
+  --bgbrown: #FFF2E5;
+
+
+ --gray-900: #1d1f26;
+ --gray-800: #363a47;
+ --gray-700: #4d5565;
+ --gray-600: #6e7484;
+ --gray-500: #8c93a3;
+ --gray-400: #a0a5b2;
+ --gray-300: #b6bac6;
+ --gray-200: #cdd0d8;
+ --gray-100: #e8eaef;
+ --gray-50: #FFC63C;
+ --gray-white: #ffffff;
+ --primary-900: #33140b;
+ --primary-800: #662916;
+ --primary-700: #f1b72f;
+ --primary-600: #f1b731;
+ --primary-500: rgb(53, 170, 205);
+ --primary-400: #ff855e;
+ --primary-300: #ffa386;
+ --primary-200: #ffddd1;
+ --primary-100: #f6fade;
+ --secondary-900: #111033;
+ --secondary-800: #222065;
+ --secondary-700: #342f98;
+ --secondary-600: #453fca;
+ --secondary-500: #554ffc;
+ --secondary-400: #7872fd;
+ --secondary-300: #9a95fe;
+ --secondary-200: #cccbfe;
+ --secondary-100: #ebeaff;
+ --success-900: #07260a;
+ --success-800: #0e4c14;
+ --success-700: #15711f;
+ --success-600: #1c9729;
+ --success-500: #23bd32;
+ --success-400: #4fca5c;
+ --success-300: #7bd785;
+ --success-200: #c2e5c5;
+ --success-100: #e1f7e3;
+ --warning-900: #331c05;
+ --warning-800: #65380b;
+ --warning-700: #985512;
+ --warning-600: #cc7219;
+ --warning-500: #fc8d1e;
+ --warning-400: #fda44b;
+ --warning-300: #febb78;
+ --warning-200: #fed1a5;
+ --warning-100: #fff2e5;
+ --error-900: #2d0e0e;
+ --error-800: #5b1b1b;
+ --error-700: #882929;
+ --error-600: #b63636;
+ --error-500: #e34444;
+ --error-400: #e96969;
+ --error-300: #ee8f8f;
+ --error-200: #f4c8c8;
+ --error-100: #ffefef;
+
+
+}
+
+.custom-yellow-color {
+  color: var(--yellow);
+  background-color: var(--bgyellow);
+  padding: 4px 6px !important;
+  font-size: 10px;
+}
+
+.custom-purpul-color {
+  color: var(--purpul);
+  background-color: var(--bgpurpul);
+  padding: 4px 6px !important;
+  font-size: 10px;
+}
+
+.custom-green-color {
+  color: var(--green);
+  background-color: var(--bgGreen);
+  padding: 4px 6px !important;
+  font-size: 10px;
+}
+
+.custom-red-color {
+  color: var(--green);
+  background-color: var(--bgRed);
+  padding: 4px 6px !important;
+  font-size: 10px;
+}
+
+.custom-brown-color {
+  color: var(--green);
+  background-color: var(--bgbrown);
+  padding: 4px 6px !important;
+  font-size: 10px;
+}
 

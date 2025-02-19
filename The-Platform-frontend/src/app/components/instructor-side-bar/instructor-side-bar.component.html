@@ -1,0 +1,47 @@
+<div class="instructor-side-bar">
+
+
+  <div class="upper-section">
+
+    <div class="logo">
+      <img ngSrc="assets/logo-white.png" alt="logo" height="140" width="478">
+    </div>
+
+    <div class="pages">
+      <div class="dashboard page" (click)="activatePage('dashboard')" [ngClass]="{'page-active':pages.dashboard}">
+        <img [src]="pages.dashboard?'assets/instructor-sidebar-icons/dashboard-icon-active.png':'assets/instructor-sidebar-icons/dashboard-icon.png'" alt="icon">
+        <span class="page-name">Dashboard</span>
+      </div>
+      <div class="create-course page" (click)="activatePage('newCourse')" [ngClass]="{'page-active':pages.newCourse}">
+        <img [src]="pages.newCourse?'assets/instructor-sidebar-icons/new-course-icon-active.png':'assets/instructor-sidebar-icons/new-course-icon.png'" alt="icon">
+        <span class="page-name">Create New Course</span>
+      </div>
+      <div class="my-courses page" (click)="activatePage('myCourses')" [ngClass]="{'page-active':pages.myCourses}">
+        <img [src]="pages.myCourses?'assets/instructor-sidebar-icons/my-courses-icon-active.png':'assets/instructor-sidebar-icons/my-courses-icon.png'" alt="icon">
+        <span class="page-name">My Courses</span>
+      </div>
+      <div class="earnings page" (click)="activatePage('earnings')" [ngClass]="{'page-active':pages.earnings}">
+        <img [src]="pages.earnings?'assets/instructor-sidebar-icons/earnings-icon-active.png':'assets/instructor-sidebar-icons/earnings-icon.png'" alt="icon">
+        <span class="page-name">Earnings</span>
+      </div>
+      <div class="messages page" (click)="activatePage('messages')" [ngClass]="{'page-active':pages.messages}">
+        <img [src]="pages.messages?'assets/instructor-sidebar-icons/messages-icon-active.png':'assets/instructor-sidebar-icons/messages-icon.png'" alt="icon">
+        <span class="page-name">Messages</span>
+      </div>
+      <div class="settings page" (click)="activatePage('settings')" [ngClass]="{'page-active':pages.settings}">
+        <img [src]="pages.settings?'assets/instructor-sidebar-icons/settings-icon-active.png':'assets/instructor-sidebar-icons/settings-icon.png'" alt="icon">
+        <span class="page-name">Settings</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="lower-section">
+    <div class="sign-out">
+      <img ngSrc="assets/instructor-sidebar-icons/sign-out-icon.png" alt="icon" height="48" width="48">
+      <span class="page-name">Sign-out</span>
+    </div>
+  </div>
+</div>

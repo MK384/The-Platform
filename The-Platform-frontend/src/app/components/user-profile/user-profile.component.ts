@@ -3,11 +3,12 @@ import {Component, Input} from '@angular/core';
 import {WatchCourseCardComponent} from "../watch-course-card/watch-course-card.component";
 import {PaginationBarComponent} from "../pagination-bar/pagination-bar.component";
 import {UserInstructorCardComponent} from "../user-instructor-card/user-instructor-card.component";
+import {WishlistCourseCardComponent} from "../wishlist-course-card/wishlist-course-card.component";
 
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [CommonModule, WatchCourseCardComponent, PaginationBarComponent, UserInstructorCardComponent],
+  imports: [CommonModule, WatchCourseCardComponent, PaginationBarComponent, UserInstructorCardComponent, WishlistCourseCardComponent],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css'
 })

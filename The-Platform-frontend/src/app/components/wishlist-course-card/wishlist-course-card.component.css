@@ -1,0 +1,142 @@
+.wishlist-card {
+  display: flex;
+  align-items: center;
+  width: 1272px;
+  height: 120px;
+  background: #FFFFFF;
+  justify-content: space-between;
+}
+
+/* Course Image */
+.course-image img {
+  width: 160px;
+  height: 120px;
+
+}
+
+/* Course Info */
+.course-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 356px;
+  height: 120px;
+  justify-content: space-between;
+}
+
+.course-rating {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.course-rating img {
+  width: 20px;
+  height: 20px;
+}
+
+.course-rating p {
+
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #1D2026;
+}
+
+.course-rating p span {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #8C94A3;
+}
+
+#instructor-name {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #4E5566;
+}
+
+.course-title {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #1D2026;
+}
+
+.course-instructors span {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #A1A5B3;
+}
+
+.course-instructors p {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #4E5566;
+}
+
+/* Pricing */
+.course-pricing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  left: 630px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 500;
+  color: #35AACD;
+}
+
+.old-price {
+  font-size: 18px;
+  text-decoration: line-through;
+  color: #8C94A3;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  left: 850px;
+}
+
+.buy-now {
+  width: 176px;
+  height: 48px;
+  background: rgba(255, 198, 60, 0.77);
+  font-size: 16px;
+  font-weight: 600;
+  color: #1D2026;
+  border: none;
+  cursor: pointer;
+}
+
+.add-to-cart {
+  width: 176px;
+  height: 48px;
+  background: #35AACD;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+}
+
+.wishlist-btn {
+  width: 48px;
+  height: 48px;
+  background: #F7FBDE;
+  border: none;
+  cursor: pointer;
+}
+
+.wishlist-btn img {
+  width: 24px;
+  height: 24px;
+}

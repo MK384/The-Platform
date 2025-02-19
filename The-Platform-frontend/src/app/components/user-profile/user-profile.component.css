@@ -238,8 +238,14 @@
     line-height: 16px;
     font-weight: 400;
     color: #6E7485;
+  }
 
+  .wish-desc{
 
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 500;
+    color: #4E5566;
   }
 
 
@@ -459,3 +465,4 @@
   bottom: 12px;
 cursor: pointer;
  }
+

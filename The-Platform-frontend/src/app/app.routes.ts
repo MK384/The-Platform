@@ -12,13 +12,13 @@ export const routes: Routes = [
   {path: "", component: HomePageComponent, title: "Home Page"},
   {path: "home", redirectTo: "", pathMatch: "full"},
 
-  {path: "courseDetails", component: CourseDetailsComponent, title: "Course details Page"},
-  {path: "search", component: CourseListPageComponent, title: "Course Search Page"},
-  {path: "watchCourse", component: WatchCourseComponent, title: "Watching Page"},
-  {path: "user", component: UserProfileComponent, title: "User Page"},
-  {path: "instructor", component: InstructorPageComponent, title: "Instructor Page"},
-  {path: "login", component: LoginPageComponent, title: "Login Page"},
-  {path: "checkout", component: CheckOutPageComponent, title: "Checkout Page"},
+  // {path: "courseDetails", component: CourseDetailsComponent, title: "Course details Page"},
+  // {path: "search", component: CourseListPageComponent, title: "Course Search Page"},
+  // {path: "watchCourse", component: WatchCourseComponent, title: "Watching Page"},
+  // {path: "user", component: UserProfileComponent, title: "User Page"},
+  // {path: "instructor", component: InstructorPageComponent, title: "Instructor Page"},
+  // {path: "login", component: LoginPageComponent, title: "Login Page"},
+  // {path: "checkout", component: CheckOutPageComponent, title: "Checkout Page"},
 
 
 ];

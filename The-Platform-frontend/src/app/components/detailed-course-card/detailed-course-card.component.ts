@@ -27,10 +27,10 @@ export class DetailedCourseCardComponent {
 
     this.iconsUrls = {
 
-      star:'../../../assets/course_icons/star.png',
-      clock:'../../../assets/course_icons/clock.png',
-      user:'../../../assets/course_icons/user-icon.png',
-      level:'../../../assets/course_icons/bar-chart.png'
+      star:'assets/course_icons/star.png',
+      clock:'assets/course_icons/clock.png',
+      user:'assets/course_icons/user-icon.png',
+      level:'assets/course_icons/bar-chart.png'
 
     }
 
@@ -41,7 +41,7 @@ export class DetailedCourseCardComponent {
     title: "Adobe XD for Web Design: Essential Principles",
     category: "PRODUCTIVITY",
     instructor: "Kevin Gilbert",
-    instructorImageUrl: "../../../assets/instructor.jpeg",
+    instructorImageUrl: "assets/instructor.jpeg",
     price: 14.00,
     oldPrice: 26.00,
     rating: 5.0,
@@ -49,14 +49,14 @@ export class DetailedCourseCardComponent {
     enrolledStudents: 265700,
     difficultyLevel :  'Beginner',
     duration: 6, // e.g., "10h 30m"
-    imageUrl: "../../../assets/course-image.png"
+    imageUrl: "assets/course-image.png"
 
   }
 
 
     textColor!: string;
     bgColor!: string;
-    
+
     ngOnInit() {
       const colors = this.categoryColorService.getCategoryColors(this.cardData.category);
       this.textColor = colors.text;

@@ -18,12 +18,13 @@ import { InstructorPageComponent } from "./components/instructor-page/instructor
 import { UserProfileComponent } from "./components/user-profile/user-profile.component";
 import { CourseDetailsComponent } from "./components/course-details/course-details.component";
 import { WatchCourseCardComponent } from "./components/watch-course-card/watch-course-card.component";
+import {InstructorSideBarComponent} from "./components/instructor-side-bar/instructor-side-bar.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, HomePageComponent, FooterComponent, InstructorCardComponent, DetailedCourseCardComponent, BecomeInstructorCardComponent, CourseCardComponent, RegularCourseCardComponent, HoveringCourseCardComponent, LoginPageComponent, CommonModule, CourseListPageComponent, FilterBarComponent, CheckOutPageComponent, InstructorPageComponent, UserProfileComponent, CourseDetailsComponent, WatchCourseCardComponent],
+  imports: [RouterOutlet, NavbarComponent, HomePageComponent, FooterComponent, InstructorCardComponent, DetailedCourseCardComponent, BecomeInstructorCardComponent, CourseCardComponent, RegularCourseCardComponent, HoveringCourseCardComponent, LoginPageComponent, CommonModule, CourseListPageComponent, FilterBarComponent, CheckOutPageComponent, InstructorPageComponent, UserProfileComponent, CourseDetailsComponent, WatchCourseCardComponent, InstructorSideBarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
